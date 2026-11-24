@@ -1,0 +1,321 @@
+{
+ "generado": "2026-11-24T13:24:20+00:00",
+ "leidas": 4554,
+ "nuevas": 16,
+ "fuentes": {
+  "remotive": 45,
+  "jobicy": 150,
+  "arbeitnow": 32,
+  "himalayas": 20,
+  "greenhouse": 4307
+ },
+ "ofertas": [
+  {
+   "id": "a65909360df1",
+   "titulo": "Associate (AI) Solution Consultant - Orbit Program",
+   "empresa": "Celonis",
+   "ubicacion": "Madrid, Spain",
+   "url": "https://job-boards.greenhouse.io/celonis/jobs/8199108003?gh_jid=8199108003",
+   "fuente": "Greenhouse",
+   "fecha": "2026-11-09",
+   "area": "IA",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 68,
+   "motivos": [
+    "junior",
+    "España"
+   ],
+   "resumen": "",
+   "vista_desde": "2026-11-24"
+  },
+  {
+   "id": "b2853ffb8eb0",
+   "titulo": "Associate Applied (AI) Value Engineer (APAC) - Orbit Program",
+   "empresa": "Celonis",
+   "ubicacion": "Madrid, Spain",
+   "url": "https://job-boards.greenhouse.io/celonis/jobs/7995509003?gh_jid=7995509003",
+   "fuente": "Greenhouse",
+   "fecha": "2026-09-22",
+   "area": "IA",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 68,
+   "motivos": [
+    "junior",
+    "España"
+   ],
+   "resumen": "",
+   "vista_desde": "2026-11-24"
+  },
+  {
+   "id": "547c112f9bc0",
+   "titulo": "Associate (AI) Solution Consultant (Nordics) - Orbit Program",
+   "empresa": "Celonis",
+   "ubicacion": "Madrid, Spain",
+   "url": "https://job-boards.greenhouse.io/celonis/jobs/7981557003?gh_jid=7981557003",
+   "fuente": "Greenhouse",
+   "fecha": "2026-08-31",
+   "area": "IA",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 68,
+   "motivos": [
+    "junior",
+    "España"
+   ],
+   "resumen": "",
+   "vista_desde": "2026-11-24"
+  },
+  {
+   "id": "49e50de3ec77",
+   "titulo": "Software Engineer, New Grad - Frontend",
+   "empresa": "Stripe",
+   "ubicacion": "Barcelona",
+   "url": "https://stripe.com/jobs/search?gh_jid=8130927",
+   "fuente": "Greenhouse",
+   "fecha": "2026-08-31",
+   "area": "Desarrollo",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 62,
+   "motivos": [
+    "junior",
+    "España"
+   ],
+   "resumen": "",
+   "vista_desde": "2026-11-24"
+  },
+  {
+   "id": "03ffe8672267",
+   "titulo": "Freelance Full-Stack Developer | Django | AI Products | Python & LLM Integration | Remote 100%",
+   "empresa": "hurra.com",
+   "ubicacion": "Berlin (remote)",
+   "url": "https://www.arbeitnow.com/jobs/companies/hurracom/freelance-full-stack-developer-django-ai-products-python-llm-integration-remote-100-berlin-290567",
+   "fuente": "Arbeitnow",
+   "fecha": "2026-11-24",
+   "area": "IA",
+   "nivel": "Sin nivel",
+   "espana": false,
+   "puntos": 55,
+   "motivos": [
+    "remoto Europa/global",
+    "encaja: python, docker, git, llm"
+   ],
+   "resumen": "Remote (worldwide) Freelance | ~60 hours/month We are an independent German digital marketing agency with proprietary technology. hurra.ai is our AI product, a growing platform that sits at the intersection of marketing intelligence and artificial intelligence. We are expanding t",
+   "vista_desde": "2026-11-24"
+  },
+  {
+   "id": "3442bef92d42",
+   "titulo": "Graduate Software Engineer, Open Source and Linux, Canonical Ubuntu",
+   "empresa": "Canonical",
+   "ubicacion": "Home based - Worldwide",
+   "url": "https://job-boards.greenhouse.io/canonical/jobs/8379825",
+   "fuente": "Greenhouse",
+   "fecha": "2026-11-16",
+   "area": "Desarrollo",
+   "nivel": "Junior",
+   "espana": false,
+   "puntos": 55,
+   "motivos": [
+    "junior",
+    "remoto Europa/global",
+    "encaja: linux"
+   ],
+   "resumen": "",
+   "vista_desde": "2026-11-24"
+  },
+  {
+   "id": "7a4906dc6bf5",
+   "titulo": "Associate Linux Support Engineer",
+   "empresa": "Canonical",
+   "ubicacion": "Home based - Worldwide",
+   "url": "https://job-boards.greenhouse.io/canonical/jobs/6448444",
+   "fuente": "Greenhouse",
+   "fecha": "2025-02-10",
+   "area": "Sistemas",
+   "nivel": "Junior",
+   "espana": false,
+   "puntos": 53,
+   "motivos": [
+    "junior",
+    "remoto Europa/global",
+    "encaja: linux"
+   ],
+   "resumen": "",
+   "vista_desde": "2026-11-24"
+  },
+  {
+   "id": "2c483fdf20c0",
+   "titulo": "Junior Linux Kernel Engineer - Ubuntu",
+   "empresa": "Canonical",
+   "ubicacion": "Home based - Worldwide",
+   "url": "https://job-boards.greenhouse.io/canonical/jobs/5370815",
+   "fuente": "Greenhouse",
+   "fecha": "2024-02-25",
+   "area": "Sistemas",
+   "nivel": "Junior",
+   "espana": false,
+   "puntos": 53,
+   "motivos": [
+    "junior",
+    "remoto Europa/global",
+    "encaja: linux"
+   ],
+   "resumen": "",
+   "vista_desde": "2026-11-24"
+  },
+  {
+   "id": "ef65de60e6a6",
+   "titulo": "AWS Cloud DevOps Engineer",
+   "empresa": "TECDATA ENGINEERING",
+   "ubicacion": "Spain",
+   "url": "https://himalayas.app/companies/tecdata-engineering/jobs/aws-cloud-devops-engineer?utm_source=api",
+   "fuente": "Himalayas",
+   "fecha": "2026-11-24",
+   "area": "Sistemas",
+   "nivel": "Posible junior",
+   "espana": true,
+   "puntos": 48,
+   "motivos": [
+    "España",
+    "encaja: docker, git"
+   ],
+   "resumen": "Buscamos un/a AWS Cloud DevOps Engineer con al menos 5 años de experiencia para incorporarse a un entorno internacional, participando en la automatización, gestión y evolución de infraestructuras cloud sobre AWS. Funciones principales: Automatización y gestión de infraestructura ",
+   "vista_desde": "2026-11-24"
+  },
+  {
+   "id": "59489850b80f",
+   "titulo": "Junior Ubuntu Software Engineer",
+   "empresa": "Canonical",
+   "ubicacion": "Home based - Worldwide",
+   "url": "https://job-boards.greenhouse.io/canonical/jobs/6707669",
+   "fuente": "Greenhouse",
+   "fecha": "2025-11-07",
+   "area": "Desarrollo",
+   "nivel": "Junior",
+   "espana": false,
+   "puntos": 47,
+   "motivos": [
+    "junior",
+    "remoto Europa/global"
+   ],
+   "resumen": "",
+   "vista_desde": "2026-11-24"
+  },
+  {
+   "id": "60bee27c975f",
+   "titulo": "Full-Stack Developer (m/w/d) – Java/Spring Boot & TypeScript",
+   "empresa": "P&T Software",
+   "ubicacion": "Berlin (remote)",
+   "url": "https://www.arbeitnow.com/jobs/companies/pt-software/full-stack-developer-java-spring-boot-typescript-berlin-318262",
+   "fuente": "Arbeitnow",
+   "fecha": "2026-11-24",
+   "area": "Desarrollo",
+   "nivel": "Sin nivel",
+   "espana": false,
+   "puntos": 45,
+   "motivos": [
+    "remoto Europa/global",
+    "encaja: java, node, node.js, docker, rest"
+   ],
+   "resumen": "Wir sind P&T Software, rund 10 Leute, und bauen individuelle B2B-Software für Unternehmen mit komplexen Geschäftsprozessen. Bei uns setzt niemand nur Tickets um: Wir finden gemeinsam mit dem Kunden heraus, was wirklich gebaut werden muss, und setzen dann genau das um. Was du bei ",
+   "vista_desde": "2026-11-24"
+  },
+  {
+   "id": "f7857f506f24",
+   "titulo": "AI Engineer",
+   "empresa": "AnywhereNow",
+   "ubicacion": "Remote job (remote)",
+   "url": "https://www.arbeitnow.nl/jobs/companies/anywherenow/remote-ai-engineer-rotterdam-22878",
+   "fuente": "Arbeitnow",
+   "fecha": "2026-11-23",
+   "area": "IA",
+   "nivel": "Sin nivel",
+   "espana": false,
+   "puntos": 45,
+   "motivos": [
+    "remoto Europa/global",
+    "encaja: rest, api, llm, agents, rag"
+   ],
+   "resumen": "Founded in 2010 in the Netherlands, AnywhereNow is a global leader in Enterprise Dialogue Management, with a vision to ensure every employee and customer feels heard, understood, and valued. Today, our team of approximately 240 employees spans 22 countries, supporting more than 2",
+   "vista_desde": "2026-11-24"
+  },
+  {
+   "id": "9fe6bd8f0625",
+   "titulo": "Java Backend Developer (m/w/d) – AdTech, Spring Boot & AI",
+   "empresa": "streamboost GmbH",
+   "ubicacion": "Berlin (remote)",
+   "url": "https://www.arbeitnow.com/jobs/companies/streamboost-gmbh/java-backend-developer-adtech-spring-boot-ai-berlin-450330",
+   "fuente": "Arbeitnow",
+   "fecha": "2026-11-24",
+   "area": "IA",
+   "nivel": "Sin nivel",
+   "espana": false,
+   "puntos": 37,
+   "motivos": [
+    "remoto Europa/global",
+    "encaja: java, sql, api"
+   ],
+   "resumen": "Java ist deine Stärke, du nutzt AI bereits aktiv in deiner Entwicklung und möchtest nicht nur Code schreiben, sondern ein Produkt mitgestalten? Dann bist du bei Streamboost Ads genau richtig! 🚀 Wir sind Streamboost Ads , ein wachsendes AdTech-Unternehmen aus Darmstadt. Seit 2020 ",
+   "vista_desde": "2026-11-24"
+  },
+  {
+   "id": "78cbebee66c3",
+   "titulo": "Full-Stack Developer",
+   "empresa": "Fluence International, Inc.",
+   "ubicacion": "Worldwide",
+   "url": "https://remotive.com/remote-jobs/software-development/full-stack-developer-2091165",
+   "fuente": "Remotive",
+   "fecha": "2026-10-29",
+   "area": "Desarrollo",
+   "nivel": "Sin nivel",
+   "espana": false,
+   "puntos": 37,
+   "motivos": [
+    "remoto Europa/global",
+    "encaja: javascript, docker, rest, api, llm"
+   ],
+   "resumen": "We’re looking for a pragmatic, security-minded Full-Stack Developer to help build and scale Fluence’s B2B products used by clinicians, researchers, and organizations in psychedelic-assisted therapy and mental health. You’ll work closely with and report to our Senior AI & Design L",
+   "vista_desde": "2026-11-24"
+  },
+  {
+   "id": "092793990b57",
+   "titulo": "Backend Engineer (Python),AI Engineering: Agent Foundations",
+   "empresa": "GitLab",
+   "ubicacion": "Remote, Canada; Remote, Poland; Remote, United Kingdom",
+   "url": "https://job-boards.greenhouse.io/gitlab/jobs/8704363002",
+   "fuente": "Greenhouse",
+   "fecha": "2026-08-19",
+   "area": "IA",
+   "nivel": "Sin nivel",
+   "espana": false,
+   "puntos": 37,
+   "motivos": [
+    "remoto Europa/global",
+    "encaja: python"
+   ],
+   "resumen": "",
+   "vista_desde": "2026-11-24"
+  },
+  {
+   "id": "63ca98deec3c",
+   "titulo": "Python and Kubernetes Software Engineer - Data, Workflows, AI/ML & Analytics",
+   "empresa": "Canonical",
+   "ubicacion": "Home based - Worldwide",
+   "url": "https://job-boards.greenhouse.io/canonical/jobs/5703396",
+   "fuente": "Greenhouse",
+   "fecha": "2024-04-11",
+   "area": "IA",
+   "nivel": "Sin nivel",
+   "espana": false,
+   "puntos": 37,
+   "motivos": [
+    "remoto Europa/global",
+    "encaja: python"
+   ],
+   "resumen": "",
+   "vista_desde": "2026-11-24"
+  }
+ ]
+}

@@ -1,0 +1,240 @@
+#!/usr/bin/env python3
+"""Buscador de ofertas: descarga de fuentes públicas, puntúa contra perfil.json
+y escribe docs/data/ofertas.json (lo que lee la app web).
+
+Solo usa la librería estándar. Uso:  python3 agente/buscar.py
+"""
+from __future__ import annotations
+
+import hashlib
+import html
+import json
+import re
+import sys
+import time
+import urllib.error
+import urllib.request
+from datetime import datetime, timezone
+from pathlib import Path
+
+RAIZ = Path(__file__).resolve().parent.parent
+PERFIL = json.loads((RAIZ / "perfil.json").read_text(encoding="utf-8"))
+SALIDA = RAIZ / "docs" / "data" / "ofertas.json"
+UA = "Work_Analyse/1.0 (buscador personal de empleo)"
+
+
+# ---------------------------------------------------------------- utilidades
+def descargar(url: str):
+    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/json"})
+    with urllib.request.urlopen(req, timeout=40) as r:
+        return json.loads(r.read().decode("utf-8", "replace"))
+
+
+def limpiar(texto) -> str:
+    texto = html.unescape(re.sub(r"<[^>]+>", " ", str(texto or "")))
+    return re.sub(r"\s+", " ", texto).strip()
+
+
+def fecha_iso(valor) -> str:
+    """Normaliza epoch o ISO a AAAA-MM-DD ('' si no se puede)."""
+    if not valor:
+        return ""
+    try:
+        if str(valor).isdigit():
+            return datetime.fromtimestamp(int(valor), timezone.utc).date().isoformat()
+        return datetime.fromisoformat(str(valor).replace("Z", "+00:00")).date().isoformat()
+    except (ValueError, OSError, OverflowError):
+        return str(valor)[:10]
+
+
+def contiene(termino: str, texto: str) -> bool:
+    """Coincidencia por palabra completa ('intern' no casa con 'internal')."""
+    return re.search(r"(?<![\w])" + re.escape(termino) + r"(?![\w])", texto) is not None
+
+
+def oferta(fuente, titulo, empresa, ubicacion, url, fecha, descripcion, etiquetas=(), remoto=False):
+    return {
+        "fuente": fuente, "titulo": limpiar(titulo), "empresa": limpiar(empresa),
+        "ubicacion": limpiar(ubicacion), "url": url, "fecha": fecha_iso(fecha),
+        "descripcion": limpiar(descripcion), "etiquetas": [str(e) for e in etiquetas or []],
+        "remoto": bool(remoto),
+    }
+
+
+# ------------------------------------------------------------------- fuentes
+def fuente_remotive():
+    for categoria in ("software-dev", "data", "devops"):
+        datos = descargar(f"https://remotive.com/api/remote-jobs?category={categoria}")
+        for j in datos.get("jobs", []):
+            yield oferta("Remotive", j["title"], j["company_name"], j.get("candidate_required_location"),
+                         j["url"], j.get("publication_date"), j.get("description"), j.get("tags"), True)
+        time.sleep(1)
+
+
+def fuente_jobicy():
+    for geo in ("spain", "emea", "europe"):
+        datos = descargar(f"https://jobicy.com/api/v2/remote-jobs?count=50&geo={geo}")
+        for j in datos.get("jobs", []):
+            yield oferta("Jobicy", j["jobTitle"], j["companyName"], j.get("jobGeo"), j["url"],
+                         j.get("pubDate"), j.get("jobDescription") or j.get("jobExcerpt"),
+                         [j.get("jobLevel", "")], True)
+        time.sleep(1)
+
+
+def fuente_arbeitnow():
+    datos = descargar("https://www.arbeitnow.com/api/job-board-api")
+    for j in datos.get("data", []):
+        if not j.get("remote"):  # presenciales: casi todo Alemania
+            continue
+        yield oferta("Arbeitnow", j["title"], j["company_name"], f"{j.get('location', '')} (remote)",
+                     j["url"], j.get("created_at"), j.get("description"), j.get("tags"), True)
+
+
+def fuente_himalayas():
+    datos = descargar("https://himalayas.app/jobs/api?limit=20")
+    for j in datos.get("jobs", []):
+        yield oferta("Himalayas", j["title"], j["companyName"],
+                     ", ".join(j.get("locationRestrictions") or ["Worldwide"]),
+                     j.get("applicationLink") or j.get("guid"), j.get("pubDate"),
+                     j.get("description") or j.get("excerpt"), j.get("categories"), True)
+
+
+def fuente_greenhouse():
+    for tablon in PERFIL["tablones_greenhouse"]:
+        try:
+            datos = descargar(f"https://boards-api.greenhouse.io/v1/boards/{tablon}/jobs")
+        except (urllib.error.URLError, TimeoutError, ValueError) as e:
+            print(f"  ! greenhouse/{tablon}: {e}", file=sys.stderr)
+            continue
+        for j in datos.get("jobs", []):
+            yield oferta(f"Greenhouse", j["title"], j.get("company_name") or tablon.capitalize(),
+                         (j.get("location") or {}).get("name"), j["absolute_url"],
+                         j.get("first_published") or j.get("updated_at"), "")
+        time.sleep(0.5)
+
+
+FUENTES = [fuente_remotive, fuente_jobicy, fuente_arbeitnow, fuente_himalayas, fuente_greenhouse]
+
+
+# ---------------------------------------------------------------- puntuación
+def puntuar(o: dict) -> dict | None:
+    """Devuelve la oferta con puntuación y motivos, o None si se descarta."""
+    titulo = o["titulo"].lower()
+    cuerpo = (o["descripcion"] + " " + " ".join(o["etiquetas"])).lower()
+    lugar = o["ubicacion"].lower()
+    puntos, motivos = 0, []
+
+    # Nivel: lo decide el título
+    niv = PERFIL["nivel"]
+    if any(contiene(t, titulo) for t in niv["excluir"]):
+        return None
+    if any(contiene(t, titulo) for t in niv["practicas"]):
+        nivel, puntos = "Prácticas", puntos + 40
+        motivos.append("prácticas")
+    elif any(contiene(t, titulo) for t in niv["junior"]):
+        nivel, puntos = "Junior", puntos + 28
+        motivos.append("junior")
+    elif any(contiene(t, cuerpo[:1500]) for t in niv["practicas"] + niv["junior"]):
+        nivel, puntos = "Posible junior", puntos + 10
+    else:
+        nivel = "Sin nivel"
+
+    # Ubicación
+    ub = PERFIL["ubicacion"]
+    en_espana = any(contiene(t, lugar) for t in ub["espana"] + ub["local"])
+    if any(contiene(t, lugar) for t in ub["local"]):
+        puntos += 40
+        motivos.append("León")
+    elif en_espana:
+        puntos += 25
+        motivos.append("España")
+    elif any(contiene(t, lugar) for t in ub["remoto_ok"]) or (o["remoto"] and not lugar):
+        puntos += 10
+        motivos.append("remoto Europa/global")
+    else:
+        return None  # restringida a otro país
+
+    # Área: la decide el título (el cuerpo menciona "AI" en casi cualquier oferta)
+    if any(contiene(t, titulo) for t in PERFIL["excluir_titulo"]):
+        return None
+    area = next((nombre for nombre, terminos in PERFIL["areas"].items()
+                 if any(contiene(t, titulo) for t in terminos)), None)
+    if not area:
+        return None  # no es un puesto técnico de tus áreas
+    puntos += PERFIL["peso_area"][area]
+
+    # Habilidades
+    extra, vistas = 0, []
+    for hab, peso in PERFIL["habilidades"].items():
+        if contiene(hab, titulo):
+            extra += 4 * peso
+            vistas.append(hab)
+        elif contiene(hab, cuerpo):
+            extra += 2 * peso
+            vistas.append(hab)
+    puntos += min(extra, 30)
+    if vistas:
+        motivos.append("encaja: " + ", ".join(vistas[:5]))
+
+    if puntos < PERFIL["puntuacion_minima"]:
+        return None
+    ident = hashlib.sha1(o["url"].encode()).hexdigest()[:12]
+    return {
+        "id": ident, "titulo": o["titulo"], "empresa": o["empresa"], "ubicacion": o["ubicacion"],
+        "url": o["url"], "fuente": o["fuente"], "fecha": o["fecha"], "area": area, "nivel": nivel,
+        "espana": en_espana, "puntos": puntos, "motivos": motivos,
+        "resumen": o["descripcion"][:280],
+    }
+
+
+# ---------------------------------------------------------------------- main
+def main() -> int:
+    hoy = datetime.now(timezone.utc).date().isoformat()
+    anteriores = {}
+    if SALIDA.exists():
+        anteriores = {o["id"]: o for o in json.loads(SALIDA.read_text(encoding="utf-8")).get("ofertas", [])}
+
+    resultado, leidas, estado = {}, 0, {}
+    for fuente in FUENTES:
+        nombre = fuente.__name__.removeprefix("fuente_")
+        n = 0
+        try:
+            for bruta in fuente():
+                n += 1
+                p = puntuar(bruta)
+                if p and (p["id"] not in resultado or p["puntos"] > resultado[p["id"]]["puntos"]):
+                    resultado[p["id"]] = p
+            estado[nombre] = n
+        except (urllib.error.URLError, TimeoutError, ValueError, KeyError) as e:
+            estado[nombre] = f"error: {e}"
+            print(f"  ! {nombre}: {e}", file=sys.stderr)
+        leidas += n
+        print(f"  {nombre}: {n} leídas")
+
+    if leidas == 0:
+        print("Ninguna fuente respondió; no se sobrescribe el archivo.", file=sys.stderr)
+        return 1
+
+    for o in resultado.values():
+        o["vista_desde"] = anteriores.get(o["id"], {}).get("vista_desde", hoy)
+    # Variantes del mismo puesto (p. ej. una por región) cuentan como una sola
+    unicas = {}
+    for o in sorted(resultado.values(), key=lambda o: -o["puntos"]):
+        clave = (o["empresa"].lower(), re.sub(r"\([^)]*\)|\s+", " ", o["titulo"].lower()).strip())
+        unicas.setdefault(clave, o)
+    ofertas = sorted(unicas.values(), key=lambda o: o["fecha"] or "", reverse=True)
+    ofertas.sort(key=lambda o: -o["puntos"])
+    ofertas = ofertas[: PERFIL["max_ofertas"]]
+    nuevas = sum(1 for o in ofertas if o["id"] not in anteriores)
+
+    SALIDA.parent.mkdir(parents=True, exist_ok=True)
+    SALIDA.write_text(json.dumps({
+        "generado": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "leidas": leidas, "nuevas": nuevas, "fuentes": estado, "ofertas": ofertas,
+    }, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"{leidas} ofertas leídas -> {len(ofertas)} seleccionadas ({nuevas} nuevas)")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
