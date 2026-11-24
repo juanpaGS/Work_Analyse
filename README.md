@@ -1,1 +1,26 @@
 # Work_Analyse
+
+Asistente personal de búsqueda de prácticas y empleo junior.
+
+## Qué hay
+
+| Ruta | Qué hace |
+|---|---|
+| `perfil.json` | Tu perfil: habilidades, áreas, niveles y ubicaciones con sus pesos. Edítalo para cambiar qué ofertas se seleccionan. |
+| `agente/buscar.py` | Descarga ofertas de fuentes públicas (Remotive, Jobicy, Arbeitnow, Himalayas y tablones Greenhouse de empresas), las puntúa contra el perfil y escribe `docs/data/ofertas.json`. Solo librería estándar de Python. |
+| `docs/` | App web instalable (PWA) que muestra las ofertas, con filtros y seguimiento (guardada / solicitada / descartada, guardado en el propio dispositivo). |
+| `.github/workflows/buscar.yml` | Ejecuta el buscador cada día y guarda los resultados. Solo se activa cuando está en la rama `main`. |
+| `cv/` | Ignorado por git (contiene datos personales). |
+
+## Uso local
+
+```bash
+python3 agente/buscar.py            # actualiza docs/data/ofertas.json
+python3 -m http.server -d docs 8000 # abre http://localhost:8000
+```
+
+## Límites actuales
+
+- No se consultan LinkedIn, InfoJobs, Indeed ni Tecnoempleo: sus condiciones o su `robots.txt` no permiten el acceso automático.
+- La puntuación es por palabras clave, no por IA.
+- Aún no hay notificaciones push.
