@@ -1,15 +1,34 @@
 {
- "generado": "2026-11-25T17:17:04+00:00",
- "leidas": 4562,
- "nuevas": 11,
+ "generado": "2026-11-26T16:57:17+00:00",
+ "leidas": 4549,
+ "nuevas": 8,
  "fuentes": {
   "remotive": 48,
   "jobicy": 150,
-  "arbeitnow": 32,
+  "arbeitnow": 26,
   "himalayas": 20,
-  "greenhouse": 4312
+  "greenhouse": 4305
  },
  "ofertas": [
+  {
+   "id": "1c9d2085fa21",
+   "titulo": "Intern Demo Experience & Applied AI",
+   "empresa": "Celonis",
+   "ubicacion": "Madrid, Spain",
+   "url": "https://job-boards.greenhouse.io/celonis/jobs/8208057003?gh_jid=8208057003",
+   "fuente": "Greenhouse",
+   "fecha": "2026-11-26",
+   "area": "IA",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 80,
+   "motivos": [
+    "prácticas",
+    "España"
+   ],
+   "resumen": "",
+   "vista_desde": "2026-11-26"
+  },
   {
    "id": "a65909360df1",
    "titulo": "Associate (AI) Solution Consultant - Orbit Program",
@@ -68,6 +87,26 @@
    "vista_desde": "2026-11-24"
   },
   {
+   "id": "6b97682d668b",
+   "titulo": "Junior Cloud Operations Engineer (all genders) CH",
+   "empresa": "BSI Software",
+   "ubicacion": "Homeoffice (remote)",
+   "url": "https://www.arbeitnow.ch/jobs/companies/bsi-software/remote-junior-cloud-operations-engineer-all-genders-ch-baar-288099",
+   "fuente": "Arbeitnow",
+   "fecha": "2026-11-26",
+   "area": "Sistemas",
+   "nivel": "Junior",
+   "espana": false,
+   "puntos": 65,
+   "motivos": [
+    "junior",
+    "remoto Europa/global",
+    "encaja: python, docker, linux, machine learning"
+   ],
+   "resumen": "Alle reden von Digitalisierung – Wir machen es. Als Hersteller von Europas #1 CRM/CX-Plattform entwickeln wir innovative Softwareprodukte in den Bereichen Kundenbeziehungsmanagement, Marketing Automation und Machine Learning. Unternehmen bei der Digitalisierung und der konsequent",
+   "vista_desde": "2026-11-26"
+  },
+  {
    "id": "49e50de3ec77",
    "titulo": "Software Engineer, New Grad - Frontend",
    "empresa": "Stripe",
@@ -87,23 +126,24 @@
    "vista_desde": "2026-11-24"
   },
   {
-   "id": "4efa9848f642",
-   "titulo": "Full Stack Developer (node.js)",
-   "empresa": "Delta Capita",
-   "ubicacion": "Remote job (remote)",
-   "url": "https://www.arbeitnow.co.uk/jobs/companies/delta-capita/remote-full-stack-developer-nodejs-ipswich-333211",
-   "fuente": "Arbeitnow",
-   "fecha": "2026-11-25",
-   "area": "Desarrollo",
-   "nivel": "Posible junior",
+   "id": "ab869af56b40",
+   "titulo": "Junior Linux Kernel Engineer - Ubuntu",
+   "empresa": "Canonical",
+   "ubicacion": "Anywhere",
+   "url": "https://jobicy.com/jobs/149520-junior-linux-kernel-engineer-ubuntu",
+   "fuente": "Jobicy",
+   "fecha": "2026-11-26",
+   "area": "Sistemas",
+   "nivel": "Junior",
    "espana": false,
-   "puntos": 59,
+   "puntos": 61,
    "motivos": [
+    "junior",
     "remoto Europa/global",
-    "encaja: javascript, node, node.js, express, docker"
+    "encaja: python, linux, git"
    ],
-   "resumen": "Location: London or Ipswich, UK (Hybrid) Employment Type: Permanent, Full-Time About Mach: MACH is Delta Capita's proprietary Distributed Ledger Technology (DLT) and workflow orchestration platform, developed to help financial institutions modernise post-trade, collateral, regula",
-   "vista_desde": "2026-11-25"
+   "resumen": "Canonical is a leading provider of open source software and operating systems to the global enterprise and technology markets. Our platform, Ubuntu, is very widely used in breakthrough enterprise initiatives such as public cloud, data science, AI, engineering innovation, and IoT.",
+   "vista_desde": "2026-11-26"
   },
   {
    "id": "3442bef92d42",
@@ -126,6 +166,25 @@
    "vista_desde": "2026-11-24"
   },
   {
+   "id": "48be48ae080f",
+   "titulo": "Infrastructure Security Engineer",
+   "empresa": "Elevenlabs",
+   "ubicacion": "Belgium, Bulgaria, Croatia, Czechia, Denmark, Hungary, Ireland, Italy, Netherlands, Poland, Portugal, Spain, Sweden, UK",
+   "url": "https://jobicy.com/jobs/157064-infrastructure-security-engineer",
+   "fuente": "Jobicy",
+   "fecha": "2026-11-26",
+   "area": "Sistemas",
+   "nivel": "Sin nivel",
+   "espana": true,
+   "puntos": 54,
+   "motivos": [
+    "España",
+    "encaja: python, linux, agents, machine learning"
+   ],
+   "resumen": "About ElevenLabs ElevenLabs is an AI research and product company transforming how we interact with technology. We launched in January 2023 with the first human-like AI voice model. Today, we serve millions of users and thousands of businesses - from fast-growing startups to larg",
+   "vista_desde": "2026-11-26"
+  },
+  {
    "id": "7a4906dc6bf5",
    "titulo": "Associate Linux Support Engineer",
    "empresa": "Canonical",
@@ -144,83 +203,6 @@
    ],
    "resumen": "",
    "vista_desde": "2026-11-24"
-  },
-  {
-   "id": "2c483fdf20c0",
-   "titulo": "Junior Linux Kernel Engineer - Ubuntu",
-   "empresa": "Canonical",
-   "ubicacion": "Home based - Worldwide",
-   "url": "https://job-boards.greenhouse.io/canonical/jobs/5370815",
-   "fuente": "Greenhouse",
-   "fecha": "2024-02-25",
-   "area": "Sistemas",
-   "nivel": "Junior",
-   "espana": false,
-   "puntos": 53,
-   "motivos": [
-    "junior",
-    "remoto Europa/global",
-    "encaja: linux"
-   ],
-   "resumen": "",
-   "vista_desde": "2026-11-24"
-  },
-  {
-   "id": "ad4bfbd19a28",
-   "titulo": "Python and Kubernetes Software Engineer - Data, Workflows, AI/ML & Analytics",
-   "empresa": "Canonical",
-   "ubicacion": "Anywhere",
-   "url": "https://jobicy.com/jobs/149563-python-and-kubernetes-software-engineer-data-workflows-ai-ml-analytics",
-   "fuente": "Jobicy",
-   "fecha": "2026-11-25",
-   "area": "IA",
-   "nivel": "Sin nivel",
-   "espana": false,
-   "puntos": 51,
-   "motivos": [
-    "remoto Europa/global",
-    "encaja: python, docker, linux, machine learning"
-   ],
-   "resumen": "Canonical is a leading provider of open source software and operating systems to the global enterprise and technology markets. Our platform, Ubuntu, is very widely used in breakthrough enterprise initiatives such as public cloud, data science, AI, engineering innovation and IoT. ",
-   "vista_desde": "2026-11-25"
-  },
-  {
-   "id": "21d38a1f467f",
-   "titulo": "Full Stack Developer - Java & React (f/m/d)",
-   "empresa": "ecosio",
-   "ubicacion": "Austria, Croatia, Germany, Hungary, Italy, Portugal, Spain, UK",
-   "url": "https://jobicy.com/jobs/164237-full-stack-developer-java-react-f-m-d-3",
-   "fuente": "Jobicy",
-   "fecha": "2026-11-25",
-   "area": "Desarrollo",
-   "nivel": "Sin nivel",
-   "espana": true,
-   "puntos": 50,
-   "motivos": [
-    "España",
-    "encaja: javascript, java, mongodb"
-   ],
-   "resumen": "Company Description ecosio is a fast-growing, innovative service company and a leading provider of B2B integration, specialising in electronic data interchange (EDI), Web EDI and e-invoicing. ecosio is part of Vertex, Inc., a leading global provider of indirect tax solutions list",
-   "vista_desde": "2026-11-25"
-  },
-  {
-   "id": "c6d1cf122d13",
-   "titulo": "Fullstack Software Engineer - Core Engineering",
-   "empresa": "dataiku",
-   "ubicacion": "Remote (remote)",
-   "url": "https://www.arbeitnow.co.uk/jobs/companies/dataiku/remote-fullstack-software-engineer-core-engineering-469912",
-   "fuente": "Arbeitnow",
-   "fecha": "2026-11-25",
-   "area": "Desarrollo",
-   "nivel": "Sin nivel",
-   "espana": false,
-   "puntos": 49,
-   "motivos": [
-    "remoto Europa/global",
-    "encaja: python, java, node, node.js, docker"
-   ],
-   "resumen": "<div class=\"content-intro\"><p><a href=\"https://www.dataiku.com/?utm_source=newswire&amp;utm_medium=press-release&amp;utm_campaign=PlatformforAISuccess\" target=\"_blank\">Dataiku</a> is the Platform for AI Success, the enterprise orchestration layer for building, deploying, and gove",
-   "vista_desde": "2026-11-25"
   },
   {
    "id": "fbbd22d9683e",
@@ -280,23 +262,23 @@
    "vista_desde": "2026-11-25"
   },
   {
-   "id": "2321081621d7",
-   "titulo": "Développeur Full-Stack (Node.js / React / Flutter)",
-   "empresa": "OHana Entreprise",
-   "ubicacion": "Paris (remote)",
-   "url": "https://www.arbeitnow.fr/jobs/companies/ohana-entreprise/developpeur-full-stack-nodejs-react-flutter-paris-474619",
-   "fuente": "Arbeitnow",
-   "fecha": "2026-11-25",
-   "area": "Desarrollo",
+   "id": "e16084165661",
+   "titulo": "Security Engineer",
+   "empresa": "Fever",
+   "ubicacion": "Spain",
+   "url": "https://jobicy.com/jobs/164365-security-engineer-4",
+   "fuente": "Jobicy",
+   "fecha": "2026-11-26",
+   "area": "Sistemas",
    "nivel": "Sin nivel",
-   "espana": false,
-   "puntos": 43,
+   "espana": true,
+   "puntos": 44,
    "motivos": [
-    "remoto Europa/global",
-    "encaja: node, node.js"
+    "España",
+    "encaja: python, docker, sql"
    ],
-   "resumen": "À propos de OHana Entreprise OHana Entreprise est une société de développement de logiciels et d'applications web et mobiles qui accompagne ses clients en France et en Afrique avec des solutions numériques sur mesure. Notre mission est de répondre aux besoins spécifiques de nos c",
-   "vista_desde": "2026-11-25"
+   "resumen": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with ",
+   "vista_desde": "2026-11-26"
   },
   {
    "id": "5c784fc58988",
@@ -318,42 +300,42 @@
    "vista_desde": "2026-11-25"
   },
   {
-   "id": "8ae103298036",
-   "titulo": "Software Engineer, Sustaining Engineering",
+   "id": "f4cb56c2b07d",
+   "titulo": "Security Software Engineer",
    "empresa": "Canonical",
    "ubicacion": "Anywhere",
-   "url": "https://jobicy.com/jobs/149524-software-engineer-sustaining-engineering",
+   "url": "https://jobicy.com/jobs/149550-security-software-engineer",
    "fuente": "Jobicy",
-   "fecha": "2026-11-25",
+   "fecha": "2026-11-26",
    "area": "Desarrollo",
    "nivel": "Sin nivel",
    "espana": false,
-   "puntos": 37,
+   "puntos": 39,
    "motivos": [
     "remoto Europa/global",
-    "encaja: python, docker, linux, git, c++"
+    "encaja: python, javascript, java, linux, c++"
    ],
-   "resumen": "Canonical is a leading provider of open source software and operating systems to the global enterprise and technology markets. Our platform, Ubuntu, is very widely used in breakthrough enterprise initiatives such as public cloud, data science, AI, engineering innovation, and IoT.",
-   "vista_desde": "2026-11-25"
+   "resumen": "Canonical is a leading provider of open source software and operating systems to the global enterprise and technology markets. Our platform, Ubuntu, is widely used in breakthrough enterprise initiatives such as public cloud, data science, AI, engineering innovation, and IoT. Our ",
+   "vista_desde": "2026-11-26"
   },
   {
-   "id": "791e9d641dd8",
-   "titulo": "Full-stack Developer",
-   "empresa": "ADOMIK",
-   "ubicacion": "Paris (remote)",
-   "url": "https://www.arbeitnow.fr/jobs/companies/adomik/full-stack-developer-paris-311610",
-   "fuente": "Arbeitnow",
-   "fecha": "2026-11-25",
-   "area": "Desarrollo",
+   "id": "6f1d826349ee",
+   "titulo": "Cybersecurity Engineer",
+   "empresa": "Fever",
+   "ubicacion": "Spain",
+   "url": "https://jobicy.com/jobs/164359-cybersecurity-engineer-2",
+   "fuente": "Jobicy",
+   "fecha": "2026-11-26",
+   "area": "Sistemas",
    "nivel": "Sin nivel",
-   "espana": false,
-   "puntos": 37,
+   "espana": true,
+   "puntos": 38,
    "motivos": [
-    "remoto Europa/global",
-    "encaja: python, mongodb, git, sql, rest"
+    "España",
+    "encaja: python"
    ],
-   "resumen": "As a leading ad tech company, we help publishers thrive in an increasingly challenging and complex digital world dominated by GAFAs. Our unique AI-based SaaS platform offers a range of products that help publishers optimize their revenue and operational efficiency. Over 100 prest",
-   "vista_desde": "2026-11-25"
+   "resumen": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with ",
+   "vista_desde": "2026-11-26"
   },
   {
    "id": "78cbebee66c3",
@@ -392,6 +374,25 @@
    ],
    "resumen": "",
    "vista_desde": "2026-11-24"
+  },
+  {
+   "id": "63ca98deec3c",
+   "titulo": "Python and Kubernetes Software Engineer - Data, Workflows, AI/ML & Analytics",
+   "empresa": "Canonical",
+   "ubicacion": "Home based - Worldwide",
+   "url": "https://job-boards.greenhouse.io/canonical/jobs/5703396",
+   "fuente": "Greenhouse",
+   "fecha": "2024-04-11",
+   "area": "IA",
+   "nivel": "Sin nivel",
+   "espana": false,
+   "puntos": 37,
+   "motivos": [
+    "remoto Europa/global",
+    "encaja: python"
+   ],
+   "resumen": "",
+   "vista_desde": "2026-11-26"
   },
   {
    "id": "48fa209887f8",
