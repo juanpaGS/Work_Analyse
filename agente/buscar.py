@@ -6,6 +6,7 @@ Solo usa la librería estándar. Uso:  python3 agente/buscar.py
 """
 from __future__ import annotations
 
+import argparse
 import hashlib
 import os
 import urllib.parse
@@ -20,6 +21,19 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
+
+
+def cargar_env():
+    """Lee RAIZ/.env (CLAVE=valor) sin pisar variables ya definidas. .env está en .gitignore."""
+    f = RAIZ / ".env"
+    if f.exists():
+        for linea in f.read_text(encoding="utf-8").splitlines():
+            if "=" in linea and not linea.lstrip().startswith("#"):
+                k, v = linea.split("=", 1)
+                os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
+
+
+cargar_env()
 PERFIL = json.loads((RAIZ / "perfil.json").read_text(encoding="utf-8"))
 SALIDA = RAIZ / "docs" / "data" / "ofertas.json"
 UA = "Work_Analyse/1.0 (buscador personal de empleo)"
@@ -345,16 +359,44 @@ DESCARTES: dict[str, int] = {}  # por qué se descartaron ofertas por requisitos
 
 
 # ---------------------------------------------------------------------- main
+REQUIERE_CLAVE = {"adzuna": ("ADZUNA_APP_ID", "ADZUNA_APP_KEY")}
+
+
+def estado_fuentes() -> list[tuple[str, str]]:
+    filas = []
+    for f in FUENTES:
+        n = f.__name__.removeprefix("fuente_")
+        falta = [v for v in REQUIERE_CLAVE.get(n, ()) if not os.environ.get(v)]
+        if n in PERFIL.get("fuentes_desactivadas", []):
+            filas.append((n, "apagada en perfil.json"))
+        elif falta:
+            filas.append((n, "sin claves (opcional): " + ", ".join(falta)))
+        else:
+            filas.append((n, "activa"))
+    return filas
+
+
 def main() -> int:
+    ap = argparse.ArgumentParser(description="Busca ofertas y las puntúa contra perfil.json")
+    ap.add_argument("--fuentes", action="store_true", help="muestra las fuentes y su estado, y sale")
+    ap.add_argument("--sin", action="append", default=[], metavar="FUENTE", help="no usar esta fuente (repetible), p. ej. --sin adzuna")
+    ap.add_argument("--solo", action="append", default=[], metavar="FUENTE", help="usar únicamente estas fuentes")
+    ap.add_argument("--salida", default=str(SALIDA), help="archivo de resultados (por defecto docs/data/ofertas.json)")
+    args = ap.parse_args()
+    if args.fuentes:
+        for n, e in estado_fuentes():
+            print(f"{n:11} {e}")
+        return 0
+    salida = Path(args.salida)
     hoy = datetime.now(timezone.utc).date().isoformat()
     anteriores = {}
-    if SALIDA.exists():
-        anteriores = {o["id"]: o for o in json.loads(SALIDA.read_text(encoding="utf-8")).get("ofertas", [])}
+    if salida.exists():
+        anteriores = {o["id"]: o for o in json.loads(salida.read_text(encoding="utf-8")).get("ofertas", [])}
 
     resultado, leidas, estado = {}, 0, {}
     for fuente in FUENTES:
         nombre = fuente.__name__.removeprefix("fuente_")
-        if nombre in PERFIL.get("fuentes_desactivadas", []):
+        if nombre in PERFIL.get("fuentes_desactivadas", []) or nombre in args.sin or (args.solo and nombre not in args.solo):
             continue
         n = 0
         try:
@@ -386,8 +428,8 @@ def main() -> int:
     ofertas = ofertas[: PERFIL["max_ofertas"]]
     nuevas = sum(1 for o in ofertas if o["id"] not in anteriores)
 
-    SALIDA.parent.mkdir(parents=True, exist_ok=True)
-    SALIDA.write_text(json.dumps({
+    salida.parent.mkdir(parents=True, exist_ok=True)
+    salida.write_text(json.dumps({
         "generado": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "leidas": leidas, "nuevas": nuevas, "fuentes": estado, "descartes": DESCARTES, "ofertas": ofertas,
     }, ensure_ascii=False, indent=1), encoding="utf-8")
