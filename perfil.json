@@ -14,7 +14,7 @@
     "linux": 2,
     "git": 1,
     "c++": 1,
-    "sql": 1,
+    "sql": 2,
     "rest": 1,
     "api": 1,
     "jwt": 1,
@@ -25,7 +25,16 @@
     "machine learning": 3,
     "deep learning": 2,
     "pytorch": 2,
-    "nlp": 2
+    "nlp": 2,
+    "mysql": 2,
+    "oracle": 1,
+    "html": 1,
+    "css": 1,
+    "scikit-learn": 2,
+    "wireshark": 1,
+    "bash": 1,
+    "computer vision": 1,
+    "openmp": 1
   },
   "areas": {
     "IA": [
@@ -68,7 +77,11 @@
       "web",
       "node",
       "java",
-      "python"
+      "python",
+      "software",
+      "informático",
+      "informática",
+      "analista programador"
     ],
     "Sistemas": [
       "devops",
@@ -202,5 +215,6 @@
     "mongodb"
   ],
   "puntuacion_minima": 35,
-  "max_ofertas": 200
+  "max_ofertas": 200,
+  "_situacion": "Estudiante de 4.º (título en 2027), sin experiencia laboral en el sector ni certificaciones; idiomas: español e inglés. agente/buscar.py descarta o avisa de lo que no encaje."
 }

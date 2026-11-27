@@ -1,13 +1,20 @@
 {
- "generado": "2026-11-27T16:43:04+00:00",
- "leidas": 4545,
- "nuevas": 1,
+ "generado": "2026-11-27T17:16:13+00:00",
+ "leidas": 4802,
+ "nuevas": 22,
  "fuentes": {
+  "adzuna": 263,
   "remotive": 51,
   "jobicy": 150,
-  "arbeitnow": 25,
+  "arbeitnow": 21,
   "himalayas": 20,
-  "greenhouse": 4299
+  "greenhouse": 4297
+ },
+ "descartes": {
+  "no es junior ni prácticas": 124,
+  "pide años de experiencia": 32,
+  "oferta en alemán": 3,
+  "exige otro idioma": 5
  },
  "ofertas": [
   {
@@ -21,12 +28,15 @@
    "area": "IA",
    "nivel": "Prácticas",
    "espana": true,
-   "puntos": 80,
+   "puntos": 100,
    "motivos": [
     "prácticas",
-    "España"
+    "España",
+    "encaja: python, sql, llm, agents"
    ],
-   "resumen": "",
+   "avisos": [],
+   "a_favor": [],
+   "resumen": "Celonis is the trusted platform to industrialize Enterprise AI. At our core is the Celonis Context Model — which combines process data, business knowledge, and intelligence into a living digital twin of the enterprise that AI can actually understand, turning AI's operational blin",
    "vista_desde": "2026-11-27"
   },
   {
@@ -40,109 +50,370 @@
    "area": "IA",
    "nivel": "Prácticas",
    "espana": true,
-   "puntos": 80,
+   "puntos": 96,
+   "motivos": [
+    "prácticas",
+    "España",
+    "encaja: python, sql, agents"
+   ],
+   "avisos": [],
+   "a_favor": [],
+   "resumen": "Celonis is the trusted platform to industrialize Enterprise AI. At our core is the Celonis Context Model — which combines process data, business knowledge, and intelligence into a living digital twin of the enterprise that AI can actually understand, turning AI's operational blin",
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "id": "4c1c1caf2f0b",
+   "titulo": "Backend Junior - Node.js, Python, .NET",
+   "empresa": "Excelia",
+   "ubicacion": "España, España",
+   "url": "https://www.adzuna.es/details/5979381113?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-26",
+   "area": "Desarrollo",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 85,
+   "motivos": [
+    "junior",
+    "España",
+    "encaja: python, node, node.js"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "resumen": "Junior Back-End Developer Excelia es una firma multinacional de Consultoría, Tecnología y Servicios profesionales con 25 años de experiencia. Prestamos servicio en más de 50 países de Europa, América Latina y Estados Unidos desde nuestras 9 oficinas propias. ¿Te apasiona el desar",
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "id": "24d3c725b317",
+   "titulo": "Becario Analista Programador",
+   "empresa": "Abas Ibérica",
+   "ubicacion": "Barcelona, España",
+   "url": "https://www.adzuna.es/details/5972389397?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-20",
+   "area": "Desarrollo",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 85,
+   "motivos": [
+    "prácticas",
+    "España",
+    "encaja: java, linux"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [
+    "admite estudiantes o perfiles sin experiencia"
+   ],
+   "resumen": "Se buscan varios estudiantes ambiciosos cursando Ingeniería Informática Superior para realizar prácticas en nuestro departamento de consultoría. Al formar parte de un grupo internacional, colaboramos de forma estrecha con nuestros partners en el extranjero como Alemania, Brasil, ",
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "id": "ccaf3fc2a153",
+   "titulo": "Backend Junior - Node.js, Python, .NET",
+   "empresa": "Excelia, SL",
+   "ubicacion": "Boadilla del Monte, Madrid, España",
+   "url": "https://www.adzuna.es/details/5955832001?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-06",
+   "area": "Desarrollo",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 85,
+   "motivos": [
+    "junior",
+    "España",
+    "encaja: python, node, node.js"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "resumen": "Junior Back-End Developer Excelia es una firma multinacional de Consultoría, Tecnología y Servicios profesionales con 25 años de experiencia. Prestamos servicio en más de 50 países de Europa, América Latina y Estados Unidos desde nuestras 9 oficinas propias. ¿Te apasiona el desar",
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "id": "cd37537927a1",
+   "titulo": "Avanade Campus: Prácticas en Inteligencia Artificial con tecnologías Microsoft - Marzo 2026",
+   "empresa": "Avanade Spainu Company",
+   "ubicacion": "Málaga, España",
+   "url": "https://www.adzuna.es/details/5972376991?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-20",
+   "area": "IA",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 83,
    "motivos": [
     "prácticas",
     "España"
    ],
-   "resumen": "",
-   "vista_desde": "2026-11-26"
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [
+    "admite estudiantes o perfiles sin experiencia"
+   ],
+   "resumen": "Quieres recibir formación en últimas tecnologías Microsoft? ¿Quieres aprender y trabajar en un ambiente dinámico en una empresa Top Employer? ¡Únete a nuestro Avanade Campus, el programa de prácticas que comienza en Marzo 2026 en una de las áreas más demandadas del mercado, Intel",
+   "vista_desde": "2026-11-27"
   },
   {
-   "id": "a65909360df1",
-   "titulo": "Associate (AI) Solution Consultant - Orbit Program",
-   "empresa": "Celonis",
-   "ubicacion": "Madrid, Spain",
-   "url": "https://job-boards.greenhouse.io/celonis/jobs/8199108003?gh_jid=8199108003",
-   "fuente": "Greenhouse",
-   "fecha": "2026-11-09",
+   "id": "54d47197b0ee",
+   "titulo": "Prácticas IT: Inteligencia Artificial",
+   "empresa": "Cuatrecasas",
+   "ubicacion": "Barcelona, España",
+   "url": "https://www.adzuna.es/details/5964737586?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-13",
    "area": "IA",
-   "nivel": "Junior",
+   "nivel": "Prácticas",
    "espana": true,
-   "puntos": 68,
+   "puntos": 79,
    "motivos": [
-    "junior",
+    "prácticas",
+    "España",
+    "encaja: llm"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "resumen": "Conocer ampliamente el funcionamiento de un Departamento de Tecnologías, concretamente del grupo CIA, de una gran empresa en la que la innovación y apuesta por las nuevas tecnologías es una prioridad. Participará y aprenderá en proyectos de IA generativa y LLM en diferentes plata",
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "id": "97ef482d0679",
+   "titulo": "Software Engineering Intern",
+   "empresa": "Datadog",
+   "ubicacion": "Madrid, Spain",
+   "url": "https://careers.datadoghq.com/detail/8114161/?gh_jid=8114161",
+   "fuente": "Greenhouse",
+   "fecha": "2026-09-08",
+   "area": "Desarrollo",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 74,
+   "motivos": [
+    "prácticas",
     "España"
    ],
-   "resumen": "",
-   "vista_desde": "2026-11-24"
+   "avisos": [],
+   "a_favor": [],
+   "resumen": "We’re looking for Software Engineering Interns to help build and scale the systems that power Datadog’s observability and security platform. Interns contribute directly to real-world engineering challenges across backend, frontend, infrastructure, data engineering, and developer ",
+   "vista_desde": "2026-11-27"
   },
   {
-   "id": "b2853ffb8eb0",
-   "titulo": "Associate Applied (AI) Value Engineer (APAC) - Orbit Program",
-   "empresa": "Celonis",
-   "ubicacion": "Madrid, Spain",
-   "url": "https://job-boards.greenhouse.io/celonis/jobs/7995509003?gh_jid=7995509003",
-   "fuente": "Greenhouse",
-   "fecha": "2026-09-22",
+   "id": "929fb5899bee",
+   "titulo": "Beca TIC de Apoyo a Ingeniería en IA y Digitalización",
+   "empresa": "Acciona Construcción S.a.",
+   "ubicacion": "España, España",
+   "url": "https://www.adzuna.es/details/5972413410?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-20",
    "area": "IA",
-   "nivel": "Junior",
+   "nivel": "Prácticas",
    "espana": true,
-   "puntos": 68,
+   "puntos": 73,
    "motivos": [
-    "junior",
+    "prácticas",
     "España"
    ],
-   "resumen": "",
-   "vista_desde": "2026-11-24"
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "resumen": "Somos una compañía global, líder en el desarrollo de infraestructuras regenerativas que generan un impacto positivo en la sociedad. Nuestra plantilla, formada por más de 65.000 profesionales y presente en más de 40 países de los cinco continentes, contribuye a nuestra misión de d",
+   "vista_desde": "2026-11-27"
   },
   {
-   "id": "547c112f9bc0",
-   "titulo": "Associate (AI) Solution Consultant (Nordics) - Orbit Program",
-   "empresa": "Celonis",
-   "ubicacion": "Madrid, Spain",
-   "url": "https://job-boards.greenhouse.io/celonis/jobs/7981557003?gh_jid=7981557003",
-   "fuente": "Greenhouse",
-   "fecha": "2026-08-31",
+   "id": "b06d37152603",
+   "titulo": "Beca de Prácticas en Inteligencia Artificial",
+   "empresa": "Knowmad Mood",
+   "ubicacion": "Las Rozas de Madrid, Madrid, España",
+   "url": "https://www.adzuna.es/details/5972400460?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-20",
    "area": "IA",
-   "nivel": "Junior",
+   "nivel": "Prácticas",
    "espana": true,
-   "puntos": 68,
+   "puntos": 73,
    "motivos": [
-    "junior",
+    "prácticas",
     "España"
    ],
-   "resumen": "",
-   "vista_desde": "2026-11-24"
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "resumen": "We are knowmad mood! Somos una compañía líder en transformación digital, en constante evolución y a la vanguardia de la tecnología. Nacimos para provocar un cambio real a través de la innovación y el desarrollo sostenible, con la misión de aportar valor a los clientes e impulsar ",
+   "vista_desde": "2026-11-27"
   },
   {
-   "id": "49e50de3ec77",
-   "titulo": "Software Engineer, New Grad - Frontend",
-   "empresa": "Stripe",
-   "ubicacion": "Barcelona",
-   "url": "https://stripe.com/jobs/search?gh_jid=8130927",
-   "fuente": "Greenhouse",
-   "fecha": "2026-08-31",
+   "id": "c01cf4e98fdd",
+   "titulo": "PRÁCTICAS EN EMPRESA IA APLICADA AL ENTORNO PROFESIONAL",
+   "empresa": "Nett Digital School",
+   "ubicacion": "España, España",
+   "url": "https://www.adzuna.es/details/5972396350?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-20",
+   "area": "IA",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 73,
+   "motivos": [
+    "prácticas",
+    "España"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "resumen": "PRÁCTICAS EN EMPRESA IA APLICADA AL ENTORNO PROFESIONAL¿Te gustaría adquirir experiencia profesional en empresa mientras te especializas en una de las áreas con mayor crecimiento del entorno digital? Buscamos perfiles junior con interés en tecnología, marketing digital, diseño, p",
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "id": "4d82c124043f",
+   "titulo": "PRACTICAS EN IA GENERATIVA",
+   "empresa": "Nett Digital School",
+   "ubicacion": "España, España",
+   "url": "https://www.adzuna.es/details/5972394582?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-20",
+   "area": "IA",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 73,
+   "motivos": [
+    "prácticas",
+    "España"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "resumen": "PRÁCTICAS EN EMPRESA FORMACIÓN EN INTELIGENCIA ARTIFICIAL ¿Quieres adquirir experiencia en empresa mientras te formas en uno de los ámbitos con mayor crecimiento del entorno digital? Buscamos personas con interés en tecnología, comunicación, marketing, diseño o áreas digitales pa",
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "id": "5208023ab65a",
+   "titulo": "Beca Digitalización, Ia Y Data | Madrid",
+   "empresa": "Enagas",
+   "ubicacion": "Madrid, España",
+   "url": "https://www.adzuna.es/details/5972383858?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-20",
+   "area": "IA",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 73,
+   "motivos": [
+    "prácticas",
+    "España"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "resumen": "En Enagás tenemos un propósito claro, contribuir a la seguridad de suministro y al proceso de descarbonización. Somos un operador de referencia en Europa, con más de 50 años de experiencia, y queremos seguir siéndolo en un futuro descarbonizado. Llevamos a cabo proyectos para imp",
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "id": "1d243fde94ed",
+   "titulo": "Junior Consultant Systems Engineering (Python scripting and API-based integrations)",
+   "empresa": "Invensity Stellenportal",
+   "ubicacion": "Barcelona, España",
+   "url": "https://www.adzuna.es/details/5972384567?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-20",
    "area": "Desarrollo",
    "nivel": "Junior",
    "espana": true,
-   "puntos": 62,
+   "puntos": 71,
    "motivos": [
     "junior",
-    "España"
+    "España",
+    "encaja: python, api"
    ],
-   "resumen": "",
-   "vista_desde": "2026-11-24"
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "resumen": "Welcome Are you looking for an opportunity to contribute to a high-impact systems engineering project involving modern lifecycle management tools and data migration workflows? This role offers the chance to work on technical integrations, API-based transformations, and requiremen",
+   "vista_desde": "2026-11-27"
   },
   {
-   "id": "ab869af56b40",
-   "titulo": "Junior Linux Kernel Engineer - Ubuntu",
-   "empresa": "Canonical",
-   "ubicacion": "Anywhere",
-   "url": "https://jobicy.com/jobs/149520-junior-linux-kernel-engineer-ubuntu",
-   "fuente": "Jobicy",
-   "fecha": "2026-11-26",
-   "area": "Sistemas",
+   "id": "cebfe92d9c9a",
+   "titulo": "Junior Data Scientist - Python & Spark (Madrid)",
+   "empresa": "Capgemini",
+   "ubicacion": "Madrid, Comunidad de Madrid, España",
+   "url": "https://www.adzuna.es/details/5963010782?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-12",
+   "area": "Datos",
    "nivel": "Junior",
-   "espana": false,
-   "puntos": 61,
+   "espana": true,
+   "puntos": 71,
    "motivos": [
     "junior",
-    "remoto Europa/global",
-    "encaja: python, linux, git"
+    "España",
+    "encaja: python, sql"
    ],
-   "resumen": "Canonical is a leading provider of open source software and operating systems to the global enterprise and technology markets. Our platform, Ubuntu, is very widely used in breakthrough enterprise initiatives such as public cloud, data science, AI, engineering innovation, and IoT.",
-   "vista_desde": "2026-11-26"
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "resumen": "Capgemini Engineering busca un Data Scientist Junior para un proyecto aeronáutico con Boeing en Madrid, en modalidad híbrida. Se valoran sólidos fundamentos en matemáticas/estadística e informática, y experiencia con Python, Spark/PySpark y SQL. El rol implica análisis de datos, ",
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "id": "3f061f2c5c06",
+   "titulo": "Data Center Madrid: Programa De Prácticas Calidad - No Experience Required",
+   "empresa": "NBCUniversal",
+   "ubicacion": "Madrid, España",
+   "url": "https://www.adzuna.es/details/5978951344?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-26",
+   "area": "Datos",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 67,
+   "motivos": [
+    "prácticas",
+    "España"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "resumen": "Apply for the Technical & Dubbing Trainee role at NBCUniversal.NBCUniversal is a leading media and entertainment company that creates, distributes, and delivers world?class content across film, television, digital streaming, and theme?park experiences.Job DescriptionTechnical & D",
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "id": "51bd9a3fc342",
+   "titulo": "Ingeniero/a aeroespacial Junior con Python",
+   "empresa": "The Ct Engineering Group",
+   "ubicacion": "Getafe, Madrid, España",
+   "url": "https://www.adzuna.es/details/5974984571?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-22",
+   "area": "Desarrollo",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 67,
+   "motivos": [
+    "junior",
+    "España",
+    "encaja: python"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "resumen": "En CT somos el socio estratégico en ingeniería e innovación de empresas líderes a nivel mundial. Con más de 38 años de experiencia, ofrecemos servicios de ingeniería que cubren todo el ciclo de vida del producto en industrias clave como aeroespacial, defensa, naval, automoción, t",
+   "vista_desde": "2026-11-27"
   },
   {
    "id": "3442bef92d42",
@@ -155,33 +426,161 @@
    "area": "Desarrollo",
    "nivel": "Junior",
    "espana": false,
-   "puntos": 55,
+   "puntos": 66,
    "motivos": [
     "junior",
     "remoto Europa/global",
-    "encaja: linux"
+    "encaja: python, javascript, java, linux, c++"
    ],
-   "resumen": "",
+   "avisos": [
+    "pide titulación terminada (tú terminas en 2027)"
+   ],
+   "a_favor": [],
+   "resumen": "We are hiring 2026 and 2027 Graduate Software Engineers into engineering teams around the world. As a global platform company we offer a wide range of software engineering challenges, in both open source products and commercial business systems. We have teams that work in a varie",
    "vista_desde": "2026-11-24"
   },
   {
-   "id": "48be48ae080f",
-   "titulo": "Infrastructure Security Engineer",
-   "empresa": "Elevenlabs",
-   "ubicacion": "Belgium, Bulgaria, Croatia, Czechia, Denmark, Hungary, Ireland, Italy, Netherlands, Poland, Portugal, Spain, Sweden, UK",
-   "url": "https://jobicy.com/jobs/157064-infrastructure-security-engineer",
+   "id": "609263751b88",
+   "titulo": "Desarrollador/a Backend Java Junior (A Coruña)",
+   "empresa": "Knowmad Mood",
+   "ubicacion": "A Coruña, España",
+   "url": "https://www.adzuna.es/details/5978610266?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-25",
+   "area": "Desarrollo",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 63,
+   "motivos": [
+    "junior",
+    "España",
+    "encaja: java"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "resumen": "We are knowmad mood! Somos una compañía líder en transformación digital, en constante evolución y a la vanguardia de la tecnología. Nacimos para provocar un cambio real a través de la innovación y el desarrollo sostenible, con la misión de aportar valor a los clientes e impulsar ",
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "id": "49e50de3ec77",
+   "titulo": "Software Engineer, New Grad - Frontend",
+   "empresa": "Stripe",
+   "ubicacion": "Barcelona",
+   "url": "https://stripe.com/jobs/search?gh_jid=8130927",
+   "fuente": "Greenhouse",
+   "fecha": "2026-08-31",
+   "area": "Desarrollo",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 63,
+   "motivos": [
+    "junior",
+    "España",
+    "encaja: javascript, java"
+   ],
+   "avisos": [
+    "pide titulación terminada (tú terminas en 2027)"
+   ],
+   "a_favor": [],
+   "resumen": "Who we are About Stripe Stripe is a technology company focused on improving the conditions for economic growth and prosperity. We build programmable financial infrastructure, rethinking from first principles how financial services should work, to make it easier and cheaper for an",
+   "vista_desde": "2026-11-24"
+  },
+  {
+   "id": "21d580226816",
+   "titulo": "Especialista Junior En Análisis De Datos E Inteligencia Artificial Aplicada A Imágenes",
+   "empresa": "UNIR Investigación y Transferencia",
+   "ubicacion": "Madrid, España",
+   "url": "https://www.adzuna.es/details/5980204724?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-27",
+   "area": "IA",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 61,
+   "motivos": [
+    "junior",
+    "España"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "resumen": "UNIR, universidad líder en formación online, busca talento junior para incorporarse al proyecto de investigación SWT, una iniciativa innovadora orientada al desarrollo de soluciones tecnológicas para la trazabilidad y autenticación de tapones de corcho mediante inteligencia artif",
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "id": "c9fba92ad265",
+   "titulo": "Desarrollador MLOps & AgentOps Junior | IA Generativa",
+   "empresa": "T-Systems Iberia",
+   "ubicacion": "España, España",
+   "url": "https://www.adzuna.es/details/5973993538?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-21",
+   "area": "IA",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 61,
+   "motivos": [
+    "junior",
+    "España"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "resumen": "T-Systems Iberia busca un Desarrollador/a Junior especializado/a en MLOps, LLMOps y AgentOps para un entorno internacional. Trabajarás en la implantación, automatización y evolución de plataformas de IA, colaborando en desarrollo, despliegue y monitorización de modelos de ML y so",
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "id": "aa256eebac73",
+   "titulo": "Analista de Datos Junior Python | AWS | Híbrido Madrid",
+   "empresa": "Tecdata Engineering",
+   "ubicacion": "Coslada, Madrid, España",
+   "url": "https://www.adzuna.es/details/5972731265?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-20",
+   "area": "Datos",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 60,
+   "motivos": [
+    "junior",
+    "España",
+    "encaja: python"
+   ],
+   "avisos": [
+    "pide 1 año de experiencia",
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "resumen": "¿Tienes experiencia con Python y te interesa trabajar en un proyecto de análisis de datos dentro de un entorno AWS? Buscamos un perfil junior con ganas de seguir creciendo en un proyecto estable. Ubicación Madrid (Castellana / Las Tablas) Modalidad híbrida: 2 días presenciales y ",
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "id": "ab869af56b40",
+   "titulo": "Junior Linux Kernel Engineer - Ubuntu",
+   "empresa": "Canonical",
+   "ubicacion": "Anywhere",
+   "url": "https://jobicy.com/jobs/149520-junior-linux-kernel-engineer-ubuntu",
    "fuente": "Jobicy",
    "fecha": "2026-11-26",
    "area": "Sistemas",
-   "nivel": "Sin nivel",
-   "espana": true,
-   "puntos": 54,
+   "nivel": "Junior",
+   "espana": false,
+   "puntos": 56,
    "motivos": [
-    "España",
-    "encaja: python, linux, agents, machine learning"
+    "junior",
+    "remoto Europa/global",
+    "encaja: python, linux, git, bash"
    ],
-   "resumen": "About ElevenLabs ElevenLabs is an AI research and product company transforming how we interact with technology. We launched in January 2023 with the first human-like AI voice model. Today, we serve millions of users and thousands of businesses - from fast-growing startups to larg",
-   "vista_desde": "2026-11-26"
+   "avisos": [
+    "dirigida a recién titulados (tú terminas en 2027)"
+   ],
+   "a_favor": [],
+   "resumen": "Canonical is a leading provider of open source software and operating systems to the global enterprise and technology markets. Our platform, Ubuntu, is very widely used in breakthrough enterprise initiatives such as public cloud, data science, AI, engineering innovation, and IoT.",
+   "vista_desde": "2026-11-27"
   },
   {
    "id": "7a4906dc6bf5",
@@ -194,14 +593,87 @@
    "area": "Sistemas",
    "nivel": "Junior",
    "espana": false,
-   "puntos": 53,
+   "puntos": 56,
    "motivos": [
     "junior",
     "remoto Europa/global",
-    "encaja: linux"
+    "encaja: javascript, linux, c++, rest, bash"
    ],
-   "resumen": "",
+   "avisos": [
+    "pide titulación terminada (tú terminas en 2027)"
+   ],
+   "a_favor": [],
+   "resumen": "Canonical is a leading provider of open source software and operating systems to the global enterprise and technology markets. Our platform, Ubuntu, is very widely used in breakthrough enterprise initiatives such as public cloud, data science, AI, engineering innovation and IoT. ",
    "vista_desde": "2026-11-24"
+  },
+  {
+   "id": "7bb295322a8d",
+   "titulo": "Junior/Mid-Level Front-End Developer",
+   "empresa": "Babel",
+   "ubicacion": "Madrid, España",
+   "url": "https://www.adzuna.es/details/5980203314?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-27",
+   "area": "Desarrollo",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 55,
+   "motivos": [
+    "junior",
+    "España"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "resumen": "We are One Team. We make it happen. We are Unstoppable. BABEL es una consultora tecnológica multinacional especializada en aplicar sus servicios y conocimiento tecnológico en los procesos de aceleración digital de sus clientes, grandes empresas y organismos públicos. ¿Cuál es nue",
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "id": "b4be0044e1a2",
+   "titulo": "Consultor/a Tecnológico/a Junior - Desarrollo, QA y Sistemas",
+   "empresa": "Babel",
+   "ubicacion": "Madrid, España",
+   "url": "https://www.adzuna.es/details/5978181439?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-25",
+   "area": "Sistemas",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 53,
+   "motivos": [
+    "junior",
+    "España"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "resumen": "We are One Team. We make it happen. We are Unstoppable. BABEL es una consultora tecnológica multinacional especializada en aplicar sus servicios y conocimiento tecnológico en los procesos de aceleración digital de sus clientes, grandes empresas y organismos públicos. ¿Cuál es nue",
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "id": "71631acc5130",
+   "titulo": "Offensive Cybersecurity Junior",
+   "empresa": "Hipoges",
+   "ubicacion": "España, España",
+   "url": "https://www.adzuna.es/details/5964319895?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-13",
+   "area": "Sistemas",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 53,
+   "motivos": [
+    "junior",
+    "España"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "resumen": "Offensive Cybersecurity Junior Fundada en 2008, Hipoges es una de las plataformas líderes en Gestión de Activos en la Península Ibérica, con más de 48.500 millones de euros en activos bajo gestión. Con presencia en España, Portugal, Grecia e Italia y más de 1.800 empleados, Hipog",
+   "vista_desde": "2026-11-27"
   },
   {
    "id": "59489850b80f",
@@ -214,165 +686,43 @@
    "area": "Desarrollo",
    "nivel": "Junior",
    "espana": false,
-   "puntos": 47,
+   "puntos": 52,
    "motivos": [
     "junior",
-    "remoto Europa/global"
-   ],
-   "resumen": "",
-   "vista_desde": "2026-11-24"
-  },
-  {
-   "id": "e16084165661",
-   "titulo": "Security Engineer",
-   "empresa": "Fever",
-   "ubicacion": "Spain",
-   "url": "https://jobicy.com/jobs/164365-security-engineer-4",
-   "fuente": "Jobicy",
-   "fecha": "2026-11-26",
-   "area": "Sistemas",
-   "nivel": "Sin nivel",
-   "espana": true,
-   "puntos": 44,
-   "motivos": [
-    "España",
-    "encaja: python, docker, sql"
-   ],
-   "resumen": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with ",
-   "vista_desde": "2026-11-26"
-  },
-  {
-   "id": "5c784fc58988",
-   "titulo": "Linux Software Engineer - Ubuntu for Next-Gen Silicon (multiple roles and seniority levels)",
-   "empresa": "Canonical",
-   "ubicacion": "Anywhere",
-   "url": "https://jobicy.com/jobs/156997-linux-software-engineer-ubuntu-for-next-gen-silicon-multiple-roles-and-seniority-levels",
-   "fuente": "Jobicy",
-   "fecha": "2026-11-25",
-   "area": "Desarrollo",
-   "nivel": "Sin nivel",
-   "espana": false,
-   "puntos": 41,
-   "motivos": [
     "remoto Europa/global",
-    "encaja: python, docker, linux, c++, rest"
+    "encaja: python, linux, c++"
    ],
+   "avisos": [
+    "pide titulación terminada (tú terminas en 2027)"
+   ],
+   "a_favor": [],
    "resumen": "Canonical is a leading provider of open source software and operating systems to the global enterprise and technology markets. Our platform, Ubuntu, is very widely used in breakthrough enterprise initiatives such as public cloud, data science, AI, engineering innovation and IoT. ",
-   "vista_desde": "2026-11-25"
+   "vista_desde": "2026-11-24"
   },
   {
-   "id": "f4cb56c2b07d",
-   "titulo": "Security Software Engineer",
-   "empresa": "Canonical",
-   "ubicacion": "Anywhere",
-   "url": "https://jobicy.com/jobs/149550-security-software-engineer",
-   "fuente": "Jobicy",
-   "fecha": "2026-11-26",
-   "area": "Desarrollo",
-   "nivel": "Sin nivel",
-   "espana": false,
-   "puntos": 39,
-   "motivos": [
-    "remoto Europa/global",
-    "encaja: python, javascript, java, linux, c++"
-   ],
-   "resumen": "Canonical is a leading provider of open source software and operating systems to the global enterprise and technology markets. Our platform, Ubuntu, is widely used in breakthrough enterprise initiatives such as public cloud, data science, AI, engineering innovation, and IoT. Our ",
-   "vista_desde": "2026-11-26"
-  },
-  {
-   "id": "6f1d826349ee",
-   "titulo": "Cybersecurity Engineer",
-   "empresa": "Fever",
-   "ubicacion": "Spain",
-   "url": "https://jobicy.com/jobs/164359-cybersecurity-engineer-2",
-   "fuente": "Jobicy",
-   "fecha": "2026-11-26",
-   "area": "Sistemas",
+   "id": "e68c4576d83f",
+   "titulo": "Consultor/a de Cibercompliance, Seguridad de la Información e Inteligencia Artificial",
+   "empresa": "Grupo Adaptalia",
+   "ubicacion": "España, España",
+   "url": "https://www.adzuna.es/details/5977043708?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-24",
+   "area": "IA",
    "nivel": "Sin nivel",
    "espana": true,
-   "puntos": 38,
+   "puntos": 36,
    "motivos": [
-    "España",
-    "encaja: python"
+    "España"
    ],
-   "resumen": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with ",
-   "vista_desde": "2026-11-26"
-  },
-  {
-   "id": "78cbebee66c3",
-   "titulo": "Full-Stack Developer",
-   "empresa": "Fluence International, Inc.",
-   "ubicacion": "Worldwide",
-   "url": "https://remotive.com/remote-jobs/software-development/full-stack-developer-2091165",
-   "fuente": "Remotive",
-   "fecha": "2026-10-29",
-   "area": "Desarrollo",
-   "nivel": "Sin nivel",
-   "espana": false,
-   "puntos": 37,
-   "motivos": [
-    "remoto Europa/global",
-    "encaja: javascript, docker, rest, api, llm"
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta",
+    "menciona certificaciones"
    ],
-   "resumen": "We’re looking for a pragmatic, security-minded Full-Stack Developer to help build and scale Fluence’s B2B products used by clinicians, researchers, and organizations in psychedelic-assisted therapy and mental health. You’ll work closely with and report to our Senior AI & Design L",
-   "vista_desde": "2026-11-24"
-  },
-  {
-   "id": "092793990b57",
-   "titulo": "Backend Engineer (Python),AI Engineering: Agent Foundations",
-   "empresa": "GitLab",
-   "ubicacion": "Remote, Canada; Remote, Poland; Remote, United Kingdom",
-   "url": "https://job-boards.greenhouse.io/gitlab/jobs/8704363002",
-   "fuente": "Greenhouse",
-   "fecha": "2026-08-19",
-   "area": "IA",
-   "nivel": "Sin nivel",
-   "espana": false,
-   "puntos": 37,
-   "motivos": [
-    "remoto Europa/global",
-    "encaja: python"
+   "a_favor": [
+    "admite estudiantes o perfiles sin experiencia"
    ],
-   "resumen": "",
-   "vista_desde": "2026-11-24"
-  },
-  {
-   "id": "63ca98deec3c",
-   "titulo": "Python and Kubernetes Software Engineer - Data, Workflows, AI/ML & Analytics",
-   "empresa": "Canonical",
-   "ubicacion": "Home based - Worldwide",
-   "url": "https://job-boards.greenhouse.io/canonical/jobs/5703396",
-   "fuente": "Greenhouse",
-   "fecha": "2024-04-11",
-   "area": "IA",
-   "nivel": "Sin nivel",
-   "espana": false,
-   "puntos": 37,
-   "motivos": [
-    "remoto Europa/global",
-    "encaja: python"
-   ],
-   "resumen": "",
-   "vista_desde": "2026-11-26"
-  },
-  {
-   "id": "48fa209887f8",
-   "titulo": "Software Engineer - Storage",
-   "empresa": "Supabase",
-   "ubicacion": "Anywhere",
-   "url": "https://jobicy.com/jobs/156940-software-engineer-storage",
-   "fuente": "Jobicy",
-   "fecha": "2026-11-25",
-   "area": "Desarrollo",
-   "nivel": "Sin nivel",
-   "espana": false,
-   "puntos": 35,
-   "motivos": [
-    "remoto Europa/global",
-    "encaja: node, node.js, docker"
-   ],
-   "resumen": "About Supabase Supabase is the Postgres development platform, built by developers for developers. We provide a complete backend solution including Database, Auth, Storage, Edge Functions, Realtime, and Vector Search. All services are deeply integrated and designed for growth. Abo",
-   "vista_desde": "2026-11-25"
+   "resumen": "Salario: 40.000 € – 46.000 € brutos anuales, según experiencia y conocimientos Beneficios: Formación continua, plan de certificaciones y desarrollo profesional \"Convenio de Oficinas y Despachos de la Comunidad de Madrid\" En Grupo Adaptalia queremos incorporar a nuestro equipo un/",
+   "vista_desde": "2026-11-27"
   }
  ]
 }

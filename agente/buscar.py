@@ -7,6 +7,8 @@ Solo usa la librería estándar. Uso:  python3 agente/buscar.py
 from __future__ import annotations
 
 import hashlib
+import os
+import urllib.parse
 import html
 import json
 import re
@@ -107,17 +109,111 @@ def fuente_greenhouse():
             print(f"  ! greenhouse/{tablon}: {e}", file=sys.stderr)
             continue
         for j in datos.get("jobs", []):
-            yield oferta(f"Greenhouse", j["title"], j.get("company_name") or tablon.capitalize(),
-                         (j.get("location") or {}).get("name"), j["absolute_url"],
-                         j.get("first_published") or j.get("updated_at"), "")
+            o = oferta("Greenhouse", j["title"], j.get("company_name") or tablon.capitalize(),
+                       (j.get("location") or {}).get("name"), j["absolute_url"],
+                       j.get("first_published") or j.get("updated_at"), "")
+            # El listado no trae descripción: se pide solo para las que pasan título y ubicación
+            if puntuar(o, previo=True):
+                try:
+                    detalle = descargar(f"https://boards-api.greenhouse.io/v1/boards/{tablon}/jobs/{j['id']}")
+                    o["descripcion"] = limpiar(html.unescape(detalle.get("content") or ""))
+                except (urllib.error.URLError, TimeoutError, ValueError):
+                    pass
+                time.sleep(0.2)
+            yield o
         time.sleep(0.5)
 
 
-FUENTES = [fuente_remotive, fuente_jobicy, fuente_arbeitnow, fuente_himalayas, fuente_greenhouse]
+def fuente_adzuna():
+    """Ofertas de España (API gratuita de Adzuna). Necesita ADZUNA_APP_ID y ADZUNA_APP_KEY."""
+    app_id, app_key = os.environ.get("ADZUNA_APP_ID"), os.environ.get("ADZUNA_APP_KEY")
+    if not (app_id and app_key):
+        print("  adzuna: sin claves (ADZUNA_APP_ID / ADZUNA_APP_KEY), se omite")
+        return
+    consultas = [("prácticas informática", ""), ("prácticas programador", ""), ("becario informática", ""),
+                 ("prácticas inteligencia artificial", ""), ("junior desarrollador", ""),
+                 ("junior python", ""), ("prácticas", "León"), ("junior informática", "León")]
+    for que, donde in consultas:
+        params = {"app_id": app_id, "app_key": app_key, "results_per_page": 50, "what": que,
+                  "sort_by": "date", "max_days_old": 30, "content-type": "application/json"}
+        if donde:
+            params.update(where=donde, distance=60)
+        datos = descargar("https://api.adzuna.com/v1/api/jobs/es/search/1?" + urllib.parse.urlencode(params))
+        for j in datos.get("results", []):
+            lugar = (j.get("location") or {}).get("display_name") or ""
+            # El enlace de Adzuna lleva tu app_id en utm_source: se quita para no publicarlo
+            partes = urllib.parse.urlsplit(j["redirect_url"])
+            consulta = [(k, v) for k, v in urllib.parse.parse_qsl(partes.query) if k != "utm_source"]
+            enlace = urllib.parse.urlunsplit(partes._replace(query=urllib.parse.urlencode(consulta)))
+            yield oferta("Adzuna", j["title"], (j.get("company") or {}).get("display_name") or "",
+                         f"{lugar}, España", enlace, j.get("created"),
+                         j.get("description"), [], False)
+        time.sleep(1)
+
+
+FUENTES = [fuente_adzuna, fuente_remotive, fuente_jobicy, fuente_arbeitnow, fuente_himalayas, fuente_greenhouse]
+
+
+# ----------------------------------------------------------------- requisitos
+IDIOMAS = (r"german|deutsch|french|fran[cç]ais|franc[eé]s|alem[aá]n|dutch|italian|italiano|portuguese|"
+           r"swedish|danish|norwegian|finnish|nordic|polish|japanese|hebrew|arabic|mandarin|korean|turkish")
+RE_IDIOMA = re.compile(
+    rf"(?:fluen\w*|native|proficien\w*|business[- ]level|c1|c2|nativo|fluido)[^.;]{{0,40}}\b({IDIOMAS})\b"
+    rf"|\b({IDIOMAS})\b[^.;]{{0,25}}(?:speaker|speaking|fluen\w*|native|proficien\w*|required|is a must|c1|c2|nativo|fluido|imprescindible)")
+RE_ANIOS = re.compile(
+    r"(\d{1,2})\s*\+?\s*(?:(?:-|–|to|a)\s*\d{1,2}\s*)?\+?\s*(?:years?|yrs?|años?)[^.;]{0,60}?(?:experience|experiencia)"
+    r"|(?:experience|experiencia)[^.;]{0,30}?(\d{1,2})\s*\+?\s*(?:years?|yrs?|años?)")
+RE_ESTUDIANTE = re.compile(
+    r"currently (?:enrolled|pursuing|studying)|pursuing an? (?:bachelor|degree|master)|enrolled in an? |"
+    r"estudiantes?\b|convenio|final[- ]year students?|penultimate|último curso|ultimo curso|"
+    r"no (?:prior |previous )?(?:work )?experience (?:is )?(?:needed|required|necessary)|"
+    r"sin experiencia|no se requiere experiencia")
+RE_TITULO = re.compile(
+    r"bachelor|\bb\.?sc?\b|university degree|degree in|college degree|grado en|graduad[oa] en|titulaci[oó]n|"
+    r"titulad[oa]|licenciatura|ingenier[oa] (?:t[eé]cnic|superior|inform)")
+RE_POSGRADO = re.compile(r"\bph\.?d\b|doctorate|doctorado|master'?s degree|\bm\.?sc\b|máster|master en")
+RE_CERT = re.compile(r"certifi(?:ed|cation|cations|cado|cados|caci[oó]n|caciones)|\bcissp\b|\bccna\b|\bitil\b")
+RE_YA_TITULADO = re.compile(r"recent graduates?|graduated|have completed (?:a|your)|reci[eé]n (?:titulad|graduad|licenciad)")
+RE_ALEMAN = re.compile(r"\b(?:und|der|die|das|mit|wir|für|sie|bei|oder)\b")
+
+
+def requisitos(titulo: str, cuerpo: str, es_practicas: bool, es_adzuna: bool = False):
+    """Compara lo que pide la oferta con tu situación (estudiante de 4.º, sin experiencia
+    laboral ni certificaciones, español e inglés). Devuelve (bloqueo, avisos, a_favor)."""
+    avisos, a_favor = [], []
+    texto = titulo + " . " + cuerpo
+    if "(m/w/d)" in titulo or len(RE_ALEMAN.findall(cuerpo)) > 12:
+        return "oferta en alemán", avisos, a_favor
+    m = RE_IDIOMA.search(texto)
+    if m:
+        return f"exige otro idioma ({m.group(1) or m.group(2)})", avisos, a_favor
+    anios = [int(a or b) for a, b in RE_ANIOS.findall(cuerpo)]
+    anios = [a for a in anios if a <= 15]
+    if anios and min(anios) >= 2:
+        return f"pide {min(anios)}+ años de experiencia", avisos, a_favor
+    if anios:
+        avisos.append("pide 1 año de experiencia")
+    if es_adzuna:
+        avisos.append("descripción parcial: lee los requisitos completos en la oferta")
+    if not cuerpo.strip():
+        avisos.append("sin descripción: revisa los requisitos en la oferta")
+        return None, avisos, a_favor
+    estudiante = RE_ESTUDIANTE.search(cuerpo) is not None
+    if estudiante:
+        a_favor.append("admite estudiantes o perfiles sin experiencia")
+    if RE_POSGRADO.search(texto):
+        avisos.append("menciona máster o doctorado")
+    if RE_YA_TITULADO.search(cuerpo) and not es_practicas:
+        avisos.append("dirigida a recién titulados (tú terminas en 2027)")
+    elif RE_TITULO.search(cuerpo) and not estudiante and not es_practicas:
+        avisos.append("pide titulación terminada (tú terminas en 2027)")
+    if RE_CERT.search(cuerpo):
+        avisos.append("menciona certificaciones")
+    return None, avisos, a_favor
 
 
 # ---------------------------------------------------------------- puntuación
-def puntuar(o: dict) -> dict | None:
+def puntuar(o: dict, previo: bool = False) -> dict | None:
     """Devuelve la oferta con puntuación y motivos, o None si se descarta."""
     titulo = o["titulo"].lower()
     cuerpo = (o["descripcion"] + " " + " ".join(o["etiquetas"])).lower()
@@ -162,6 +258,20 @@ def puntuar(o: dict) -> dict | None:
     if not area:
         return None  # no es un puesto técnico de tus áreas
     puntos += PERFIL["peso_area"][area]
+    if previo:  # solo se comprobaba título y ubicación
+        return o
+
+    # Requisitos que no cumples: descartan o restan
+    bloqueo, avisos, a_favor = requisitos(titulo, o["descripcion"].lower(), nivel == "Prácticas", o["fuente"] == "Adzuna")
+    if bloqueo:
+        clave = re.sub(r" \(.*| \d+\+", "", bloqueo)
+        DESCARTES[clave] = DESCARTES.get(clave, 0) + 1
+        return None
+    # Sin "prácticas" o "junior" en el título, solo vale si dice expresamente que admite estudiantes
+    if nivel not in ("Prácticas", "Junior") and not a_favor:
+        DESCARTES["no es junior ni prácticas"] = DESCARTES.get("no es junior ni prácticas", 0) + 1
+        return None
+    puntos += 10 * len(a_favor) - 7 * len(avisos)
 
     # Habilidades
     extra, vistas = 0, []
@@ -182,9 +292,13 @@ def puntuar(o: dict) -> dict | None:
     return {
         "id": ident, "titulo": o["titulo"], "empresa": o["empresa"], "ubicacion": o["ubicacion"],
         "url": o["url"], "fuente": o["fuente"], "fecha": o["fecha"], "area": area, "nivel": nivel,
-        "espana": en_espana, "puntos": puntos, "motivos": motivos,
+        "espana": en_espana, "puntos": min(puntos, 100), "motivos": motivos,
+        "avisos": avisos, "a_favor": a_favor,
         "resumen": o["descripcion"][:280],
     }
+
+
+DESCARTES: dict[str, int] = {}  # por qué se descartaron ofertas por requisitos
 
 
 # ---------------------------------------------------------------------- main
@@ -230,8 +344,9 @@ def main() -> int:
     SALIDA.parent.mkdir(parents=True, exist_ok=True)
     SALIDA.write_text(json.dumps({
         "generado": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "leidas": leidas, "nuevas": nuevas, "fuentes": estado, "ofertas": ofertas,
+        "leidas": leidas, "nuevas": nuevas, "fuentes": estado, "descartes": DESCARTES, "ofertas": ofertas,
     }, ensure_ascii=False, indent=1), encoding="utf-8")
+    print("  descartadas por requisitos:", DESCARTES)
     print(f"{leidas} ofertas leídas -> {len(ofertas)} seleccionadas ({nuevas} nuevas)")
     return 0
 

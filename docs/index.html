@@ -32,6 +32,11 @@ main{padding:12px 16px}
 .tag.nueva{background:var(--brand);color:var(--brand-ink);font-weight:600}
 .puntos{float:right;font-weight:700;color:var(--good);font-variant-numeric:tabular-nums;margin-left:8px}
 .motivos{color:var(--muted);font-size:13px}
+.req{font-size:13.5px;margin-top:6px;padding-left:0;list-style:none}
+.req li{padding-left:20px;position:relative;margin-bottom:2px}
+.req li::before{position:absolute;left:0;font-weight:700}
+.req .ok{color:var(--good)}.req .ok::before{content:"✓"}
+.req .ojo{color:var(--warn)}.req .ojo::before{content:"!"}
 .acciones{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
 .btn{border:1px solid var(--line);background:transparent;border-radius:10px;padding:8px 12px;font-size:14px;min-height:40px;text-decoration:none;color:var(--ink)}
 .btn.pri{background:var(--brand);border-color:var(--brand);color:var(--brand-ink);font-weight:600}
@@ -50,7 +55,7 @@ main{padding:12px 16px}
 <main><div class="wrap" id="lista"></div></main>
 <script>
 const ESTADOS = [["pendiente","Por revisar"],["guardada","Guardadas"],["solicitada","Solicitadas"],["descartada","Descartadas"]];
-const FILTROS = [["espana","España"],["Prácticas","Prácticas"],["Junior","Junior"],["IA","IA"],["Datos","Datos"],["Desarrollo","Desarrollo"],["Sistemas","Sistemas"]];
+const FILTROS = [["limpia","Sin avisos"],["espana","España"],["Prácticas","Prácticas"],["Junior","Junior"],["IA","IA"],["Datos","Datos"],["Desarrollo","Desarrollo"],["Sistemas","Sistemas"]];
 let datos = {ofertas: []}, tab = "pendiente", activos = new Set(), estado = {};
 try { estado = JSON.parse(localStorage.getItem("estado") || "{}"); } catch (e) {}
 const guardar = () => { try { localStorage.setItem("estado", JSON.stringify(estado)); } catch (e) {} };
@@ -67,7 +72,7 @@ function pinta() {
   $("filtros").innerHTML = FILTROS.map(([k, t]) =>
     `<button class="chip" data-f="${k}" aria-pressed="${activos.has(k)}">${t}</button>`).join("");
   const vis = datos.ofertas.filter(o => de(o) === tab
-    && [...activos].every(f => f === "espana" ? o.espana : (o.nivel === f || o.area === f))
+    && [...activos].every(f => f === "espana" ? o.espana : f === "limpia" ? !(o.avisos || []).length : (o.nivel === f || o.area === f))
     && (!q || (o.titulo + " " + o.empresa).toLowerCase().includes(q)));
   $("lista").innerHTML = vis.length ? vis.map(o => `
     <article class="oferta">
@@ -80,6 +85,10 @@ function pinta() {
         <span class="tag">${esc(o.fuente)}</span>${o.fecha ? `<span class="tag">${esc(o.fecha)}</span>` : ""}
       </div>
       <div class="motivos">${esc(o.motivos.join(" · "))}</div>
+      <ul class="req">
+        ${(o.a_favor || []).map(t => `<li class="ok">${esc(t)}</li>`).join("")}
+        ${(o.avisos || []).map(t => `<li class="ojo">${esc(t)}</li>`).join("")}
+      </ul>
       <div class="acciones">
         <a class="btn pri" href="${esc(o.url)}" target="_blank" rel="noopener">Ver oferta</a>
         ${[["guardada","Guardar"],["solicitada","Solicitada"],["descartada","Descartar"]].map(([k, t]) =>
@@ -100,7 +109,7 @@ $("q").addEventListener("input", pinta);
 fetch("data/ofertas.json", {cache: "no-store"}).then(r => r.json()).then(d => {
   datos = d;
   const f = new Date(d.generado);
-  $("meta").textContent = `${d.ofertas.length} ofertas · ${d.nuevas} nuevas · actualizado ${f.toLocaleDateString("es-ES", {day: "numeric", month: "short"})} ${f.toLocaleTimeString("es-ES", {hour: "2-digit", minute: "2-digit"})}`;
+  $("meta").textContent = `${d.ofertas.length} ofertas de ${d.leidas} revisadas · ${Object.values(d.descartes || {}).reduce((a, b) => a + b, 0)} descartadas por requisitos · actualizado ${f.toLocaleDateString("es-ES", {day: "numeric", month: "short"})} ${f.toLocaleTimeString("es-ES", {hour: "2-digit", minute: "2-digit"})}`;
   pinta();
 }).catch(() => { $("meta").textContent = "No se pudieron cargar las ofertas."; pinta(); });
 

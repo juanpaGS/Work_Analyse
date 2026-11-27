@@ -17,6 +17,9 @@ jobs:
         with:
           python-version: "3.12"
       - run: python agente/buscar.py
+        env:
+          ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
+          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
       - name: Guardar resultados
         run: |
           git config user.name "github-actions[bot]"

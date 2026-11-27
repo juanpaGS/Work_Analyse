@@ -22,5 +22,6 @@ python3 -m http.server -d docs 8000 # abre http://localhost:8000
 ## Límites actuales
 
 - No se consultan LinkedIn, InfoJobs, Indeed ni Tecnoempleo: sus condiciones o su `robots.txt` no permiten el acceso automático.
-- La puntuación es por palabras clave, no por IA.
+- La puntuación y la revisión de requisitos (años de experiencia, titulación, idiomas, certificaciones) son por palabras clave, no por IA: pueden fallar, así que la app muestra los avisos para que los compruebes.
+- Solo pasan ofertas de prácticas o junior, o las que dicen expresamente que admiten estudiantes.
 - Aún no hay notificaciones push.
