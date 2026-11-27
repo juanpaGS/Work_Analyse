@@ -7,6 +7,8 @@ Solo usa la librería estándar. Uso:  python3 agente/buscar.py
 from __future__ import annotations
 
 import hashlib
+import os
+import urllib.parse
 import html
 import json
 import re
@@ -122,7 +124,30 @@ def fuente_greenhouse():
         time.sleep(0.5)
 
 
-FUENTES = [fuente_remotive, fuente_jobicy, fuente_arbeitnow, fuente_himalayas, fuente_greenhouse]
+def fuente_adzuna():
+    """Ofertas de España (API gratuita de Adzuna). Necesita ADZUNA_APP_ID y ADZUNA_APP_KEY."""
+    app_id, app_key = os.environ.get("ADZUNA_APP_ID"), os.environ.get("ADZUNA_APP_KEY")
+    if not (app_id and app_key):
+        print("  adzuna: sin claves (ADZUNA_APP_ID / ADZUNA_APP_KEY), se omite")
+        return
+    consultas = [("prácticas informática", ""), ("prácticas programador", ""), ("becario informática", ""),
+                 ("prácticas inteligencia artificial", ""), ("junior desarrollador", ""),
+                 ("junior python", ""), ("prácticas", "León"), ("junior informática", "León")]
+    for que, donde in consultas:
+        params = {"app_id": app_id, "app_key": app_key, "results_per_page": 50, "what": que,
+                  "sort_by": "date", "max_days_old": 30, "content-type": "application/json"}
+        if donde:
+            params.update(where=donde, distance=60)
+        datos = descargar("https://api.adzuna.com/v1/api/jobs/es/search/1?" + urllib.parse.urlencode(params))
+        for j in datos.get("results", []):
+            lugar = (j.get("location") or {}).get("display_name") or ""
+            yield oferta("Adzuna", j["title"], (j.get("company") or {}).get("display_name") or "",
+                         f"{lugar}, España", j["redirect_url"], j.get("created"),
+                         j.get("description"), [], False)
+        time.sleep(1)
+
+
+FUENTES = [fuente_adzuna, fuente_remotive, fuente_jobicy, fuente_arbeitnow, fuente_himalayas, fuente_greenhouse]
 
 
 # ----------------------------------------------------------------- requisitos
@@ -148,7 +173,7 @@ RE_YA_TITULADO = re.compile(r"recent graduates?|graduated|have completed (?:a|yo
 RE_ALEMAN = re.compile(r"\b(?:und|der|die|das|mit|wir|für|sie|bei|oder)\b")
 
 
-def requisitos(titulo: str, cuerpo: str, es_practicas: bool):
+def requisitos(titulo: str, cuerpo: str, es_practicas: bool, es_adzuna: bool = False):
     """Compara lo que pide la oferta con tu situación (estudiante de 4.º, sin experiencia
     laboral ni certificaciones, español e inglés). Devuelve (bloqueo, avisos, a_favor)."""
     avisos, a_favor = [], []
@@ -164,6 +189,8 @@ def requisitos(titulo: str, cuerpo: str, es_practicas: bool):
         return f"pide {min(anios)}+ años de experiencia", avisos, a_favor
     if anios:
         avisos.append("pide 1 año de experiencia")
+    if es_adzuna:
+        avisos.append("descripción parcial: lee los requisitos completos en la oferta")
     if not cuerpo.strip():
         avisos.append("sin descripción: revisa los requisitos en la oferta")
         return None, avisos, a_favor
@@ -231,7 +258,7 @@ def puntuar(o: dict, previo: bool = False) -> dict | None:
         return o
 
     # Requisitos que no cumples: descartan o restan
-    bloqueo, avisos, a_favor = requisitos(titulo, o["descripcion"].lower(), nivel == "Prácticas")
+    bloqueo, avisos, a_favor = requisitos(titulo, o["descripcion"].lower(), nivel == "Prácticas", o["fuente"] == "Adzuna")
     if bloqueo:
         clave = re.sub(r" \(.*| \d+\+", "", bloqueo)
         DESCARTES[clave] = DESCARTES.get(clave, 0) + 1

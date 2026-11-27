@@ -1,18 +1,19 @@
 {
- "generado": "2026-11-27T16:52:15+00:00",
- "leidas": 4541,
- "nuevas": 3,
+ "generado": "2026-11-27T17:08:39+00:00",
+ "leidas": 4538,
+ "nuevas": 1,
  "fuentes": {
+  "adzuna": 0,
   "remotive": 51,
   "jobicy": 150,
   "arbeitnow": 21,
   "himalayas": 20,
-  "greenhouse": 4299
+  "greenhouse": 4296
  },
  "descartes": {
-  "pide años de experiencia": 29,
-  "no es junior ni prácticas": 77,
-  "oferta en alemán": 2,
+  "pide años de experiencia": 28,
+  "no es junior ni prácticas": 78,
+  "oferta en alemán": 3,
   "exige otro idioma": 5
  },
  "ofertas": [
@@ -58,6 +59,27 @@
    "avisos": [],
    "a_favor": [],
    "resumen": "Celonis is the trusted platform to industrialize Enterprise AI. At our core is the Celonis Context Model — which combines process data, business knowledge, and intelligence into a living digital twin of the enterprise that AI can actually understand, turning AI's operational blin",
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "id": "97ef482d0679",
+   "titulo": "Software Engineering Intern",
+   "empresa": "Datadog",
+   "ubicacion": "Madrid, Spain",
+   "url": "https://careers.datadoghq.com/detail/8114161/?gh_jid=8114161",
+   "fuente": "Greenhouse",
+   "fecha": "2026-09-08",
+   "area": "Desarrollo",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 74,
+   "motivos": [
+    "prácticas",
+    "España"
+   ],
+   "avisos": [],
+   "a_favor": [],
+   "resumen": "We’re looking for Software Engineering Interns to help build and scale the systems that power Datadog’s observability and security platform. Interns contribute directly to real-world engineering challenges across backend, frontend, infrastructure, data engineering, and developer ",
    "vista_desde": "2026-11-27"
   },
   {
