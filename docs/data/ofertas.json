@@ -1,6 +1,6 @@
 {
- "generado": "2026-11-27T17:39:52+00:00",
- "leidas": 5060,
+ "generado": "2026-11-27T18:05:43+00:00",
+ "leidas": 5063,
  "nuevas": 0,
  "fuentes": {
   "adzuna": 263,
@@ -9,16 +9,167 @@
   "jobicy": 150,
   "arbeitnow": 21,
   "himalayas": 20,
-  "greenhouse": 4524
+  "greenhouse": 4527
  },
  "descartes": {
   "presencial fuera de León": 283,
-  "pide años de experiencia": 13,
-  "no es junior ni prácticas": 61,
-  "exige otro idioma": 1
+  "no es junior ni prácticas": 131,
+  "pide años de experiencia": 16,
+  "exige otro idioma": 6
  },
+ "tecnologias_conocidas": [
+  "python",
+  "java",
+  "javascript",
+  "typescript",
+  "node.js",
+  "c++",
+  "c#",
+  ".net",
+  "php",
+  "ruby",
+  "rust",
+  "kotlin",
+  "scala",
+  "matlab",
+  "bash",
+  "powershell",
+  "sql",
+  "mysql",
+  "postgresql",
+  "oracle",
+  "mongodb",
+  "redis",
+  "elasticsearch",
+  "react",
+  "angular",
+  "vue",
+  "html",
+  "css",
+  "express.js",
+  "spring boot",
+  "django",
+  "flask",
+  "fastapi",
+  "flutter",
+  "android",
+  "ios",
+  "rest api",
+  "graphql",
+  "jwt",
+  "docker",
+  "kubernetes",
+  "aws",
+  "azure",
+  "gcp",
+  "terraform",
+  "ansible",
+  "jenkins",
+  "ci/cd",
+  "git",
+  "github actions",
+  "linux",
+  "wireshark",
+  "devops",
+  "kafka",
+  "spark",
+  "hadoop",
+  "airflow",
+  "etl",
+  "power bi",
+  "tableau",
+  "pandas",
+  "numpy",
+  "scikit-learn",
+  "tensorflow",
+  "pytorch",
+  "keras",
+  "machine learning",
+  "deep learning",
+  "nlp",
+  "computer vision",
+  "llm",
+  "rag",
+  "langchain",
+  "openai",
+  "mlops",
+  "openmp",
+  "opencl",
+  "cuda",
+  "selenium",
+  "junit",
+  "cypress",
+  "jira",
+  "scrum",
+  "agile",
+  "sap",
+  "salesforce"
+ ],
+ "alias": {
+  "nodejs": "node.js",
+  "postgres": "postgresql",
+  "k8s": "kubernetes",
+  "expressjs": "express.js",
+  "restful": "rest api",
+  "rest apis": "rest api",
+  "spring framework": "spring boot",
+  "amazon web services": "aws",
+  "google cloud": "gcp",
+  "sklearn": "scikit-learn",
+  "large language model": "llm",
+  "large language models": "llm",
+  "llms": "llm",
+  "genai": "llm",
+  "generative ai": "llm",
+  "natural language processing": "nlp",
+  "visión artificial": "computer vision",
+  "vision artificial": "computer vision",
+  "aprendizaje automático": "machine learning",
+  "aprendizaje automatico": "machine learning",
+  "react.js": "react",
+  "reactjs": "react",
+  "vue.js": "vue",
+  "angularjs": "angular",
+  "dotnet": ".net",
+  "csharp": "c#",
+  "ci-cd": "ci/cd",
+  "cicd": "ci/cd"
+ },
+ "mis_tecnologias": [
+  "bash",
+  "c++",
+  "computer vision",
+  "css",
+  "deep learning",
+  "docker",
+  "express.js",
+  "git",
+  "html",
+  "java",
+  "javascript",
+  "jwt",
+  "linux",
+  "llm",
+  "machine learning",
+  "mongodb",
+  "mysql",
+  "nlp",
+  "node.js",
+  "openmp",
+  "oracle",
+  "python",
+  "pytorch",
+  "rag",
+  "rest api",
+  "scikit-learn",
+  "sql",
+  "wireshark"
+ ],
  "ofertas": [
   {
+   "descartada": null,
+   "zona": "leon",
+   "tecnologias": [],
    "id": "e17f4ecf3847",
    "titulo": "Conversion Engineer Intern",
    "empresa": "Mondel?z International",
@@ -42,6 +193,9 @@
    "vista_desde": "2026-11-27"
   },
   {
+   "descartada": null,
+   "zona": "leon",
+   "tecnologias": [],
    "id": "82dded288912",
    "titulo": "Junior Operations Analyst",
    "empresa": "Ebury",
@@ -63,6 +217,9 @@
    "vista_desde": "2026-11-27"
   },
   {
+   "descartada": null,
+   "zona": "remoto",
+   "tecnologias": [],
    "id": "657be92253cd",
    "titulo": "Rocket Program Madrid - Prácticas Consultoría Sector Público - Enero 2027 (Madrid, Es, 28046)",
    "empresa": "KPMG España",
@@ -86,6 +243,18 @@
    "vista_desde": "2026-11-27"
   },
   {
+   "descartada": null,
+   "zona": "remoto",
+   "tecnologias": [
+    "bash",
+    "c++",
+    "java",
+    "javascript",
+    "kubernetes",
+    "linux",
+    "python",
+    "rust"
+   ],
    "id": "3442bef92d42",
    "titulo": "Graduate Software Engineer, Open Source and Linux, Canonical Ubuntu",
    "empresa": "Canonical",
@@ -110,6 +279,15 @@
    "vista_desde": "2026-11-24"
   },
   {
+   "descartada": null,
+   "zona": "remoto",
+   "tecnologias": [
+    "bash",
+    "git",
+    "linux",
+    "python",
+    "rust"
+   ],
    "id": "ab869af56b40",
    "titulo": "Junior Linux Kernel Engineer - Ubuntu",
    "empresa": "Canonical",
@@ -134,6 +312,15 @@
    "vista_desde": "2026-11-27"
   },
   {
+   "descartada": null,
+   "zona": "remoto",
+   "tecnologias": [
+    "bash",
+    "c++",
+    "javascript",
+    "linux",
+    "ruby"
+   ],
    "id": "7a4906dc6bf5",
    "titulo": "Associate Linux Support Engineer",
    "empresa": "Canonical",
@@ -158,6 +345,16 @@
    "vista_desde": "2026-11-24"
   },
   {
+   "descartada": null,
+   "zona": "remoto",
+   "tecnologias": [
+    "c++",
+    "ci/cd",
+    "flutter",
+    "linux",
+    "python",
+    "rust"
+   ],
    "id": "59489850b80f",
    "titulo": "Junior Ubuntu Software Engineer",
    "empresa": "Canonical",
@@ -180,6 +377,2093 @@
    "a_favor": [],
    "resumen": "Canonical is a leading provider of open source software and operating systems to the global enterprise and technology markets. Our platform, Ubuntu, is very widely used in breakthrough enterprise initiatives such as public cloud, data science, AI, engineering innovation and IoT. ",
    "vista_desde": "2026-11-24"
+  },
+  {
+   "descartada": "pide 2+ años de experiencia",
+   "zona": "remoto",
+   "tecnologias": [
+    "fastapi",
+    "git",
+    "python"
+   ],
+   "id": "23b5cabd9e62",
+   "titulo": "Python Developer Junior - Fast API - IA (100% remoto)",
+   "empresa": "Knowmad Mood",
+   "ubicacion": "Madrid, España",
+   "url": "https://www.adzuna.es/details/5972399677?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-20",
+   "area": "IA",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 93,
+   "motivos": [
+    "junior",
+    "remoto desde España",
+    "encaja: python, git, rest, api"
+   ],
+   "avisos": [],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [
+    "llm",
+    "python",
+    "salesforce",
+    "sql"
+   ],
+   "id": "0dc5bb0f1991",
+   "titulo": "Intern AI Solutions & Value Engineering (Agentic Customer Journey)",
+   "empresa": "Celonis",
+   "ubicacion": "Madrid, Spain",
+   "url": "https://job-boards.greenhouse.io/celonis/jobs/8213877003?gh_jid=8213877003",
+   "fuente": "Greenhouse",
+   "fecha": "2026-11-27",
+   "area": "IA",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 85,
+   "motivos": [
+    "prácticas",
+    "presencial fuera de León",
+    "encaja: python, sql, llm, agents"
+   ],
+   "avisos": [],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [
+    "langchain",
+    "llm",
+    "openai",
+    "oracle",
+    "pandas",
+    "python",
+    "pytorch",
+    "rag",
+    "sap",
+    "scikit-learn",
+    "sql"
+   ],
+   "id": "547c112f9bc0",
+   "titulo": "Associate (AI) Solution Consultant (Nordics) - Orbit Program",
+   "empresa": "Celonis",
+   "ubicacion": "Madrid, Spain",
+   "url": "https://job-boards.greenhouse.io/celonis/jobs/7981557003?gh_jid=7981557003",
+   "fuente": "Greenhouse",
+   "fecha": "2026-08-31",
+   "area": "IA",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 81,
+   "motivos": [
+    "junior",
+    "presencial fuera de León",
+    "encaja: python, sql, llm, agents, rag"
+   ],
+   "avisos": [],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [
+    "langchain",
+    "llm",
+    "openai",
+    "oracle",
+    "pandas",
+    "python",
+    "pytorch",
+    "rag",
+    "sap",
+    "scikit-learn",
+    "sql"
+   ],
+   "id": "a65909360df1",
+   "titulo": "Associate (AI) Solution Consultant - Orbit Program",
+   "empresa": "Celonis",
+   "ubicacion": "Madrid, Spain",
+   "url": "https://job-boards.greenhouse.io/celonis/jobs/8199108003?gh_jid=8199108003",
+   "fuente": "Greenhouse",
+   "fecha": "2026-11-09",
+   "area": "IA",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 81,
+   "motivos": [
+    "junior",
+    "presencial fuera de León",
+    "encaja: python, sql, llm, agents, rag"
+   ],
+   "avisos": [],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [
+    "langchain",
+    "llm",
+    "openai",
+    "oracle",
+    "pandas",
+    "python",
+    "pytorch",
+    "rag",
+    "sap",
+    "scikit-learn",
+    "sql"
+   ],
+   "id": "b2853ffb8eb0",
+   "titulo": "Associate Applied (AI) Value Engineer (APAC) - Orbit Program",
+   "empresa": "Celonis",
+   "ubicacion": "Madrid, Spain",
+   "url": "https://job-boards.greenhouse.io/celonis/jobs/7995509003?gh_jid=7995509003",
+   "fuente": "Greenhouse",
+   "fecha": "2026-09-22",
+   "area": "IA",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 81,
+   "motivos": [
+    "junior",
+    "presencial fuera de León",
+    "encaja: python, sql, llm, agents, rag"
+   ],
+   "avisos": [],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [
+    "llm",
+    "python",
+    "sql"
+   ],
+   "id": "1c9d2085fa21",
+   "titulo": "Intern Demo Experience & Applied AI",
+   "empresa": "Celonis",
+   "ubicacion": "Madrid, Spain",
+   "url": "https://job-boards.greenhouse.io/celonis/jobs/8208057003?gh_jid=8208057003",
+   "fuente": "Greenhouse",
+   "fecha": "2026-11-26",
+   "area": "IA",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 79,
+   "motivos": [
+    "prácticas",
+    "presencial fuera de León",
+    "encaja: python, sql, agents"
+   ],
+   "avisos": [],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "no es junior ni prácticas",
+   "zona": "remoto",
+   "tecnologias": [
+    "aws",
+    "ci/cd",
+    "gcp",
+    "kubernetes",
+    "linux",
+    "machine learning",
+    "python",
+    "terraform",
+    "typescript"
+   ],
+   "id": "48be48ae080f",
+   "titulo": "Infrastructure Security Engineer",
+   "empresa": "Elevenlabs",
+   "ubicacion": "Belgium, Bulgaria, Croatia, Czechia, Denmark, Hungary, Ireland, Italy, Netherlands, Poland, Portugal, Spain, Sweden, UK",
+   "url": "https://jobicy.com/jobs/157064-infrastructure-security-engineer",
+   "fuente": "Jobicy",
+   "fecha": "2026-11-26",
+   "area": "Sistemas",
+   "nivel": "Sin nivel",
+   "espana": true,
+   "puntos": 69,
+   "motivos": [
+    "remoto desde España",
+    "encaja: python, linux, agents, machine learning"
+   ],
+   "avisos": [],
+   "a_favor": [
+    "indica remuneración"
+   ],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [
+    "llm",
+    "machine learning",
+    "rag"
+   ],
+   "id": "a7b4bb9ce5d6",
+   "titulo": "Prácticas en Ingenieria Informatica - Bosch Manufacturing Solutions",
+   "empresa": "The Bosch Group, Inc.",
+   "ubicacion": "Madrid, España",
+   "url": "https://www.adzuna.es/details/5972417075?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-20",
+   "area": "TI general",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 68,
+   "motivos": [
+    "prácticas",
+    "presencial fuera de León",
+    "encaja: llm, agents, rag, machine learning"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [
+    "java",
+    "linux"
+   ],
+   "id": "24d3c725b317",
+   "titulo": "Becario Analista Programador",
+   "empresa": "Abas Ibérica",
+   "ubicacion": "Barcelona, España",
+   "url": "https://www.adzuna.es/details/5972389397?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-20",
+   "area": "Desarrollo",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 68,
+   "motivos": [
+    "prácticas",
+    "presencial fuera de León",
+    "encaja: java, linux"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [
+    "admite estudiantes o perfiles sin experiencia"
+   ],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [
+    ".net",
+    "node.js",
+    "python"
+   ],
+   "id": "4c1c1caf2f0b",
+   "titulo": "Backend Junior - Node.js, Python, .NET",
+   "empresa": "Excelia",
+   "ubicacion": "España, España",
+   "url": "https://www.adzuna.es/details/5979381113?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-26",
+   "area": "Desarrollo",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 68,
+   "motivos": [
+    "junior",
+    "presencial fuera de León",
+    "encaja: python, node, node.js"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [
+    ".net",
+    "node.js",
+    "python"
+   ],
+   "id": "ccaf3fc2a153",
+   "titulo": "Backend Junior - Node.js, Python, .NET",
+   "empresa": "Excelia, SL",
+   "ubicacion": "Boadilla del Monte, Madrid, España",
+   "url": "https://www.adzuna.es/details/5955832001?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-06",
+   "area": "Desarrollo",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 68,
+   "motivos": [
+    "junior",
+    "presencial fuera de León",
+    "encaja: python, node, node.js"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [],
+   "id": "cd37537927a1",
+   "titulo": "Avanade Campus: Prácticas en Inteligencia Artificial con tecnologías Microsoft - Marzo 2026",
+   "empresa": "Avanade Spainu Company",
+   "ubicacion": "Málaga, España",
+   "url": "https://www.adzuna.es/details/5972376991?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-20",
+   "area": "IA",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 66,
+   "motivos": [
+    "prácticas",
+    "presencial fuera de León"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [
+    "admite estudiantes o perfiles sin experiencia"
+   ],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [
+    "azure",
+    "llm",
+    "openai"
+   ],
+   "id": "54d47197b0ee",
+   "titulo": "Prácticas IT: Inteligencia Artificial",
+   "empresa": "Cuatrecasas",
+   "ubicacion": "Barcelona, España",
+   "url": "https://www.adzuna.es/details/5964737586?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-13",
+   "area": "IA",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 62,
+   "motivos": [
+    "prácticas",
+    "presencial fuera de León",
+    "encaja: llm"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [
+    "aws",
+    "azure",
+    "ci/cd",
+    "etl",
+    "gcp",
+    "pandas",
+    "python",
+    "sql"
+   ],
+   "id": "168ca662559c",
+   "titulo": "Intern, Data Engineering",
+   "empresa": "Bitpanda",
+   "ubicacion": "Barcelona, Spain",
+   "url": "https://job-boards.eu.greenhouse.io/bitpanda/jobs/4999438101",
+   "fuente": "Greenhouse",
+   "fecha": "2026-10-13",
+   "area": "Datos",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 62,
+   "motivos": [
+    "prácticas",
+    "presencial fuera de León",
+    "encaja: python, sql, rest"
+   ],
+   "avisos": [
+    "menciona máster o doctorado"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "pide 2+ años de experiencia",
+   "zona": "remoto",
+   "tecnologias": [
+    "bash",
+    "devops",
+    "jira",
+    "node.js",
+    "python"
+   ],
+   "id": "bc8b21d0a57e",
+   "titulo": "Developer Advocate - Service Management EMEA",
+   "empresa": "Datadog",
+   "ubicacion": "France, Remote; Spain, Remote; The Netherlands, Remote",
+   "url": "https://careers.datadoghq.com/detail/8161455/?gh_jid=8161455",
+   "fuente": "Greenhouse",
+   "fecha": "2026-09-14",
+   "area": "Desarrollo",
+   "nivel": "Sin nivel",
+   "espana": true,
+   "puntos": 59,
+   "motivos": [
+    "remoto desde España",
+    "encaja: python, node, node.js, bash"
+   ],
+   "avisos": [],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "pide 2+ años de experiencia",
+   "zona": "remoto",
+   "tecnologias": [
+    "airflow",
+    "llm"
+   ],
+   "id": "20dceb64f9bd",
+   "titulo": "Consultor/a LLM / Airflow - REMOTO",
+   "empresa": "AD4 Octógono",
+   "ubicacion": "Madrid, Comunidad de Madrid, España",
+   "url": "https://www.adzuna.es/details/5971528240?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-19",
+   "area": "IA",
+   "nivel": "Sin nivel",
+   "espana": true,
+   "puntos": 57,
+   "motivos": [
+    "remoto desde España",
+    "encaja: llm"
+   ],
+   "avisos": [],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [
+    "kubernetes"
+   ],
+   "id": "97ef482d0679",
+   "titulo": "Software Engineering Intern",
+   "empresa": "Datadog",
+   "ubicacion": "Madrid, Spain",
+   "url": "https://careers.datadoghq.com/detail/8114161/?gh_jid=8114161",
+   "fuente": "Greenhouse",
+   "fecha": "2026-09-08",
+   "area": "Desarrollo",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 57,
+   "motivos": [
+    "prácticas",
+    "presencial fuera de León"
+   ],
+   "avisos": [],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [
+    "sap"
+   ],
+   "id": "5e60861b40ac",
+   "titulo": "Spain Applications - Intern",
+   "empresa": "Prysmian Group",
+   "ubicacion": "España, España",
+   "url": "https://www.adzuna.es/details/5972403612?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-20",
+   "area": "TI general",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 56,
+   "motivos": [
+    "prácticas",
+    "presencial fuera de León"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [
+    "admite estudiantes o perfiles sin experiencia"
+   ],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [],
+   "id": "239f3ef8d652",
+   "titulo": "Beca - Automatización de Plataformas de Integración Eléctrico-Electrónicas",
+   "empresa": "Renault Group",
+   "ubicacion": "España, España",
+   "url": "https://www.adzuna.es/details/5980559400?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-27",
+   "area": "TI general",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 56,
+   "motivos": [
+    "prácticas",
+    "presencial fuera de León"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [
+    "admite estudiantes o perfiles sin experiencia"
+   ],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [],
+   "id": "49de43756f29",
+   "titulo": "Beca - Automatización de Plataformas de Integración Eléctrico-Electrónicas",
+   "empresa": "Renault Group España",
+   "ubicacion": "Valladolid, España",
+   "url": "https://www.adzuna.es/details/5979834152?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-26",
+   "area": "TI general",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 56,
+   "motivos": [
+    "prácticas",
+    "presencial fuera de León"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [
+    "admite estudiantes o perfiles sin experiencia"
+   ],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [],
+   "id": "1497da76c850",
+   "titulo": "Programa Tresca Talento: Prácticas y Becas",
+   "empresa": "Tresca Ingenieria S.A",
+   "ubicacion": "España, España",
+   "url": "https://www.adzuna.es/details/5979379253?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-26",
+   "area": "TI general",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 56,
+   "motivos": [
+    "prácticas",
+    "presencial fuera de León"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [
+    "admite estudiantes o perfiles sin experiencia"
+   ],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [],
+   "id": "929fb5899bee",
+   "titulo": "Beca TIC de Apoyo a Ingeniería en IA y Digitalización",
+   "empresa": "Acciona Construcción S.a.",
+   "ubicacion": "España, España",
+   "url": "https://www.adzuna.es/details/5972413410?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-20",
+   "area": "IA",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 56,
+   "motivos": [
+    "prácticas",
+    "presencial fuera de León"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [],
+   "id": "b06d37152603",
+   "titulo": "Beca de Prácticas en Inteligencia Artificial",
+   "empresa": "Knowmad Mood",
+   "ubicacion": "Las Rozas de Madrid, Madrid, España",
+   "url": "https://www.adzuna.es/details/5972400460?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-20",
+   "area": "IA",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 56,
+   "motivos": [
+    "prácticas",
+    "presencial fuera de León"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [],
+   "id": "c01cf4e98fdd",
+   "titulo": "PRÁCTICAS EN EMPRESA IA APLICADA AL ENTORNO PROFESIONAL",
+   "empresa": "Nett Digital School",
+   "ubicacion": "España, España",
+   "url": "https://www.adzuna.es/details/5972396350?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-20",
+   "area": "IA",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 56,
+   "motivos": [
+    "prácticas",
+    "presencial fuera de León"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [],
+   "id": "4d82c124043f",
+   "titulo": "PRACTICAS EN IA GENERATIVA",
+   "empresa": "Nett Digital School",
+   "ubicacion": "España, España",
+   "url": "https://www.adzuna.es/details/5972394582?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-20",
+   "area": "IA",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 56,
+   "motivos": [
+    "prácticas",
+    "presencial fuera de León"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [],
+   "id": "5208023ab65a",
+   "titulo": "Beca Digitalización, Ia Y Data | Madrid",
+   "empresa": "Enagas",
+   "ubicacion": "Madrid, España",
+   "url": "https://www.adzuna.es/details/5972383858?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-20",
+   "area": "IA",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 56,
+   "motivos": [
+    "prácticas",
+    "presencial fuera de León"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [
+    "python"
+   ],
+   "id": "1d243fde94ed",
+   "titulo": "Junior Consultant Systems Engineering (Python scripting and API-based integrations)",
+   "empresa": "Invensity Stellenportal",
+   "ubicacion": "Barcelona, España",
+   "url": "https://www.adzuna.es/details/5972384567?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-20",
+   "area": "Desarrollo",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 54,
+   "motivos": [
+    "junior",
+    "presencial fuera de León",
+    "encaja: python, api"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [
+    "python",
+    "spark",
+    "sql"
+   ],
+   "id": "cebfe92d9c9a",
+   "titulo": "Junior Data Scientist - Python & Spark (Madrid)",
+   "empresa": "Capgemini",
+   "ubicacion": "Madrid, Comunidad de Madrid, España",
+   "url": "https://www.adzuna.es/details/5963010782?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-12",
+   "area": "Datos",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 54,
+   "motivos": [
+    "junior",
+    "presencial fuera de León",
+    "encaja: python, sql"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "no es junior ni prácticas",
+   "zona": "leon",
+   "tecnologias": [
+    "java",
+    "junit",
+    "spring boot"
+   ],
+   "id": "936f672deed8",
+   "titulo": "Java Microservices Engineer – Remote/Hybrid, Growth",
+   "empresa": "Ntt Data España",
+   "ubicacion": "León, Castilla y León, España",
+   "url": "https://www.adzuna.es/details/5965701588?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-14",
+   "area": "Desarrollo",
+   "nivel": "Posible junior",
+   "espana": true,
+   "puntos": 53,
+   "motivos": [
+    "León",
+    "encaja: java"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta",
+    "menciona certificaciones"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "pide 5+ años de experiencia",
+   "zona": "leon",
+   "tecnologias": [
+    "aws",
+    "gcp",
+    "kubernetes",
+    "python"
+   ],
+   "id": "6535f887cb48",
+   "titulo": "Security Engineer - Penetration Tester",
+   "empresa": "Ebury",
+   "ubicacion": "León",
+   "url": "https://job-boards.eu.greenhouse.io/ebury/jobs/5039857101",
+   "fuente": "Greenhouse",
+   "fecha": "2026-11-20",
+   "area": "Sistemas",
+   "nivel": "Sin nivel",
+   "espana": true,
+   "puntos": 53,
+   "motivos": [
+    "León",
+    "encaja: python"
+   ],
+   "avisos": [],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "no es junior ni prácticas",
+   "zona": "remoto",
+   "tecnologias": [
+    "android",
+    "aws",
+    "ci/cd",
+    "django",
+    "docker",
+    "flask",
+    "ios",
+    "kafka",
+    "kubernetes",
+    "postgresql",
+    "python",
+    "redis",
+    "rest api",
+    "sql"
+   ],
+   "id": "e16084165661",
+   "titulo": "Security Engineer",
+   "empresa": "Fever",
+   "ubicacion": "Spain",
+   "url": "https://jobicy.com/jobs/164365-security-engineer-4",
+   "fuente": "Jobicy",
+   "fecha": "2026-11-26",
+   "area": "Sistemas",
+   "nivel": "Sin nivel",
+   "espana": true,
+   "puntos": 51,
+   "motivos": [
+    "remoto desde España",
+    "encaja: python, docker, sql"
+   ],
+   "avisos": [],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [],
+   "id": "3f061f2c5c06",
+   "titulo": "Data Center Madrid: Programa De Prácticas Calidad - No Experience Required",
+   "empresa": "NBCUniversal",
+   "ubicacion": "Madrid, España",
+   "url": "https://www.adzuna.es/details/5978951344?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-26",
+   "area": "Datos",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 50,
+   "motivos": [
+    "prácticas",
+    "presencial fuera de León"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [
+    "python"
+   ],
+   "id": "51bd9a3fc342",
+   "titulo": "Ingeniero/a aeroespacial Junior con Python",
+   "empresa": "The Ct Engineering Group",
+   "ubicacion": "Getafe, Madrid, España",
+   "url": "https://www.adzuna.es/details/5974984571?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-22",
+   "area": "Desarrollo",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 50,
+   "motivos": [
+    "junior",
+    "presencial fuera de León",
+    "encaja: python"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [
+    "c++",
+    "matlab"
+   ],
+   "id": "69d12b21dc97",
+   "titulo": "Desarrollador HW Junior para EGSEs – Proyectos Internacionales",
+   "empresa": "Sener en Ingeniería",
+   "ubicacion": "Tres Cantos, Madrid, España",
+   "url": "https://www.adzuna.es/details/5979506461?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-26",
+   "area": "Desarrollo",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 47,
+   "motivos": [
+    "junior",
+    "presencial fuera de León",
+    "encaja: c++"
+   ],
+   "avisos": [],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [],
+   "id": "0331c5c2fbfd",
+   "titulo": "BECA Universitaria Ingenieros becarios",
+   "empresa": "Accenture",
+   "ubicacion": "España, España",
+   "url": "https://www.adzuna.es/details/5980557405?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-27",
+   "area": "TI general",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 46,
+   "motivos": [
+    "prácticas",
+    "presencial fuera de León"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [],
+   "id": "e6c7a826dc70",
+   "titulo": "Becario Alimentacion-1",
+   "empresa": "El Corte Inglés",
+   "ubicacion": "Madrid, España",
+   "url": "https://www.adzuna.es/details/5978610133?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-25",
+   "area": "TI general",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 46,
+   "motivos": [
+    "prácticas",
+    "presencial fuera de León"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [],
+   "id": "8b610d14841f",
+   "titulo": "Tech Program - Prácticas Microsoft - Zaragoza Enero 2027 (Zaragoza, ES, 50018)",
+   "empresa": "KPMG España",
+   "ubicacion": "Zaragoza, España",
+   "url": "https://www.adzuna.es/details/5978609525?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-25",
+   "area": "TI general",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 46,
+   "motivos": [
+    "prácticas",
+    "presencial fuera de León"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [
+    "java"
+   ],
+   "id": "609263751b88",
+   "titulo": "Desarrollador/a Backend Java Junior (A Coruña)",
+   "empresa": "Knowmad Mood",
+   "ubicacion": "A Coruña, España",
+   "url": "https://www.adzuna.es/details/5978610266?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-25",
+   "area": "Desarrollo",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 46,
+   "motivos": [
+    "junior",
+    "presencial fuera de León",
+    "encaja: java"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "no es junior ni prácticas",
+   "zona": "remoto",
+   "tecnologias": [
+    "elasticsearch",
+    "kafka",
+    "kubernetes",
+    "linux",
+    "mongodb",
+    "mysql",
+    "oracle",
+    "postgresql",
+    "python",
+    "redis",
+    "spark",
+    "sql"
+   ],
+   "id": "d2a0c9920436",
+   "titulo": "Software Engineer - Data Infrastructure - Kafka",
+   "empresa": "Canonical",
+   "ubicacion": "Home based - EMEA",
+   "url": "https://job-boards.greenhouse.io/canonical/jobs/5218601",
+   "fuente": "Greenhouse",
+   "fecha": "2023-07-24",
+   "area": "Datos",
+   "nivel": "Posible junior",
+   "espana": false,
+   "puntos": 46,
+   "motivos": [
+    "remoto Europa/global",
+    "encaja: python, mongodb, linux, sql, mysql"
+   ],
+   "avisos": [
+    "pide titulación terminada (tú terminas en 2027)"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [
+    "java",
+    "javascript",
+    "ruby",
+    "scala"
+   ],
+   "id": "49e50de3ec77",
+   "titulo": "Software Engineer, New Grad - Frontend",
+   "empresa": "Stripe",
+   "ubicacion": "Barcelona",
+   "url": "https://stripe.com/jobs/search?gh_jid=8130927",
+   "fuente": "Greenhouse",
+   "fecha": "2026-08-31",
+   "area": "Desarrollo",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 46,
+   "motivos": [
+    "junior",
+    "presencial fuera de León",
+    "encaja: javascript, java"
+   ],
+   "avisos": [
+    "pide titulación terminada (tú terminas en 2027)"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "exige otro idioma (german)",
+   "zona": "remoto",
+   "tecnologias": [],
+   "id": "8649f2139d31",
+   "titulo": "HQ - AI Business Analyst (German-speaking)",
+   "empresa": "Jobandtalent",
+   "ubicacion": "Madrid HQ, ES (remote)",
+   "url": "https://jobs.lever.co/jobandtalent/f3a0f9dc-e563-42a0-8c2d-f2d7264ce3a3",
+   "fuente": "Lever",
+   "fecha": "2026-07-02",
+   "area": "IA",
+   "nivel": "Sin nivel",
+   "espana": true,
+   "puntos": 45,
+   "motivos": [
+    "remoto desde España"
+   ],
+   "avisos": [],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "no es junior ni prácticas",
+   "zona": "remoto",
+   "tecnologias": [
+    "java",
+    "javascript",
+    "linux",
+    "php",
+    "python",
+    "ruby",
+    "rust",
+    "typescript"
+   ],
+   "id": "7251fcd4e18f",
+   "titulo": "Ubuntu Security Engineer",
+   "empresa": "Canonical",
+   "ubicacion": "Home based - Worldwide",
+   "url": "https://job-boards.greenhouse.io/canonical/jobs/2925180",
+   "fuente": "Greenhouse",
+   "fecha": "2021-03-02",
+   "area": "Sistemas",
+   "nivel": "Posible junior",
+   "espana": false,
+   "puntos": 45,
+   "motivos": [
+    "remoto Europa/global",
+    "encaja: python, javascript, java, linux"
+   ],
+   "avisos": [],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [
+    "computer vision"
+   ],
+   "id": "21d580226816",
+   "titulo": "Especialista Junior En Análisis De Datos E Inteligencia Artificial Aplicada A Imágenes",
+   "empresa": "UNIR Investigación y Transferencia",
+   "ubicacion": "Madrid, España",
+   "url": "https://www.adzuna.es/details/5980204724?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-27",
+   "area": "IA",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 44,
+   "motivos": [
+    "junior",
+    "presencial fuera de León"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [
+    "mlops"
+   ],
+   "id": "c9fba92ad265",
+   "titulo": "Desarrollador MLOps & AgentOps Junior | IA Generativa",
+   "empresa": "T-Systems Iberia",
+   "ubicacion": "España, España",
+   "url": "https://www.adzuna.es/details/5973993538?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-21",
+   "area": "IA",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 44,
+   "motivos": [
+    "junior",
+    "presencial fuera de León"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "no es junior ni prácticas",
+   "zona": "remoto",
+   "tecnologias": [
+    "airflow",
+    "aws",
+    "azure",
+    "docker",
+    "etl",
+    "gcp",
+    "kubernetes",
+    "linux",
+    "machine learning",
+    "mlops",
+    "python"
+   ],
+   "id": "63ca98deec3c",
+   "titulo": "Python and Kubernetes Software Engineer - Data, Workflows, AI/ML & Analytics",
+   "empresa": "Canonical",
+   "ubicacion": "Home based - Worldwide",
+   "url": "https://job-boards.greenhouse.io/canonical/jobs/5703396",
+   "fuente": "Greenhouse",
+   "fecha": "2024-04-11",
+   "area": "IA",
+   "nivel": "Sin nivel",
+   "espana": false,
+   "puntos": 44,
+   "motivos": [
+    "remoto Europa/global",
+    "encaja: python, docker, linux, machine learning"
+   ],
+   "avisos": [
+    "pide titulación terminada (tú terminas en 2027)"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "no es junior ni prácticas",
+   "zona": "remoto",
+   "tecnologias": [
+    "kafka",
+    "kubernetes",
+    "linux",
+    "mongodb",
+    "mysql",
+    "postgresql",
+    "python",
+    "redis",
+    "sql"
+   ],
+   "id": "af5edac7bfae",
+   "titulo": "Software Engineer - Data Infrastructure",
+   "empresa": "Canonical",
+   "ubicacion": "Home based - EMEA",
+   "url": "https://job-boards.greenhouse.io/canonical/jobs/3014391",
+   "fuente": "Greenhouse",
+   "fecha": "2021-05-12",
+   "area": "Datos",
+   "nivel": "Posible junior",
+   "espana": false,
+   "puntos": 44,
+   "motivos": [
+    "remoto Europa/global",
+    "encaja: python, mongodb, linux, sql, mysql"
+   ],
+   "avisos": [
+    "pide titulación terminada (tú terminas en 2027)"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [
+    "aws",
+    "pandas",
+    "python"
+   ],
+   "id": "aa256eebac73",
+   "titulo": "Analista de Datos Junior Python | AWS | Híbrido Madrid",
+   "empresa": "Tecdata Engineering",
+   "ubicacion": "Coslada, Madrid, España",
+   "url": "https://www.adzuna.es/details/5972731265?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-20",
+   "area": "Datos",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 43,
+   "motivos": [
+    "junior",
+    "presencial fuera de León",
+    "encaja: python"
+   ],
+   "avisos": [
+    "pide 1 año de experiencia",
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "no es junior ni prácticas",
+   "zona": "leon",
+   "tecnologias": [
+    "java"
+   ],
+   "id": "430dc67f4504",
+   "titulo": "Java Software Engineer",
+   "empresa": "Ntt Data España",
+   "ubicacion": "León, Castilla y León, España",
+   "url": "https://www.adzuna.es/details/5965749664?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-14",
+   "area": "Desarrollo",
+   "nivel": "Sin nivel",
+   "espana": true,
+   "puntos": 43,
+   "motivos": [
+    "León",
+    "encaja: java"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta",
+    "menciona certificaciones"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "pide 3+ años de experiencia",
+   "zona": "remoto",
+   "tecnologias": [
+    "aws",
+    "devops",
+    "python",
+    "terraform"
+   ],
+   "id": "6f1d826349ee",
+   "titulo": "Cybersecurity Engineer",
+   "empresa": "Fever",
+   "ubicacion": "Spain",
+   "url": "https://jobicy.com/jobs/164359-cybersecurity-engineer-2",
+   "fuente": "Jobicy",
+   "fecha": "2026-11-26",
+   "area": "Sistemas",
+   "nivel": "Sin nivel",
+   "espana": true,
+   "puntos": 43,
+   "motivos": [
+    "remoto desde España",
+    "encaja: python"
+   ],
+   "avisos": [],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [
+    "javascript",
+    "llm",
+    "python"
+   ],
+   "id": "d4ec86044eb2",
+   "titulo": "AI Engineer for Quality Monitoring (JavaScript/Python) — Barcelona",
+   "empresa": "Pasiona",
+   "ubicacion": "Barcelona, España",
+   "url": "https://www.adzuna.es/details/5980885299?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-27",
+   "area": "IA",
+   "nivel": "Sin nivel",
+   "espana": true,
+   "puntos": 42,
+   "motivos": [
+    "presencial fuera de León",
+    "encaja: python, javascript, llm"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [
+    "javascript",
+    "llm",
+    "python"
+   ],
+   "id": "01bd3afeda8d",
+   "titulo": "AI Engineer for Quality Monitoring (JavaScript/Python) — Barcelona",
+   "empresa": "Trabajos en Demo Datos",
+   "ubicacion": "Barcelona, España",
+   "url": "https://www.adzuna.es/details/5980558304?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-27",
+   "area": "IA",
+   "nivel": "Sin nivel",
+   "espana": true,
+   "puntos": 42,
+   "motivos": [
+    "presencial fuera de León",
+    "encaja: python, javascript, llm"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "no es junior ni prácticas",
+   "zona": "leon",
+   "tecnologias": [],
+   "id": "e609194fba32",
+   "titulo": "Data Validation Specialist (Spain Only)",
+   "empresa": "Technosylva",
+   "ubicacion": "León, España",
+   "url": "https://www.adzuna.es/details/5972389229?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-20",
+   "area": "Datos",
+   "nivel": "Sin nivel",
+   "espana": true,
+   "puntos": 42,
+   "motivos": [
+    "León"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "no es junior ni prácticas",
+   "zona": "leon",
+   "tecnologias": [],
+   "id": "8c0c9506981d",
+   "titulo": "Desarrollador De Videojuegos - Especialista En Vr/Ar",
+   "empresa": "Placements24",
+   "ubicacion": "León, Castilla y León, España",
+   "url": "https://www.adzuna.es/details/5966769913?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-15",
+   "area": "Desarrollo",
+   "nivel": "Sin nivel",
+   "espana": true,
+   "puntos": 42,
+   "motivos": [
+    "León"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "no es junior ni prácticas",
+   "zona": "leon",
+   "tecnologias": [],
+   "id": "a915609ede6c",
+   "titulo": "Service Support Analyst",
+   "empresa": "Ebury",
+   "ubicacion": "León, Castilla y León, España",
+   "url": "https://www.adzuna.es/details/5964437627?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-13",
+   "area": "Datos",
+   "nivel": "Sin nivel",
+   "espana": true,
+   "puntos": 42,
+   "motivos": [
+    "León"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "no es junior ni prácticas",
+   "zona": "leon",
+   "tecnologias": [],
+   "id": "7639b49e0274",
+   "titulo": "Ingeniero/a de Software Frontend (Web/Cloud)",
+   "empresa": "HP SCDS",
+   "ubicacion": "León, Castilla y León, España",
+   "url": "https://www.adzuna.es/details/5963013537?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-12",
+   "area": "Desarrollo",
+   "nivel": "Sin nivel",
+   "espana": true,
+   "puntos": 42,
+   "motivos": [
+    "León"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "no es junior ni prácticas",
+   "zona": "remoto",
+   "tecnologias": [
+    "c++",
+    "docker",
+    "flutter",
+    "kubernetes",
+    "linux",
+    "python",
+    "rust",
+    "sql"
+   ],
+   "id": "abc3d7e3668c",
+   "titulo": "Python Engineer",
+   "empresa": "Canonical",
+   "ubicacion": "Home based - Worldwide",
+   "url": "https://job-boards.greenhouse.io/canonical/jobs/5143074",
+   "fuente": "Greenhouse",
+   "fecha": "2023-10-11",
+   "area": "Desarrollo",
+   "nivel": "Sin nivel",
+   "espana": false,
+   "puntos": 42,
+   "motivos": [
+    "remoto Europa/global",
+    "encaja: python, docker, linux, c++, sql"
+   ],
+   "avisos": [
+    "pide titulación terminada (tú terminas en 2027)"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [],
+   "id": "78119fe1f2ba",
+   "titulo": "BECA: Enel Grids Iberia, Substation Maintenance Cádiz. Puerto Real",
+   "empresa": "Endesa",
+   "ubicacion": "Puerto Real, Cádiz, España",
+   "url": "https://www.adzuna.es/details/5980885472?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-27",
+   "area": "TI general",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 39,
+   "motivos": [
+    "prácticas",
+    "presencial fuera de León"
+   ],
+   "avisos": [
+    "pide 1 año de experiencia",
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [],
+   "id": "7263a840f7f7",
+   "titulo": "BECA: Enel Grids Iberia, Substation Maintenance Cádiz. Puerto Real",
+   "empresa": "Enel",
+   "ubicacion": "Puerto Real, Cádiz, España",
+   "url": "https://www.adzuna.es/details/5980449789?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-27",
+   "area": "TI general",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 39,
+   "motivos": [
+    "prácticas",
+    "presencial fuera de León"
+   ],
+   "avisos": [
+    "pide 1 año de experiencia",
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "no es junior ni prácticas",
+   "zona": "remoto",
+   "tecnologias": [
+    "ci/cd",
+    "git",
+    "javascript",
+    "linux",
+    "python",
+    "rest api"
+   ],
+   "id": "50d3c29b11fe",
+   "titulo": "Kernel Build Automation Engineer - Ubuntu Linux",
+   "empresa": "Canonical",
+   "ubicacion": "Home based - EMEA",
+   "url": "https://job-boards.greenhouse.io/canonical/jobs/7334725",
+   "fuente": "Greenhouse",
+   "fecha": "2025-10-16",
+   "area": "Sistemas",
+   "nivel": "Sin nivel",
+   "espana": false,
+   "puntos": 39,
+   "motivos": [
+    "remoto Europa/global",
+    "encaja: python, javascript, linux, git, rest"
+   ],
+   "avisos": [],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [],
+   "id": "7bb295322a8d",
+   "titulo": "Junior/Mid-Level Front-End Developer",
+   "empresa": "Babel",
+   "ubicacion": "Madrid, España",
+   "url": "https://www.adzuna.es/details/5980203314?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-27",
+   "area": "Desarrollo",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 38,
+   "motivos": [
+    "junior",
+    "presencial fuera de León"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "no es junior ni prácticas",
+   "zona": "remoto",
+   "tecnologias": [
+    "aws",
+    "azure",
+    "gcp",
+    "kubernetes",
+    "linux",
+    "llm",
+    "machine learning",
+    "mlops",
+    "python",
+    "rust",
+    "spark",
+    "sql"
+   ],
+   "id": "f4088aaad9bc",
+   "titulo": "MLOps Field Engineer",
+   "empresa": "Canonical",
+   "ubicacion": "Home based - Worldwide",
+   "url": "https://job-boards.greenhouse.io/canonical/jobs/6783943",
+   "fuente": "Greenhouse",
+   "fecha": "2025-04-10",
+   "area": "IA",
+   "nivel": "Sin nivel",
+   "espana": false,
+   "puntos": 38,
+   "motivos": [
+    "remoto Europa/global",
+    "encaja: python, linux, sql, machine learning"
+   ],
+   "avisos": [
+    "pide titulación terminada (tú terminas en 2027)"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "pide 3+ años de experiencia",
+   "zona": "remoto",
+   "tecnologias": [
+    "aws",
+    "docker",
+    "javascript",
+    "llm",
+    "react",
+    "typescript"
+   ],
+   "id": "78cbebee66c3",
+   "titulo": "Full-Stack Developer",
+   "empresa": "Fluence International, Inc.",
+   "ubicacion": "Worldwide",
+   "url": "https://remotive.com/remote-jobs/software-development/full-stack-developer-2091165",
+   "fuente": "Remotive",
+   "fecha": "2026-10-29",
+   "area": "Desarrollo",
+   "nivel": "Sin nivel",
+   "espana": false,
+   "puntos": 37,
+   "motivos": [
+    "remoto Europa/global",
+    "encaja: javascript, docker, rest, api, llm"
+   ],
+   "avisos": [],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "no es junior ni prácticas",
+   "zona": "remoto",
+   "tecnologias": [
+    "c++",
+    "docker",
+    "git",
+    "kubernetes",
+    "linux",
+    "postgresql",
+    "python"
+   ],
+   "id": "4c5d203de8f8",
+   "titulo": "Software Engineer, Cloud - Sustaining Engineering",
+   "empresa": "Canonical",
+   "ubicacion": "Home based - Worldwide",
+   "url": "https://job-boards.greenhouse.io/canonical/jobs/3062022",
+   "fuente": "Greenhouse",
+   "fecha": "2021-07-09",
+   "area": "Desarrollo",
+   "nivel": "Sin nivel",
+   "espana": false,
+   "puntos": 37,
+   "motivos": [
+    "remoto Europa/global",
+    "encaja: python, docker, linux, git, c++"
+   ],
+   "avisos": [],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "no es junior ni prácticas",
+   "zona": "remoto",
+   "tecnologias": [
+    "c++",
+    "docker",
+    "git",
+    "kubernetes",
+    "linux",
+    "postgresql",
+    "python"
+   ],
+   "id": "02a19e358e27",
+   "titulo": "Software Engineer, Sustaining Engineering",
+   "empresa": "Canonical",
+   "ubicacion": "Home based - Worldwide",
+   "url": "https://job-boards.greenhouse.io/canonical/jobs/3326693",
+   "fuente": "Greenhouse",
+   "fecha": "2021-07-22",
+   "area": "Desarrollo",
+   "nivel": "Sin nivel",
+   "espana": false,
+   "puntos": 37,
+   "motivos": [
+    "remoto Europa/global",
+    "encaja: python, docker, linux, git, c++"
+   ],
+   "avisos": [],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [],
+   "id": "71631acc5130",
+   "titulo": "Offensive Cybersecurity Junior",
+   "empresa": "Hipoges",
+   "ubicacion": "España, España",
+   "url": "https://www.adzuna.es/details/5964319895?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-13",
+   "area": "Sistemas",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 36,
+   "motivos": [
+    "junior",
+    "presencial fuera de León"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [],
+   "id": "b4be0044e1a2",
+   "titulo": "Consultor/a Tecnológico/a Junior - Desarrollo, QA y Sistemas",
+   "empresa": "Babel",
+   "ubicacion": "Madrid, España",
+   "url": "https://www.adzuna.es/details/5978181439?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-25",
+   "area": "Sistemas",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 36,
+   "motivos": [
+    "junior",
+    "presencial fuera de León"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "pide 5+ años de experiencia",
+   "zona": "remoto",
+   "tecnologias": [
+    "aws",
+    "azure",
+    "docker",
+    "gcp",
+    "ios",
+    "kubernetes",
+    "node.js",
+    "postgresql",
+    "react"
+   ],
+   "id": "48fa209887f8",
+   "titulo": "Software Engineer - Storage",
+   "empresa": "Supabase",
+   "ubicacion": "Anywhere",
+   "url": "https://jobicy.com/jobs/156940-software-engineer-storage",
+   "fuente": "Jobicy",
+   "fecha": "2026-11-25",
+   "area": "Desarrollo",
+   "nivel": "Sin nivel",
+   "espana": false,
+   "puntos": 35,
+   "motivos": [
+    "remoto Europa/global",
+    "encaja: node, node.js, docker"
+   ],
+   "avisos": [],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "no es junior ni prácticas",
+   "zona": "remoto",
+   "tecnologias": [
+    "aws",
+    "azure",
+    "github actions",
+    "jenkins",
+    "kubernetes",
+    "linux",
+    "python",
+    "terraform"
+   ],
+   "id": "c6f8e4c47052",
+   "titulo": "Distributed Systems Testing Software Engineer, Python / Go",
+   "empresa": "Canonical",
+   "ubicacion": "Home Based - Americas; Home based - EMEA",
+   "url": "https://job-boards.greenhouse.io/canonical/jobs/2969042",
+   "fuente": "Greenhouse",
+   "fecha": "2021-03-18",
+   "area": "Desarrollo",
+   "nivel": "Sin nivel",
+   "espana": false,
+   "puntos": 35,
+   "motivos": [
+    "remoto Europa/global",
+    "encaja: python, linux"
+   ],
+   "avisos": [],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "no es junior ni prácticas",
+   "zona": "remoto",
+   "tecnologias": [
+    "c++",
+    "docker",
+    "kubernetes",
+    "linux",
+    "postgresql",
+    "python"
+   ],
+   "id": "f54d6b20ee83",
+   "titulo": "Software Engineer - L3 Support",
+   "empresa": "Canonical",
+   "ubicacion": "Home based - Worldwide",
+   "url": "https://job-boards.greenhouse.io/canonical/jobs/6635671",
+   "fuente": "Greenhouse",
+   "fecha": "2025-07-14",
+   "area": "Desarrollo",
+   "nivel": "Sin nivel",
+   "espana": false,
+   "puntos": 35,
+   "motivos": [
+    "remoto Europa/global",
+    "encaja: python, docker, linux, c++"
+   ],
+   "avisos": [],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "no es junior ni prácticas",
+   "zona": "remoto",
+   "tecnologias": [
+    "c++",
+    "docker",
+    "kubernetes",
+    "linux",
+    "postgresql",
+    "python"
+   ],
+   "id": "d7b0cdc6f4ed",
+   "titulo": "Software Maintenance Engineer",
+   "empresa": "Canonical",
+   "ubicacion": "Home based - Worldwide",
+   "url": "https://job-boards.greenhouse.io/canonical/jobs/6635681",
+   "fuente": "Greenhouse",
+   "fecha": "2025-07-14",
+   "area": "Desarrollo",
+   "nivel": "Sin nivel",
+   "espana": false,
+   "puntos": 35,
+   "motivos": [
+    "remoto Europa/global",
+    "encaja: python, docker, linux, c++"
+   ],
+   "avisos": [],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "no es junior ni prácticas",
+   "zona": "remoto",
+   "tecnologias": [
+    "c++",
+    "docker",
+    "kubernetes",
+    "linux",
+    "postgresql",
+    "python"
+   ],
+   "id": "6282f8cf95b1",
+   "titulo": "Software Support Engineer",
+   "empresa": "Canonical",
+   "ubicacion": "Home based - Worldwide",
+   "url": "https://job-boards.greenhouse.io/canonical/jobs/6635593",
+   "fuente": "Greenhouse",
+   "fecha": "2025-07-14",
+   "area": "Desarrollo",
+   "nivel": "Sin nivel",
+   "espana": false,
+   "puntos": 35,
+   "motivos": [
+    "remoto Europa/global",
+    "encaja: python, docker, linux, c++"
+   ],
+   "avisos": [],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "no es junior ni prácticas",
+   "zona": "remoto",
+   "tecnologias": [
+    "bash",
+    "git",
+    "linux",
+    "python"
+   ],
+   "id": "499edc535429",
+   "titulo": "Ubuntu Linux Kernel Engineer - Silicon Enablement",
+   "empresa": "Canonical",
+   "ubicacion": "Home based - Worldwide",
+   "url": "https://job-boards.greenhouse.io/canonical/jobs/6076909",
+   "fuente": "Greenhouse",
+   "fecha": "2024-06-27",
+   "area": "Sistemas",
+   "nivel": "Sin nivel",
+   "espana": false,
+   "puntos": 35,
+   "motivos": [
+    "remoto Europa/global",
+    "encaja: python, linux, git, bash"
+   ],
+   "avisos": [],
+   "a_favor": [],
+   "vista_desde": "2026-11-27"
   }
  ]
 }

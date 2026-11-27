@@ -251,13 +251,41 @@ def requisitos(titulo: str, cuerpo: str, es_practicas: bool, es_adzuna: bool = F
     return None, avisos, a_favor
 
 
+# ------------------------------------------------------------- tecnologías
+TECNOLOGIAS = [
+    "python", "java", "javascript", "typescript", "node.js", "c++", "c#", ".net", "php", "ruby", "rust",
+    "kotlin", "scala", "matlab", "bash", "powershell", "sql", "mysql", "postgresql", "oracle",
+    "mongodb", "redis", "elasticsearch", "react", "angular", "vue", "html", "css", "express.js", "spring boot",
+    "django", "flask", "fastapi", "flutter", "android", "ios", "rest api", "graphql", "jwt", "docker",
+    "kubernetes", "aws", "azure", "gcp", "terraform", "ansible", "jenkins", "ci/cd", "git", "github actions",
+    "linux", "wireshark", "devops", "kafka", "spark", "hadoop", "airflow", "etl", "power bi", "tableau",
+    "pandas", "numpy", "scikit-learn", "tensorflow", "pytorch", "keras", "machine learning",
+    "deep learning", "nlp", "computer vision", "llm", "rag", "langchain", "openai", "mlops", "openmp",
+    "opencl", "cuda", "selenium", "junit", "cypress", "jira", "scrum", "agile", "sap", "salesforce",
+]
+ALIAS = {"nodejs": "node.js", "postgres": "postgresql", "k8s": "kubernetes", "expressjs": "express.js", "restful": "rest api", "rest apis": "rest api", "spring framework": "spring boot", "amazon web services": "aws", "google cloud": "gcp",
+         "sklearn": "scikit-learn", "large language model": "llm", "large language models": "llm",
+         "llms": "llm", "genai": "llm", "generative ai": "llm", "natural language processing": "nlp",
+         "visión artificial": "computer vision", "vision artificial": "computer vision",
+         "aprendizaje automático": "machine learning", "aprendizaje automatico": "machine learning",
+         "react.js": "react", "reactjs": "react", "vue.js": "vue", "angularjs": "angular",
+         "dotnet": ".net", "csharp": "c#", "ci-cd": "ci/cd", "cicd": "ci/cd"}
+
+
+def tecnologias_de(texto: str) -> list[str]:
+    texto = texto.lower()
+    vistas = {t for t in TECNOLOGIAS if contiene(t, texto)}
+    vistas |= {canon for alias, canon in ALIAS.items() if contiene(alias, texto)}
+    return sorted(vistas)
+
+
 # ---------------------------------------------------------------- puntuación
 def puntuar(o: dict, previo: bool = False) -> dict | None:
     """Devuelve la oferta con puntuación y motivos, o None si se descarta."""
     titulo = o["titulo"].lower()
     cuerpo = (o["descripcion"] + " " + " ".join(o["etiquetas"])).lower()
     lugar = o["ubicacion"].lower()
-    puntos, motivos, sin_region = 0, [], False
+    puntos, motivos, sin_region, descarte, zona = 0, [], False, None, "remoto"
 
     # Nivel: lo decide el título
     niv = PERFIL["nivel"]
@@ -279,11 +307,14 @@ def puntuar(o: dict, previo: bool = False) -> dict | None:
     en_espana = any(contiene(t, lugar) for t in ub["espana"] + ub["local"])
     if any(contiene(t, lugar) for t in ub["local"]):
         puntos += 40
+        zona = "leon"
         motivos.append("León")
     elif en_espana:
-        zona = lugar + " " + titulo + " " + cuerpo[:1500]
-        es_remoto = (RE_REMOTO.search(zona) or o["remoto"]) and (
-            not RE_HIBRIDO.search(lugar + " " + titulo + " " + cuerpo[:600]) or RE_TODO_REMOTO.search(zona))
+        contexto = lugar + " " + titulo + " " + cuerpo[:1500]
+        es_remoto = (RE_REMOTO.search(contexto) or o["remoto"]) and (
+            not RE_HIBRIDO.search(lugar + " " + titulo + " " + cuerpo[:600]) or RE_TODO_REMOTO.search(contexto))
+        if not es_remoto:
+            zona = "otra"
         if es_remoto:
             puntos += 30
             motivos.append("remoto desde España")
@@ -292,7 +323,9 @@ def puntuar(o: dict, previo: bool = False) -> dict | None:
             motivos.append("presencial fuera de León")
         else:
             DESCARTES["presencial fuera de León"] = DESCARTES.get("presencial fuera de León", 0) + 1
-            return None
+            descarte = "presencial fuera de León"
+            puntos += 8
+            motivos.append("presencial fuera de León")
     elif any(contiene(t, lugar) for t in ub["remoto_ok"]) or (o["remoto"] and not lugar):
         puntos += 10
         motivos.append("remoto Europa/global")
@@ -314,6 +347,8 @@ def puntuar(o: dict, previo: bool = False) -> dict | None:
         return None  # no es un puesto técnico de tus áreas
     puntos += PERFIL["peso_area"].get(area, 5)
     if previo:  # solo se comprobaba título y ubicación
+        if descarte and nivel not in ("Prácticas", "Junior"):
+            return None  # no merece la pena pedir su descripción
         return o
 
     # Requisitos que no cumples: descartan o restan
@@ -321,11 +356,12 @@ def puntuar(o: dict, previo: bool = False) -> dict | None:
     if bloqueo:
         clave = re.sub(r" \(.*| \d+\+", "", bloqueo)
         DESCARTES[clave] = DESCARTES.get(clave, 0) + 1
-        return None
+        descarte = descarte or bloqueo
+        avisos, a_favor = [], []
     # Sin "prácticas" o "junior" en el título, solo vale si dice expresamente que admite estudiantes
     if nivel not in ("Prácticas", "Junior") and "admite estudiantes o perfiles sin experiencia" not in a_favor:
         DESCARTES["no es junior ni prácticas"] = DESCARTES.get("no es junior ni prácticas", 0) + 1
-        return None
+        descarte = descarte or "no es junior ni prácticas"
     if sin_region:
         avisos.append("remoto sin región: comprueba que admite candidatos desde España")
     puntos += 10 * len(a_favor) - 7 * len(avisos)
@@ -347,6 +383,8 @@ def puntuar(o: dict, previo: bool = False) -> dict | None:
         return None
     ident = hashlib.sha1(o["url"].encode()).hexdigest()[:12]
     return {
+        "descartada": descarte, "zona": zona,
+        "tecnologias": tecnologias_de(o["titulo"] + " " + cuerpo),
         "id": ident, "titulo": o["titulo"], "empresa": o["empresa"], "ubicacion": o["ubicacion"],
         "url": o["url"], "fuente": o["fuente"], "fecha": o["fecha"], "area": area, "nivel": nivel,
         "espana": en_espana, "puntos": min(puntos, 100), "motivos": motivos,
@@ -423,18 +461,29 @@ def main() -> int:
     for o in sorted(resultado.values(), key=lambda o: -o["puntos"]):
         clave = (o["empresa"].lower(), re.sub(r"\([^)]*\)|\s+", " ", o["titulo"].lower()).strip())
         unicas.setdefault(clave, o)
-    ofertas = sorted(unicas.values(), key=lambda o: o["fecha"] or "", reverse=True)
-    ofertas.sort(key=lambda o: -o["puntos"])
-    ofertas = ofertas[: PERFIL["max_ofertas"]]
-    nuevas = sum(1 for o in ofertas if o["id"] not in anteriores)
+    normales = [o for o in unicas.values() if not o["descartada"]]
+    casi = [o for o in unicas.values() if o["descartada"]]
+    normales.sort(key=lambda o: o["fecha"] or "", reverse=True)
+    normales.sort(key=lambda o: -o["puntos"])
+    casi.sort(key=lambda o: -o["puntos"])
+    normales = normales[: PERFIL["max_ofertas"]]
+    casi = casi[: PERFIL.get("max_casi_validas", 150)]
+    for o in casi:
+        o.pop("resumen", None)  # ahorra tamaño; son ofertas que solo se muestran si el usuario lo pide
+    ofertas = normales + casi
+    nuevas = sum(1 for o in normales if o["id"] not in anteriores)
+    PERFIL_A_TEC = {"rest": "rest api", "express": "express.js", "node": "node.js", "agents": "llm", "agentes": "llm"}
+    mis_tec = sorted({PERFIL_A_TEC.get(k, ALIAS.get(k, k)) for k in PERFIL["habilidades"]} & set(TECNOLOGIAS))
 
     salida.parent.mkdir(parents=True, exist_ok=True)
     salida.write_text(json.dumps({
         "generado": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "leidas": leidas, "nuevas": nuevas, "fuentes": estado, "descartes": DESCARTES, "ofertas": ofertas,
+        "leidas": leidas, "nuevas": nuevas, "fuentes": estado, "descartes": DESCARTES,
+        "tecnologias_conocidas": TECNOLOGIAS, "alias": ALIAS, "mis_tecnologias": mis_tec,
+        "ofertas": ofertas,
     }, ensure_ascii=False, indent=1), encoding="utf-8")
     print("  descartadas por requisitos:", DESCARTES)
-    print(f"{leidas} ofertas leídas -> {len(ofertas)} seleccionadas ({nuevas} nuevas)")
+    print(f"{leidas} ofertas leídas -> {len(normales)} seleccionadas ({nuevas} nuevas) + {len(casi)} casi válidas")
     return 0
 
 
