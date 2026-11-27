@@ -1,15 +1,34 @@
 {
- "generado": "2026-11-26T16:57:17+00:00",
- "leidas": 4549,
- "nuevas": 8,
+ "generado": "2026-11-27T16:43:04+00:00",
+ "leidas": 4545,
+ "nuevas": 1,
  "fuentes": {
-  "remotive": 48,
+  "remotive": 51,
   "jobicy": 150,
-  "arbeitnow": 26,
+  "arbeitnow": 25,
   "himalayas": 20,
-  "greenhouse": 4305
+  "greenhouse": 4299
  },
  "ofertas": [
+  {
+   "id": "0dc5bb0f1991",
+   "titulo": "Intern AI Solutions & Value Engineering (Agentic Customer Journey)",
+   "empresa": "Celonis",
+   "ubicacion": "Madrid, Spain",
+   "url": "https://job-boards.greenhouse.io/celonis/jobs/8213877003?gh_jid=8213877003",
+   "fuente": "Greenhouse",
+   "fecha": "2026-11-27",
+   "area": "IA",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 80,
+   "motivos": [
+    "prácticas",
+    "España"
+   ],
+   "resumen": "",
+   "vista_desde": "2026-11-27"
+  },
   {
    "id": "1c9d2085fa21",
    "titulo": "Intern Demo Experience & Applied AI",
@@ -85,26 +104,6 @@
    ],
    "resumen": "",
    "vista_desde": "2026-11-24"
-  },
-  {
-   "id": "6b97682d668b",
-   "titulo": "Junior Cloud Operations Engineer (all genders) CH",
-   "empresa": "BSI Software",
-   "ubicacion": "Homeoffice (remote)",
-   "url": "https://www.arbeitnow.ch/jobs/companies/bsi-software/remote-junior-cloud-operations-engineer-all-genders-ch-baar-288099",
-   "fuente": "Arbeitnow",
-   "fecha": "2026-11-26",
-   "area": "Sistemas",
-   "nivel": "Junior",
-   "espana": false,
-   "puntos": 65,
-   "motivos": [
-    "junior",
-    "remoto Europa/global",
-    "encaja: python, docker, linux, machine learning"
-   ],
-   "resumen": "Alle reden von Digitalisierung – Wir machen es. Als Hersteller von Europas #1 CRM/CX-Plattform entwickeln wir innovative Softwareprodukte in den Bereichen Kundenbeziehungsmanagement, Marketing Automation und Machine Learning. Unternehmen bei der Digitalisierung und der konsequent",
-   "vista_desde": "2026-11-26"
   },
   {
    "id": "49e50de3ec77",
@@ -205,25 +204,6 @@
    "vista_desde": "2026-11-24"
   },
   {
-   "id": "fbbd22d9683e",
-   "titulo": "Python Engineer",
-   "empresa": "Canonical",
-   "ubicacion": "Anywhere",
-   "url": "https://jobicy.com/jobs/149543-python-engineer",
-   "fuente": "Jobicy",
-   "fecha": "2026-11-25",
-   "area": "Desarrollo",
-   "nivel": "Sin nivel",
-   "espana": false,
-   "puntos": 47,
-   "motivos": [
-    "remoto Europa/global",
-    "encaja: python, docker, linux, c++, sql"
-   ],
-   "resumen": "Canonical is a leading provider of open source software and operating systems to the global enterprise and technology markets. Our platform, Ubuntu, is very widely used in breakthrough enterprise initiatives such as public cloud, data science, AI, engineering innovation, and IoT.",
-   "vista_desde": "2026-11-25"
-  },
-  {
    "id": "59489850b80f",
    "titulo": "Junior Ubuntu Software Engineer",
    "empresa": "Canonical",
@@ -241,25 +221,6 @@
    ],
    "resumen": "",
    "vista_desde": "2026-11-24"
-  },
-  {
-   "id": "121bded4effd",
-   "titulo": "Ubuntu Security Engineer",
-   "empresa": "Canonical",
-   "ubicacion": "Anywhere",
-   "url": "https://jobicy.com/jobs/149565-ubuntu-security-engineer",
-   "fuente": "Jobicy",
-   "fecha": "2026-11-25",
-   "area": "Sistemas",
-   "nivel": "Posible junior",
-   "espana": false,
-   "puntos": 45,
-   "motivos": [
-    "remoto Europa/global",
-    "encaja: python, javascript, java, linux"
-   ],
-   "resumen": "Canonical is a leading provider of open source software and operating systems to the global enterprise and technology markets. Our platform, Ubuntu, is very widely used in breakthrough enterprise initiatives such as public cloud, data science, AI, engineering innovation, and IoT.",
-   "vista_desde": "2026-11-25"
   },
   {
    "id": "e16084165661",
