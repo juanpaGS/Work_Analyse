@@ -194,8 +194,7 @@
       "europa",
       "emea",
       "eu",
-      "european union",
-      "remote"
+      "european union"
     ]
   },
   "tablones_greenhouse": [
@@ -212,9 +211,52 @@
     "sumup",
     "n26",
     "adyen",
-    "mongodb"
+    "mongodb",
+    "ebury",
+    "bitpanda",
+    "mirakl"
   ],
   "puntuacion_minima": 35,
   "max_ofertas": 200,
-  "_situacion": "Estudiante de 4.º (título en 2027), sin experiencia laboral en el sector ni certificaciones; idiomas: español e inglés. agente/buscar.py descarta o avisa de lo que no encaje."
+  "_situacion": "Estudiante de 4.º (título en 2027), sin experiencia laboral en el sector ni certificaciones; idiomas: español e inglés. agente/buscar.py descarta o avisa de lo que no encaje.",
+  "acepta_otras_ciudades": false,
+  "_acepta_otras_ciudades": "false = solo León o remoto. Ponlo en true para ver también ofertas presenciales en Madrid, Barcelona, etc. (con menos puntos).",
+  "areas_practicas_amplias": [
+    "it",
+    "tic",
+    "informática",
+    "informatica",
+    "technology",
+    "tecnología",
+    "tecnologia",
+    "digital",
+    "software",
+    "sistemas",
+    "systems",
+    "soporte",
+    "support",
+    "qa",
+    "testing",
+    "tester",
+    "web",
+    "datos",
+    "data",
+    "ia",
+    "ai",
+    "cyber",
+    "ciberseguridad",
+    "cloud",
+    "devops",
+    "redes",
+    "network",
+    "programación",
+    "programacion",
+    "developer",
+    "desarrollo"
+  ],
+  "tablones_lever": [
+    "jobandtalent"
+  ],
+  "fuentes_desactivadas": [],
+  "_fuentes_desactivadas": "Nombres de fuentes a apagar, p. ej. [\"adzuna\"]. El programa funciona sin ninguna en concreto."
 }

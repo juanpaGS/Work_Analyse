@@ -151,7 +151,23 @@ def fuente_adzuna():
         time.sleep(1)
 
 
-FUENTES = [fuente_adzuna, fuente_remotive, fuente_jobicy, fuente_arbeitnow, fuente_himalayas, fuente_greenhouse]
+def fuente_lever():
+    for emp in PERFIL.get("tablones_lever", []):
+        try:
+            datos = descargar(f"https://api.lever.co/v0/postings/{emp}?mode=json")
+        except (urllib.error.URLError, TimeoutError, ValueError) as e:
+            print(f"  ! lever/{emp}: {e}", file=sys.stderr)
+            continue
+        for j in datos:
+            remoto = j.get("workplaceType") == "remote"
+            lugar = (j.get("categories") or {}).get("location") or ""
+            yield oferta("Lever", j["text"], emp.capitalize(), lugar + (" (remote)" if remoto else ""),
+                         j["hostedUrl"], str(int(j.get("createdAt", 0)) // 1000) if j.get("createdAt") else "",
+                         j.get("descriptionPlain") or j.get("description"), [], remoto)
+        time.sleep(0.5)
+
+
+FUENTES = [fuente_adzuna, fuente_lever, fuente_remotive, fuente_jobicy, fuente_arbeitnow, fuente_himalayas, fuente_greenhouse]
 
 
 # ----------------------------------------------------------------- requisitos
@@ -174,6 +190,11 @@ RE_TITULO = re.compile(
 RE_POSGRADO = re.compile(r"\bph\.?d\b|doctorate|doctorado|master'?s degree|\bm\.?sc\b|máster|master en")
 RE_CERT = re.compile(r"certifi(?:ed|cation|cations|cado|cados|caci[oó]n|caciones)|\bcissp\b|\bccna\b|\bitil\b")
 RE_YA_TITULADO = re.compile(r"recent graduates?|graduated|have completed (?:a|your)|reci[eé]n (?:titulad|graduad|licenciad)")
+RE_REMOTO = re.compile(r"remot|teletrabaj|work from home|trabajo desde casa|home[- ]?office|fully remote")
+RE_HIBRIDO = re.compile(r"h[ií]brid|hybrid|presencial|on-?site|in[- ]office")
+RE_TODO_REMOTO = re.compile(r"100 ?% ?(?:remot|teletrabaj)|fully remote|totalmente remot|full[- ]remote")
+RE_PAGADA = re.compile(r"remunerad[ao]s?|bolsa de ayuda|ayuda al estudio|paid intern|stipend|retribu[ií]d[ao]|retribuci[oó]n")
+RE_NO_PAGADA = re.compile(r"no remunerad|unpaid|sin remuneraci|non[- ]paid|no retribu")
 RE_ALEMAN = re.compile(r"\b(?:und|der|die|das|mit|wir|für|sie|bei|oder)\b")
 
 
@@ -201,6 +222,10 @@ def requisitos(titulo: str, cuerpo: str, es_practicas: bool, es_adzuna: bool = F
     estudiante = RE_ESTUDIANTE.search(cuerpo) is not None
     if estudiante:
         a_favor.append("admite estudiantes o perfiles sin experiencia")
+    if RE_NO_PAGADA.search(texto):
+        avisos.append("prácticas posiblemente NO remuneradas")
+    elif RE_PAGADA.search(texto):
+        a_favor.append("indica remuneración")
     if RE_POSGRADO.search(texto):
         avisos.append("menciona máster o doctorado")
     if RE_YA_TITULADO.search(cuerpo) and not es_practicas:
@@ -218,7 +243,7 @@ def puntuar(o: dict, previo: bool = False) -> dict | None:
     titulo = o["titulo"].lower()
     cuerpo = (o["descripcion"] + " " + " ".join(o["etiquetas"])).lower()
     lugar = o["ubicacion"].lower()
-    puntos, motivos = 0, []
+    puntos, motivos, sin_region = 0, [], False
 
     # Nivel: lo decide el título
     niv = PERFIL["nivel"]
@@ -242,11 +267,25 @@ def puntuar(o: dict, previo: bool = False) -> dict | None:
         puntos += 40
         motivos.append("León")
     elif en_espana:
-        puntos += 25
-        motivos.append("España")
+        zona = lugar + " " + titulo + " " + cuerpo[:1500]
+        es_remoto = (RE_REMOTO.search(zona) or o["remoto"]) and (
+            not RE_HIBRIDO.search(lugar + " " + titulo + " " + cuerpo[:600]) or RE_TODO_REMOTO.search(zona))
+        if es_remoto:
+            puntos += 30
+            motivos.append("remoto desde España")
+        elif PERFIL.get("acepta_otras_ciudades", False):
+            puntos += 8
+            motivos.append("presencial fuera de León")
+        else:
+            DESCARTES["presencial fuera de León"] = DESCARTES.get("presencial fuera de León", 0) + 1
+            return None
     elif any(contiene(t, lugar) for t in ub["remoto_ok"]) or (o["remoto"] and not lugar):
         puntos += 10
         motivos.append("remoto Europa/global")
+    elif lugar.strip() in ("remote", "remoto"):
+        puntos += 4
+        motivos.append("remoto (región sin indicar)")
+        sin_region = True
     else:
         return None  # restringida a otro país
 
@@ -255,9 +294,11 @@ def puntuar(o: dict, previo: bool = False) -> dict | None:
         return None
     area = next((nombre for nombre, terminos in PERFIL["areas"].items()
                  if any(contiene(t, titulo) for t in terminos)), None)
+    if not area and nivel == "Prácticas" and any(contiene(t, titulo + " " + cuerpo[:600]) for t in PERFIL["areas_practicas_amplias"]):
+        area = "TI general"  # unas prácticas valen aunque no sean de tu área principal
     if not area:
         return None  # no es un puesto técnico de tus áreas
-    puntos += PERFIL["peso_area"][area]
+    puntos += PERFIL["peso_area"].get(area, 5)
     if previo:  # solo se comprobaba título y ubicación
         return o
 
@@ -268,9 +309,11 @@ def puntuar(o: dict, previo: bool = False) -> dict | None:
         DESCARTES[clave] = DESCARTES.get(clave, 0) + 1
         return None
     # Sin "prácticas" o "junior" en el título, solo vale si dice expresamente que admite estudiantes
-    if nivel not in ("Prácticas", "Junior") and not a_favor:
+    if nivel not in ("Prácticas", "Junior") and "admite estudiantes o perfiles sin experiencia" not in a_favor:
         DESCARTES["no es junior ni prácticas"] = DESCARTES.get("no es junior ni prácticas", 0) + 1
         return None
+    if sin_region:
+        avisos.append("remoto sin región: comprueba que admite candidatos desde España")
     puntos += 10 * len(a_favor) - 7 * len(avisos)
 
     # Habilidades
@@ -311,6 +354,8 @@ def main() -> int:
     resultado, leidas, estado = {}, 0, {}
     for fuente in FUENTES:
         nombre = fuente.__name__.removeprefix("fuente_")
+        if nombre in PERFIL.get("fuentes_desactivadas", []):
+            continue
         n = 0
         try:
             for bruta in fuente():

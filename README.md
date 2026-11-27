@@ -19,6 +19,17 @@ python3 agente/buscar.py            # actualiza docs/data/ofertas.json
 python3 -m http.server -d docs 8000 # abre http://localhost:8000
 ```
 
+## Fuentes e independencia
+
+Ninguna fuente es imprescindible: cada una es opcional y, si falla o no hay clave, el buscador sigue con las demás.
+
+- **Sin clave** (siempre activas): Remotive, Jobicy, Arbeitnow, Himalayas y tablones de empresas en Greenhouse y Lever. Para añadir empresas, edita `tablones_greenhouse` / `tablones_lever` en `perfil.json`.
+- **Con clave** (opcional): Adzuna, con los secretos `ADZUNA_APP_ID` y `ADZUNA_APP_KEY` del repositorio. Sin ellos se omite. Se puede apagar a mano con `"fuentes_desactivadas": ["adzuna"]`.
+
+## Ubicación
+
+Solo León o remoto. Las ofertas presenciales en otras ciudades se descartan; para verlas, pon `"acepta_otras_ciudades": true` en `perfil.json`.
+
 ## Límites actuales
 
 - No se consultan LinkedIn, InfoJobs, Indeed ni Tecnoempleo: sus condiciones o su `robots.txt` no permiten el acceso automático.
