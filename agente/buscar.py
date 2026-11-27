@@ -141,8 +141,12 @@ def fuente_adzuna():
         datos = descargar("https://api.adzuna.com/v1/api/jobs/es/search/1?" + urllib.parse.urlencode(params))
         for j in datos.get("results", []):
             lugar = (j.get("location") or {}).get("display_name") or ""
+            # El enlace de Adzuna lleva tu app_id en utm_source: se quita para no publicarlo
+            partes = urllib.parse.urlsplit(j["redirect_url"])
+            consulta = [(k, v) for k, v in urllib.parse.parse_qsl(partes.query) if k != "utm_source"]
+            enlace = urllib.parse.urlunsplit(partes._replace(query=urllib.parse.urlencode(consulta)))
             yield oferta("Adzuna", j["title"], (j.get("company") or {}).get("display_name") or "",
-                         f"{lugar}, España", j["redirect_url"], j.get("created"),
+                         f"{lugar}, España", enlace, j.get("created"),
                          j.get("description"), [], False)
         time.sleep(1)
 
