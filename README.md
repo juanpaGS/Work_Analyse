@@ -12,12 +12,38 @@ Asistente personal de búsqueda de prácticas y empleo junior.
 | `.github/workflows/buscar.yml` | Ejecuta el buscador cada día y guarda los resultados. Solo se activa cuando está en la rama `main`. |
 | `cv/` | Ignorado por git (contiene datos personales). |
 
-## Uso local
+## Prueba rápida en tu PC
+
+Necesitas Python 3.10 o superior (en Windows: python.org, marcando "Add to PATH"; en WSL/Linux ya suele venir) y Git.
 
 ```bash
-python3 agente/buscar.py            # actualiza docs/data/ofertas.json
-python3 -m http.server -d docs 8000 # abre http://localhost:8000
+git clone https://github.com/juanpaGS/Work_Analyse.git
+cd Work_Analyse
+python3 agente/buscar.py --fuentes          # qué fuentes hay y cuáles están activas
+python3 agente/buscar.py --sin adzuna       # búsqueda solo con fuentes sin clave
+python3 agente/buscar.py                    # búsqueda con todas las fuentes activas
+python3 -m http.server -d docs 8000         # abre http://localhost:8000 en el navegador
 ```
+
+En Windows sin WSL usa `python` o `py` en lugar de `python3`. La búsqueda tarda 1-2 minutos y escribe `docs/data/ofertas.json`.
+
+Opciones: `--sin FUENTE` (repetible), `--solo FUENTE`, `--salida ARCHIVO` (no toca los datos de la app).
+
+### Activar Adzuna (opcional)
+
+1. Copia `.env.ejemplo` como `.env` y rellena `ADZUNA_APP_ID` y `ADZUNA_APP_KEY`. El archivo `.env` está en `.gitignore` y nunca se sube.
+2. Comprueba con `python3 agente/buscar.py --fuentes`: `adzuna` debe salir como `activa`.
+
+## Fuentes e independencia
+
+Ninguna fuente es imprescindible: cada una es opcional y, si falla o no hay clave, el buscador sigue con las demás.
+
+- **Sin clave** (siempre activas): Remotive, Jobicy, Arbeitnow, Himalayas y tablones de empresas en Greenhouse y Lever. Para añadir empresas, edita `tablones_greenhouse` / `tablones_lever` en `perfil.json`.
+- **Con clave** (opcional, recomendada): Adzuna, con los secretos `ADZUNA_APP_ID` y `ADZUNA_APP_KEY` del repositorio. Sin ellos se omite. Se puede apagar a mano con `"fuentes_desactivadas": ["adzuna"]`.
+
+## Ubicación
+
+Solo León o remoto. Las ofertas presenciales en otras ciudades se descartan; para verlas, pon `"acepta_otras_ciudades": true` en `perfil.json`.
 
 ## Límites actuales
 
