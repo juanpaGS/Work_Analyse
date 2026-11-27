@@ -1,13 +1,19 @@
 {
- "generado": "2026-11-27T16:43:04+00:00",
- "leidas": 4545,
- "nuevas": 1,
+ "generado": "2026-11-27T16:52:15+00:00",
+ "leidas": 4541,
+ "nuevas": 3,
  "fuentes": {
   "remotive": 51,
   "jobicy": 150,
-  "arbeitnow": 25,
+  "arbeitnow": 21,
   "himalayas": 20,
   "greenhouse": 4299
+ },
+ "descartes": {
+  "pide años de experiencia": 29,
+  "no es junior ni prácticas": 77,
+  "oferta en alemán": 2,
+  "exige otro idioma": 5
  },
  "ofertas": [
   {
@@ -21,12 +27,15 @@
    "area": "IA",
    "nivel": "Prácticas",
    "espana": true,
-   "puntos": 80,
+   "puntos": 100,
    "motivos": [
     "prácticas",
-    "España"
+    "España",
+    "encaja: python, sql, llm, agents"
    ],
-   "resumen": "",
+   "avisos": [],
+   "a_favor": [],
+   "resumen": "Celonis is the trusted platform to industrialize Enterprise AI. At our core is the Celonis Context Model — which combines process data, business knowledge, and intelligence into a living digital twin of the enterprise that AI can actually understand, turning AI's operational blin",
    "vista_desde": "2026-11-27"
   },
   {
@@ -40,69 +49,39 @@
    "area": "IA",
    "nivel": "Prácticas",
    "espana": true,
-   "puntos": 80,
+   "puntos": 96,
    "motivos": [
     "prácticas",
-    "España"
+    "España",
+    "encaja: python, sql, agents"
    ],
-   "resumen": "",
-   "vista_desde": "2026-11-26"
+   "avisos": [],
+   "a_favor": [],
+   "resumen": "Celonis is the trusted platform to industrialize Enterprise AI. At our core is the Celonis Context Model — which combines process data, business knowledge, and intelligence into a living digital twin of the enterprise that AI can actually understand, turning AI's operational blin",
+   "vista_desde": "2026-11-27"
   },
   {
-   "id": "a65909360df1",
-   "titulo": "Associate (AI) Solution Consultant - Orbit Program",
-   "empresa": "Celonis",
-   "ubicacion": "Madrid, Spain",
-   "url": "https://job-boards.greenhouse.io/celonis/jobs/8199108003?gh_jid=8199108003",
+   "id": "3442bef92d42",
+   "titulo": "Graduate Software Engineer, Open Source and Linux, Canonical Ubuntu",
+   "empresa": "Canonical",
+   "ubicacion": "Home based - Worldwide",
+   "url": "https://job-boards.greenhouse.io/canonical/jobs/8379825",
    "fuente": "Greenhouse",
-   "fecha": "2026-11-09",
-   "area": "IA",
+   "fecha": "2026-11-16",
+   "area": "Desarrollo",
    "nivel": "Junior",
-   "espana": true,
-   "puntos": 68,
+   "espana": false,
+   "puntos": 66,
    "motivos": [
     "junior",
-    "España"
+    "remoto Europa/global",
+    "encaja: python, javascript, java, linux, c++"
    ],
-   "resumen": "",
-   "vista_desde": "2026-11-24"
-  },
-  {
-   "id": "b2853ffb8eb0",
-   "titulo": "Associate Applied (AI) Value Engineer (APAC) - Orbit Program",
-   "empresa": "Celonis",
-   "ubicacion": "Madrid, Spain",
-   "url": "https://job-boards.greenhouse.io/celonis/jobs/7995509003?gh_jid=7995509003",
-   "fuente": "Greenhouse",
-   "fecha": "2026-09-22",
-   "area": "IA",
-   "nivel": "Junior",
-   "espana": true,
-   "puntos": 68,
-   "motivos": [
-    "junior",
-    "España"
+   "avisos": [
+    "pide titulación terminada (tú terminas en 2027)"
    ],
-   "resumen": "",
-   "vista_desde": "2026-11-24"
-  },
-  {
-   "id": "547c112f9bc0",
-   "titulo": "Associate (AI) Solution Consultant (Nordics) - Orbit Program",
-   "empresa": "Celonis",
-   "ubicacion": "Madrid, Spain",
-   "url": "https://job-boards.greenhouse.io/celonis/jobs/7981557003?gh_jid=7981557003",
-   "fuente": "Greenhouse",
-   "fecha": "2026-08-31",
-   "area": "IA",
-   "nivel": "Junior",
-   "espana": true,
-   "puntos": 68,
-   "motivos": [
-    "junior",
-    "España"
-   ],
-   "resumen": "",
+   "a_favor": [],
+   "resumen": "We are hiring 2026 and 2027 Graduate Software Engineers into engineering teams around the world. As a global platform company we offer a wide range of software engineering challenges, in both open source products and commercial business systems. We have teams that work in a varie",
    "vista_desde": "2026-11-24"
   },
   {
@@ -116,12 +95,17 @@
    "area": "Desarrollo",
    "nivel": "Junior",
    "espana": true,
-   "puntos": 62,
+   "puntos": 63,
    "motivos": [
     "junior",
-    "España"
+    "España",
+    "encaja: javascript, java"
    ],
-   "resumen": "",
+   "avisos": [
+    "pide titulación terminada (tú terminas en 2027)"
+   ],
+   "a_favor": [],
+   "resumen": "Who we are About Stripe Stripe is a technology company focused on improving the conditions for economic growth and prosperity. We build programmable financial infrastructure, rethinking from first principles how financial services should work, to make it easier and cheaper for an",
    "vista_desde": "2026-11-24"
   },
   {
@@ -135,53 +119,18 @@
    "area": "Sistemas",
    "nivel": "Junior",
    "espana": false,
-   "puntos": 61,
+   "puntos": 56,
    "motivos": [
     "junior",
     "remoto Europa/global",
-    "encaja: python, linux, git"
+    "encaja: python, linux, git, bash"
    ],
+   "avisos": [
+    "dirigida a recién titulados (tú terminas en 2027)"
+   ],
+   "a_favor": [],
    "resumen": "Canonical is a leading provider of open source software and operating systems to the global enterprise and technology markets. Our platform, Ubuntu, is very widely used in breakthrough enterprise initiatives such as public cloud, data science, AI, engineering innovation, and IoT.",
-   "vista_desde": "2026-11-26"
-  },
-  {
-   "id": "3442bef92d42",
-   "titulo": "Graduate Software Engineer, Open Source and Linux, Canonical Ubuntu",
-   "empresa": "Canonical",
-   "ubicacion": "Home based - Worldwide",
-   "url": "https://job-boards.greenhouse.io/canonical/jobs/8379825",
-   "fuente": "Greenhouse",
-   "fecha": "2026-11-16",
-   "area": "Desarrollo",
-   "nivel": "Junior",
-   "espana": false,
-   "puntos": 55,
-   "motivos": [
-    "junior",
-    "remoto Europa/global",
-    "encaja: linux"
-   ],
-   "resumen": "",
-   "vista_desde": "2026-11-24"
-  },
-  {
-   "id": "48be48ae080f",
-   "titulo": "Infrastructure Security Engineer",
-   "empresa": "Elevenlabs",
-   "ubicacion": "Belgium, Bulgaria, Croatia, Czechia, Denmark, Hungary, Ireland, Italy, Netherlands, Poland, Portugal, Spain, Sweden, UK",
-   "url": "https://jobicy.com/jobs/157064-infrastructure-security-engineer",
-   "fuente": "Jobicy",
-   "fecha": "2026-11-26",
-   "area": "Sistemas",
-   "nivel": "Sin nivel",
-   "espana": true,
-   "puntos": 54,
-   "motivos": [
-    "España",
-    "encaja: python, linux, agents, machine learning"
-   ],
-   "resumen": "About ElevenLabs ElevenLabs is an AI research and product company transforming how we interact with technology. We launched in January 2023 with the first human-like AI voice model. Today, we serve millions of users and thousands of businesses - from fast-growing startups to larg",
-   "vista_desde": "2026-11-26"
+   "vista_desde": "2026-11-27"
   },
   {
    "id": "7a4906dc6bf5",
@@ -194,13 +143,17 @@
    "area": "Sistemas",
    "nivel": "Junior",
    "espana": false,
-   "puntos": 53,
+   "puntos": 56,
    "motivos": [
     "junior",
     "remoto Europa/global",
-    "encaja: linux"
+    "encaja: javascript, linux, c++, rest, bash"
    ],
-   "resumen": "",
+   "avisos": [
+    "pide titulación terminada (tú terminas en 2027)"
+   ],
+   "a_favor": [],
+   "resumen": "Canonical is a leading provider of open source software and operating systems to the global enterprise and technology markets. Our platform, Ubuntu, is very widely used in breakthrough enterprise initiatives such as public cloud, data science, AI, engineering innovation and IoT. ",
    "vista_desde": "2026-11-24"
   },
   {
@@ -214,165 +167,18 @@
    "area": "Desarrollo",
    "nivel": "Junior",
    "espana": false,
-   "puntos": 47,
+   "puntos": 52,
    "motivos": [
     "junior",
-    "remoto Europa/global"
-   ],
-   "resumen": "",
-   "vista_desde": "2026-11-24"
-  },
-  {
-   "id": "e16084165661",
-   "titulo": "Security Engineer",
-   "empresa": "Fever",
-   "ubicacion": "Spain",
-   "url": "https://jobicy.com/jobs/164365-security-engineer-4",
-   "fuente": "Jobicy",
-   "fecha": "2026-11-26",
-   "area": "Sistemas",
-   "nivel": "Sin nivel",
-   "espana": true,
-   "puntos": 44,
-   "motivos": [
-    "España",
-    "encaja: python, docker, sql"
-   ],
-   "resumen": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with ",
-   "vista_desde": "2026-11-26"
-  },
-  {
-   "id": "5c784fc58988",
-   "titulo": "Linux Software Engineer - Ubuntu for Next-Gen Silicon (multiple roles and seniority levels)",
-   "empresa": "Canonical",
-   "ubicacion": "Anywhere",
-   "url": "https://jobicy.com/jobs/156997-linux-software-engineer-ubuntu-for-next-gen-silicon-multiple-roles-and-seniority-levels",
-   "fuente": "Jobicy",
-   "fecha": "2026-11-25",
-   "area": "Desarrollo",
-   "nivel": "Sin nivel",
-   "espana": false,
-   "puntos": 41,
-   "motivos": [
     "remoto Europa/global",
-    "encaja: python, docker, linux, c++, rest"
+    "encaja: python, linux, c++"
    ],
+   "avisos": [
+    "pide titulación terminada (tú terminas en 2027)"
+   ],
+   "a_favor": [],
    "resumen": "Canonical is a leading provider of open source software and operating systems to the global enterprise and technology markets. Our platform, Ubuntu, is very widely used in breakthrough enterprise initiatives such as public cloud, data science, AI, engineering innovation and IoT. ",
-   "vista_desde": "2026-11-25"
-  },
-  {
-   "id": "f4cb56c2b07d",
-   "titulo": "Security Software Engineer",
-   "empresa": "Canonical",
-   "ubicacion": "Anywhere",
-   "url": "https://jobicy.com/jobs/149550-security-software-engineer",
-   "fuente": "Jobicy",
-   "fecha": "2026-11-26",
-   "area": "Desarrollo",
-   "nivel": "Sin nivel",
-   "espana": false,
-   "puntos": 39,
-   "motivos": [
-    "remoto Europa/global",
-    "encaja: python, javascript, java, linux, c++"
-   ],
-   "resumen": "Canonical is a leading provider of open source software and operating systems to the global enterprise and technology markets. Our platform, Ubuntu, is widely used in breakthrough enterprise initiatives such as public cloud, data science, AI, engineering innovation, and IoT. Our ",
-   "vista_desde": "2026-11-26"
-  },
-  {
-   "id": "6f1d826349ee",
-   "titulo": "Cybersecurity Engineer",
-   "empresa": "Fever",
-   "ubicacion": "Spain",
-   "url": "https://jobicy.com/jobs/164359-cybersecurity-engineer-2",
-   "fuente": "Jobicy",
-   "fecha": "2026-11-26",
-   "area": "Sistemas",
-   "nivel": "Sin nivel",
-   "espana": true,
-   "puntos": 38,
-   "motivos": [
-    "España",
-    "encaja: python"
-   ],
-   "resumen": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with ",
-   "vista_desde": "2026-11-26"
-  },
-  {
-   "id": "78cbebee66c3",
-   "titulo": "Full-Stack Developer",
-   "empresa": "Fluence International, Inc.",
-   "ubicacion": "Worldwide",
-   "url": "https://remotive.com/remote-jobs/software-development/full-stack-developer-2091165",
-   "fuente": "Remotive",
-   "fecha": "2026-10-29",
-   "area": "Desarrollo",
-   "nivel": "Sin nivel",
-   "espana": false,
-   "puntos": 37,
-   "motivos": [
-    "remoto Europa/global",
-    "encaja: javascript, docker, rest, api, llm"
-   ],
-   "resumen": "We’re looking for a pragmatic, security-minded Full-Stack Developer to help build and scale Fluence’s B2B products used by clinicians, researchers, and organizations in psychedelic-assisted therapy and mental health. You’ll work closely with and report to our Senior AI & Design L",
    "vista_desde": "2026-11-24"
-  },
-  {
-   "id": "092793990b57",
-   "titulo": "Backend Engineer (Python),AI Engineering: Agent Foundations",
-   "empresa": "GitLab",
-   "ubicacion": "Remote, Canada; Remote, Poland; Remote, United Kingdom",
-   "url": "https://job-boards.greenhouse.io/gitlab/jobs/8704363002",
-   "fuente": "Greenhouse",
-   "fecha": "2026-08-19",
-   "area": "IA",
-   "nivel": "Sin nivel",
-   "espana": false,
-   "puntos": 37,
-   "motivos": [
-    "remoto Europa/global",
-    "encaja: python"
-   ],
-   "resumen": "",
-   "vista_desde": "2026-11-24"
-  },
-  {
-   "id": "63ca98deec3c",
-   "titulo": "Python and Kubernetes Software Engineer - Data, Workflows, AI/ML & Analytics",
-   "empresa": "Canonical",
-   "ubicacion": "Home based - Worldwide",
-   "url": "https://job-boards.greenhouse.io/canonical/jobs/5703396",
-   "fuente": "Greenhouse",
-   "fecha": "2024-04-11",
-   "area": "IA",
-   "nivel": "Sin nivel",
-   "espana": false,
-   "puntos": 37,
-   "motivos": [
-    "remoto Europa/global",
-    "encaja: python"
-   ],
-   "resumen": "",
-   "vista_desde": "2026-11-26"
-  },
-  {
-   "id": "48fa209887f8",
-   "titulo": "Software Engineer - Storage",
-   "empresa": "Supabase",
-   "ubicacion": "Anywhere",
-   "url": "https://jobicy.com/jobs/156940-software-engineer-storage",
-   "fuente": "Jobicy",
-   "fecha": "2026-11-25",
-   "area": "Desarrollo",
-   "nivel": "Sin nivel",
-   "espana": false,
-   "puntos": 35,
-   "motivos": [
-    "remoto Europa/global",
-    "encaja: node, node.js, docker"
-   ],
-   "resumen": "About Supabase Supabase is the Postgres development platform, built by developers for developers. We provide a complete backend solution including Database, Auth, Storage, Edge Functions, Realtime, and Vector Search. All services are deeply integrated and designed for growth. Abo",
-   "vista_desde": "2026-11-25"
   }
  ]
 }
