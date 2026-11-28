@@ -12,6 +12,15 @@ Asistente personal de búsqueda de prácticas y empleo junior.
 | `.github/workflows/buscar.yml` | Ejecuta el buscador cada día y guarda los resultados. Solo se activa cuando está en la rama `main`. |
 | `cv/` | Ignorado por git (contiene datos personales). |
 
+## La app
+
+Interfaz instalable en el móvil, con todo guardado en tu dispositivo:
+
+- **Filtros**: dónde (León / remoto), tipo (prácticas / junior), área, encaje mínimo, sin avisos, con remuneración y orden.
+- **Ofertas que casi encajan**: se pueden mostrar, con el motivo por el que no cumplen el filtro estricto (presencial fuera de León, piden experiencia, sin nivel junior, otro idioma).
+- **Mi perfil**: tecnologías que dominas, editables. Puedes pegar el texto de tu CV y se detectan en tu navegador, sin enviarlo a ningún sitio.
+- **Qué te falta**: en cada oferta, qué tecnologías ya dominas y cuáles no, y un resumen de las más pedidas que aún no tienes.
+
 ## Prueba rápida en tu PC
 
 Necesitas Python 3.10 o superior (en Windows: python.org, marcando "Add to PATH"; en WSL/Linux ya suele venir) y Git.

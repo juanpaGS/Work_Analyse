@@ -14,102 +14,277 @@
 @media (prefers-color-scheme:dark){:root{--bg:#0e1418;--card:#172026;--ink:#e6edf2;--muted:#93a3b0;--line:#26333c;--brand:#2dd4bf;--brand-ink:#04211e;--chip:#22303a;--good:#2dd4bf;--warn:#fbbf24}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;padding:env(safe-area-inset-top) 0 calc(24px + env(safe-area-inset-bottom))}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
 header{position:sticky;top:0;z-index:2;background:var(--bg);border-bottom:1px solid var(--line);padding:12px 16px 10px}
 .wrap{max-width:760px;margin:0 auto}
 h1{font-size:20px;margin:0}
 .meta{color:var(--muted);font-size:13px;margin-top:2px}
-.tabs,.filtros{display:flex;gap:8px;overflow-x:auto;padding:10px 0 2px;scrollbar-width:none}
-button{font:inherit;color:inherit;cursor:pointer}
-.chip{flex:none;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:6px 12px;font-size:14px;min-height:36px}
+.scroll{display:flex;gap:8px;overflow-x:auto;padding:10px 0 2px;scrollbar-width:none}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 10px}
+.chip{flex:none;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:6px 12px;font-size:14px;min-height:40px}
 .chip[aria-pressed=true]{background:var(--brand);border-color:var(--brand);color:var(--brand-ink);font-weight:600}
-input[type=search]{width:100%;margin-top:10px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);font:inherit}
+.chip.peq{min-height:32px;padding:3px 10px;font-size:13px}
+input[type=search],input[type=text],select,textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+textarea{min-height:110px;resize:vertical}
+input[type=range]{width:100%;accent-color:var(--brand)}
 main{padding:12px 16px}
+details.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:10px}
+details.panel>summary{padding:12px 14px;font-weight:600;cursor:pointer;min-height:44px}
+details.panel>div{padding:0 14px 12px}
+h3{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin:12px 0 2px}
+.ayuda{color:var(--muted);font-size:13px;margin:2px 0 6px}
+.cuenta{color:var(--muted);font-size:13px;margin:4px 2px 10px}
 .oferta{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px}
+.oferta.casi{border-style:dashed}
 .oferta h2{font-size:16px;margin:0 0 2px;line-height:1.3}
 .oferta .emp{color:var(--muted);font-size:14px}
 .fila{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
 .tag{background:var(--chip);border-radius:6px;padding:2px 8px;font-size:12.5px}
 .tag.nueva{background:var(--brand);color:var(--brand-ink);font-weight:600}
+.tag.ok{border:1px solid var(--good);background:transparent;color:var(--good)}
+.tag.falta{border:1px solid var(--warn);background:transparent;color:var(--warn)}
 .puntos{float:right;font-weight:700;color:var(--good);font-variant-numeric:tabular-nums;margin-left:8px}
 .motivos{color:var(--muted);font-size:13px}
-.req{font-size:13.5px;margin-top:6px;padding-left:0;list-style:none}
+.req{font-size:13.5px;margin:6px 0 0;padding:0;list-style:none}
 .req li{padding-left:20px;position:relative;margin-bottom:2px}
 .req li::before{position:absolute;left:0;font-weight:700}
 .req .ok{color:var(--good)}.req .ok::before{content:"✓"}
 .req .ojo{color:var(--warn)}.req .ojo::before{content:"!"}
+.casi-aviso{color:var(--warn);font-size:13.5px;margin-top:6px}
+.tec{font-size:13px;margin-top:8px;color:var(--muted)}
+.tec .fila{margin:4px 0}
 .acciones{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-.btn{border:1px solid var(--line);background:transparent;border-radius:10px;padding:8px 12px;font-size:14px;min-height:40px;text-decoration:none;color:var(--ink)}
+.btn{border:1px solid var(--line);background:transparent;border-radius:10px;padding:8px 12px;font-size:14px;min-height:40px;text-decoration:none;color:var(--ink);display:inline-flex;align-items:center}
 .btn.pri{background:var(--brand);border-color:var(--brand);color:var(--brand-ink);font-weight:600}
 .btn[aria-pressed=true]{border-color:var(--brand);color:var(--brand);font-weight:600}
 .vacio{color:var(--muted);text-align:center;padding:40px 10px}
+.fila-form{display:flex;gap:8px}
+.fila-form input{flex:1}
 </style>
 </head>
 <body>
 <header><div class="wrap">
   <h1>Work Analyse</h1>
   <div class="meta" id="meta">Cargando ofertas…</div>
-  <div class="tabs" id="tabs" role="group" aria-label="Estado"></div>
-  <div class="filtros" id="filtros" role="group" aria-label="Filtros"></div>
-  <input type="search" id="q" placeholder="Buscar por puesto o empresa" aria-label="Buscar">
+  <div class="scroll" id="tabs" role="group" aria-label="Estado de la oferta"></div>
 </div></header>
-<main><div class="wrap" id="lista"></div></main>
+
+<main><div class="wrap">
+  <details class="panel" id="p-filtros">
+    <summary>Filtros</summary>
+    <div>
+      <label for="q"><h3>Buscar</h3></label>
+      <input type="search" id="q" placeholder="Puesto, empresa o tecnología" autocomplete="off">
+      <h3>Dónde</h3><div class="chips" id="f-zona"></div>
+      <h3>Tipo</h3><div class="chips" id="f-nivel"></div>
+      <h3>Área</h3><div class="chips" id="f-area"></div>
+      <label for="min"><h3>Encaje mínimo: <span id="min-v">0</span></h3></label>
+      <input type="range" id="min" min="0" max="100" step="5" value="0">
+      <h3>Más condiciones</h3><div class="chips" id="f-extra"></div>
+      <h3>Mostrar también ofertas que casi encajan</h3>
+      <p class="ayuda">Aparecen con borde discontinuo y el motivo por el que no cumplen tu filtro estricto.</p>
+      <div class="chips" id="f-casi"></div>
+      <label for="orden"><h3>Ordenar por</h3></label>
+      <select id="orden">
+        <option value="encaje">Encaje con la búsqueda</option>
+        <option value="tec">Tecnologías que ya dominas</option>
+        <option value="fecha">Más recientes</option>
+      </select>
+      <div class="chips" style="margin-top:12px"><button class="chip" id="reset-filtros">Restablecer filtros</button></div>
+    </div>
+  </details>
+
+  <details class="panel" id="p-perfil">
+    <summary>Mi perfil: tecnologías que domino</summary>
+    <div>
+      <p class="ayuda">Con esto la app te dice, en cada oferta, qué ya sabes y qué te falta. Toca una para quitarla.</p>
+      <div class="chips" id="tec-lista"></div>
+      <div class="fila-form">
+        <input type="text" id="tec-nueva" list="tec-sugeridas" placeholder="Añadir tecnología" aria-label="Añadir tecnología" autocomplete="off">
+        <button class="btn" id="tec-add">Añadir</button>
+      </div>
+      <datalist id="tec-sugeridas"></datalist>
+      <h3>Detectar desde mi CV</h3>
+      <p class="ayuda">Pega el texto de tu CV. Se analiza solo en tu navegador: no se envía ni se guarda en ningún sitio.</p>
+      <textarea id="cv-texto" aria-label="Texto del CV" placeholder="Pega aquí el texto de tu CV"></textarea>
+      <div class="chips" style="margin-top:8px">
+        <button class="btn pri" id="cv-detectar">Detectar tecnologías</button>
+        <button class="chip" id="tec-reset">Volver a mi perfil original</button>
+      </div>
+      <p class="ayuda" id="cv-res" aria-live="polite"></p>
+    </div>
+  </details>
+
+  <details class="panel" id="p-aprender">
+    <summary>Qué te falta: lo más pedido que aún no tienes</summary>
+    <div>
+      <p class="ayuda">Cuenta las tecnologías que piden las ofertas que ves ahora y que no están en tu perfil. Es una guía para elegir qué aprender o qué proyecto hacer.</p>
+      <div class="chips" id="aprender-lista"></div>
+    </div>
+  </details>
+
+  <div class="cuenta" id="cuenta" aria-live="polite"></div>
+  <div id="lista"></div>
+</div></main>
+
 <script>
 const ESTADOS = [["pendiente","Por revisar"],["guardada","Guardadas"],["solicitada","Solicitadas"],["descartada","Descartadas"]];
-const FILTROS = [["limpia","Sin avisos"],["espana","España"],["Prácticas","Prácticas"],["Junior","Junior"],["IA","IA"],["Datos","Datos"],["Desarrollo","Desarrollo"],["Sistemas","Sistemas"]];
-let datos = {ofertas: []}, tab = "pendiente", activos = new Set(), estado = {};
-try { estado = JSON.parse(localStorage.getItem("estado") || "{}"); } catch (e) {}
-const guardar = () => { try { localStorage.setItem("estado", JSON.stringify(estado)); } catch (e) {} };
+const ZONAS = [["leon","León"],["remoto","Remoto"]];
+const NIVELES = [["Prácticas","Prácticas"],["Junior","Junior"],["Otros","Otros"]];
+const AREAS = ["IA","Datos","Desarrollo","Sistemas","TI general"];
+const CASI = [["presencial","Presencial fuera de León"],["experiencia","Piden experiencia"],["nojunior","Sin nivel junior"],["idioma","Otro idioma"]];
+const DEF = {zona:{leon:true,remoto:true}, nivel:{"Prácticas":true,"Junior":true,"Otros":true}, area:[], min:0,
+             sinAvisos:false, pagada:false, casi:{presencial:false,experiencia:false,nojunior:false,idioma:false}, orden:"encaje", tec:null};
+
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const de = o => estado[o.id] || "pendiente";
+const leer = (k, def) => { try { return JSON.parse(localStorage.getItem(k)) ?? def; } catch (e) { return def; } };
+const grabar = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
 
-function pinta() {
-  const hoy = (datos.generado || "").slice(0, 10), q = $("q").value.trim().toLowerCase();
-  $("tabs").innerHTML = ESTADOS.map(([k, t]) => {
-    const n = datos.ofertas.filter(o => de(o) === k).length;
-    return `<button class="chip" data-tab="${k}" aria-pressed="${tab === k}">${t} · ${n}</button>`;
-  }).join("");
-  $("filtros").innerHTML = FILTROS.map(([k, t]) =>
-    `<button class="chip" data-f="${k}" aria-pressed="${activos.has(k)}">${t}</button>`).join("");
-  const vis = datos.ofertas.filter(o => de(o) === tab
-    && [...activos].every(f => f === "espana" ? o.espana : f === "limpia" ? !(o.avisos || []).length : (o.nivel === f || o.area === f))
-    && (!q || (o.titulo + " " + o.empresa).toLowerCase().includes(q)));
-  $("lista").innerHTML = vis.length ? vis.map(o => `
-    <article class="oferta">
-      <span class="puntos" title="Encaje con tu perfil">${o.puntos}</span>
+let D = {ofertas: [], tecnologias_conocidas: [], alias: {}, mis_tecnologias: []};
+let tab = "pendiente";
+let estado = leer("estado", {});
+let A = (() => {
+  const g = leer("ajustes", {}), a = {};
+  for (const k in DEF) a[k] = (DEF[k] && typeof DEF[k] === "object" && !Array.isArray(DEF[k])) ? Object.assign({}, DEF[k], g[k]) : (g[k] ?? DEF[k]);
+  return a;
+})();
+const guardarAjustes = () => grabar("ajustes", A);
+const de = o => estado[o.id] || "pendiente";
+const misTec = () => new Set(A.tec ?? D.mis_tecnologias);
+const casiKey = o => !o.descartada ? null : /^presencial/.test(o.descartada) ? "presencial" : /^pide/.test(o.descartada) ? "experiencia" : /^no es junior/.test(o.descartada) ? "nojunior" : "idioma";
+const nivelKey = o => (o.nivel === "Prácticas" || o.nivel === "Junior") ? o.nivel : "Otros";
+const ZONA_TXT = {leon: "León", remoto: "Remoto", otra: "Otra ciudad"};
+
+function tecDe(o) {
+  const mine = misTec(), todas = o.tecnologias || [];
+  return {have: todas.filter(t => mine.has(t)), falta: todas.filter(t => !mine.has(t)), n: todas.length};
+}
+
+function visibles() {
+  const q = $("q").value.trim().toLowerCase();
+  const out = D.ofertas.filter(o => {
+    if (de(o) !== tab) return false;
+    const ck = casiKey(o);
+    if (ck && !A.casi[ck]) return false;
+    if ((o.zona === "leon" || o.zona === "remoto") && !A.zona[o.zona]) return false;
+    if (!A.nivel[nivelKey(o)]) return false;
+    if (A.area.length && !A.area.includes(o.area)) return false;
+    if (o.puntos < A.min) return false;
+    if (A.sinAvisos && (o.avisos || []).length) return false;
+    if (A.pagada && !(o.a_favor || []).includes("indica remuneración")) return false;
+    if (q && !(o.titulo + " " + o.empresa + " " + (o.tecnologias || []).join(" ")).toLowerCase().includes(q)) return false;
+    return true;
+  });
+  const ratio = o => { const t = tecDe(o); return t.n ? t.have.length / t.n : -1; };
+  if (A.orden === "tec") out.sort((a, b) => ratio(b) - ratio(a) || b.puntos - a.puntos);
+  else if (A.orden === "fecha") out.sort((a, b) => (b.fecha || "").localeCompare(a.fecha || ""));
+  else out.sort((a, b) => b.puntos - a.puntos);
+  return out;
+}
+
+const chip = (attr, val, texto, on, extra = "") => `<button class="chip ${extra}" ${attr}="${esc(val)}" aria-pressed="${on}">${esc(texto)}</button>`;
+
+function pintaControles() {
+  $("tabs").innerHTML = ESTADOS.map(([k, t]) => chip("data-tab", k, `${t} · ${D.ofertas.filter(o => de(o) === k && (!o.descartada || A.casi[casiKey(o)])).length}`, tab === k)).join("");
+  $("f-zona").innerHTML = ZONAS.map(([k, t]) => chip("data-zona", k, t, A.zona[k])).join("");
+  $("f-nivel").innerHTML = NIVELES.map(([k, t]) => chip("data-nivel", k, t, A.nivel[k])).join("");
+  $("f-area").innerHTML = AREAS.map(k => chip("data-area", k, k, A.area.includes(k))).join("");
+  $("f-extra").innerHTML = chip("data-extra", "sinAvisos", "Sin avisos", A.sinAvisos) + chip("data-extra", "pagada", "Indica remuneración", A.pagada);
+  $("f-casi").innerHTML = CASI.map(([k, t]) => chip("data-casi", k, t, A.casi[k])).join("");
+  $("min").value = A.min; $("min-v").textContent = A.min; $("orden").value = A.orden;
+  const mine = [...misTec()].sort();
+  $("tec-lista").innerHTML = mine.length ? mine.map(t => chip("data-quitar", t, t + " ×", true, "peq")).join("") : '<span class="ayuda">Aún no hay ninguna.</span>';
+}
+
+function pintaLista() {
+  const vis = visibles();
+  const total = D.ofertas.filter(o => de(o) === tab).length;
+  const casiOcultas = D.ofertas.filter(o => de(o) === tab && o.descartada && !A.casi[casiKey(o)]).length;
+  const otras = total - casiOcultas - vis.length;
+  $("cuenta").textContent = `${vis.length} ofertas mostradas` + (otras > 0 ? ` · ${otras} ocultas por tus filtros` : "") +
+    (casiOcultas ? ` · ${casiOcultas} más casi encajan (actívalas en Filtros)` : "");
+  const hoy = (D.generado || "").slice(0, 10);
+  $("lista").innerHTML = vis.length ? vis.map(o => {
+    const t = tecDe(o);
+    return `<article class="oferta ${o.descartada ? "casi" : ""}">
+      <span class="puntos" title="Encaje con la búsqueda (0-100)">${o.puntos}</span>
       <h2>${esc(o.titulo)}</h2>
       <div class="emp">${esc(o.empresa)} · ${esc(o.ubicacion || "Remoto")}</div>
       <div class="fila">
-        ${o.vista_desde === hoy ? '<span class="tag nueva">Nueva</span>' : ""}
-        <span class="tag">${esc(o.area)}</span><span class="tag">${esc(o.nivel)}</span>
+        ${o.vista_desde === hoy && !o.descartada ? '<span class="tag nueva">Nueva</span>' : ""}
+        <span class="tag">${esc(ZONA_TXT[o.zona] || "")}</span><span class="tag">${esc(o.area)}</span><span class="tag">${esc(o.nivel)}</span>
         <span class="tag">${esc(o.fuente)}</span>${o.fecha ? `<span class="tag">${esc(o.fecha)}</span>` : ""}
       </div>
-      <div class="motivos">${esc(o.motivos.join(" · "))}</div>
+      ${o.descartada ? `<div class="casi-aviso">No cumple tu filtro estricto: ${esc(o.descartada)}</div>` : ""}
+      <div class="motivos">${esc((o.motivos || []).join(" · "))}</div>
       <ul class="req">
-        ${(o.a_favor || []).map(t => `<li class="ok">${esc(t)}</li>`).join("")}
-        ${(o.avisos || []).map(t => `<li class="ojo">${esc(t)}</li>`).join("")}
+        ${(o.a_favor || []).map(x => `<li class="ok">${esc(x)}</li>`).join("")}
+        ${(o.avisos || []).map(x => `<li class="ojo">${esc(x)}</li>`).join("")}
       </ul>
+      ${t.n ? `<div class="tec">Pide ${t.n} tecnologías · ya dominas ${t.have.length}
+        <div class="fila">${t.have.map(x => `<span class="tag ok">${esc(x)}</span>`).join("")}${t.falta.map(x => `<span class="tag falta">${esc(x)}</span>`).join("")}</div></div>` : ""}
       <div class="acciones">
         <a class="btn pri" href="${esc(o.url)}" target="_blank" rel="noopener">Ver oferta</a>
-        ${[["guardada","Guardar"],["solicitada","Solicitada"],["descartada","Descartar"]].map(([k, t]) =>
-          `<button class="btn" data-id="${o.id}" data-e="${k}" aria-pressed="${de(o) === k}">${t}</button>`).join("")}
+        ${[["guardada","Guardar"],["solicitada","Solicitada"],["descartada","Descartar"]].map(([k, x]) =>
+          `<button class="btn" data-id="${o.id}" data-e="${k}" aria-pressed="${de(o) === k}">${x}</button>`).join("")}
       </div>
-    </article>`).join("") : '<p class="vacio">No hay ofertas en esta vista.</p>';
+    </article>`;
+  }).join("") : '<p class="vacio">No hay ofertas con estos filtros. Prueba a quitar alguno o a mostrar las que casi encajan.</p>';
+
+  const cuenta = {};
+  vis.forEach(o => tecDe(o).falta.forEach(t => cuenta[t] = (cuenta[t] || 0) + 1));
+  const top = Object.entries(cuenta).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0, 12);
+  $("aprender-lista").innerHTML = top.length ? top.map(([t, n]) => `<span class="tag falta">${esc(t)} · ${n} ${n === 1 ? "oferta" : "ofertas"}</span>`).join("")
+    : '<span class="ayuda">Con las ofertas que ves ahora no te falta ninguna tecnología conocida.</span>';
+}
+const pinta = () => { pintaControles(); pintaLista(); };
+
+function detecta(texto) {
+  const t = texto.toLowerCase(), found = new Set();
+  const esta = term => new RegExp("(?<![\\w])" + term.replace(/[.*+?^${}()|[\]\\\/]/g, "\\$&") + "(?![\\w])").test(t);
+  D.tecnologias_conocidas.forEach(k => { if (esta(k)) found.add(k); });
+  Object.entries(D.alias).forEach(([a, c]) => { if (esta(a)) found.add(c); });
+  return [...found];
 }
 
 document.addEventListener("click", e => {
   const b = e.target.closest("button"); if (!b) return;
-  if (b.dataset.tab) tab = b.dataset.tab;
-  else if (b.dataset.f) activos.has(b.dataset.f) ? activos.delete(b.dataset.f) : activos.add(b.dataset.f);
-  else if (b.dataset.id) { estado[b.dataset.id] = de({id: b.dataset.id}) === b.dataset.e ? "pendiente" : b.dataset.e; guardar(); }
-  pinta();
+  const d = b.dataset;
+  if (d.tab) tab = d.tab;
+  else if (d.zona) A.zona[d.zona] = !A.zona[d.zona];
+  else if (d.nivel) A.nivel[d.nivel] = !A.nivel[d.nivel];
+  else if (d.area) A.area = A.area.includes(d.area) ? A.area.filter(x => x !== d.area) : [...A.area, d.area];
+  else if (d.extra) A[d.extra] = !A[d.extra];
+  else if (d.casi) A.casi[d.casi] = !A.casi[d.casi];
+  else if (d.quitar) A.tec = [...misTec()].filter(x => x !== d.quitar);
+  else if (d.id) { estado[d.id] = de({id: d.id}) === d.e ? "pendiente" : d.e; grabar("estado", estado); }
+  else if (b.id === "reset-filtros") { const t = A.tec; A = Object.assign(JSON.parse(JSON.stringify(DEF)), {tec: t}); $("q").value = ""; }
+  else if (b.id === "tec-reset") { A.tec = null; $("cv-res").textContent = "Perfil original restaurado."; }
+  else if (b.id === "tec-add") { anade(); return; }
+  else if (b.id === "cv-detectar") {
+    const f = detecta($("cv-texto").value);
+    A.tec = [...new Set([...misTec(), ...f])];
+    $("cv-res").textContent = f.length ? `Detecté ${f.length} tecnologías en tu CV: ${f.join(", ")}.` : "No encontré tecnologías conocidas en ese texto.";
+  } else return;
+  guardarAjustes(); pinta();
 });
-$("q").addEventListener("input", pinta);
+function anade() {
+  const v = $("tec-nueva").value.trim().toLowerCase(); if (!v) return;
+  A.tec = [...new Set([...misTec(), D.alias[v] || v])]; $("tec-nueva").value = ""; guardarAjustes(); pinta();
+}
+$("tec-nueva").addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); anade(); } });
+$("q").addEventListener("input", pintaLista);
+$("min").addEventListener("input", e => { A.min = +e.target.value; $("min-v").textContent = A.min; guardarAjustes(); pintaLista(); });
+$("orden").addEventListener("change", e => { A.orden = e.target.value; guardarAjustes(); pintaLista(); });
 
 fetch("data/ofertas.json", {cache: "no-store"}).then(r => r.json()).then(d => {
-  datos = d;
-  const f = new Date(d.generado);
-  $("meta").textContent = `${d.ofertas.length} ofertas de ${d.leidas} revisadas · ${Object.values(d.descartes || {}).reduce((a, b) => a + b, 0)} descartadas por requisitos · actualizado ${f.toLocaleDateString("es-ES", {day: "numeric", month: "short"})} ${f.toLocaleTimeString("es-ES", {hour: "2-digit", minute: "2-digit"})}`;
+  D = d;
+  $("tec-sugeridas").innerHTML = d.tecnologias_conocidas.map(t => `<option value="${esc(t)}">`).join("");
+  const f = new Date(d.generado), desc = Object.values(d.descartes || {}).reduce((a, b) => a + b, 0);
+  $("meta").textContent = `${d.leidas} ofertas revisadas · ${desc} descartadas por requisitos · actualizado ${f.toLocaleDateString("es-ES", {day: "numeric", month: "short"})} ${f.toLocaleTimeString("es-ES", {hour: "2-digit", minute: "2-digit"})}`;
   pinta();
 }).catch(() => { $("meta").textContent = "No se pudieron cargar las ofertas."; pinta(); });
 
