@@ -1,20 +1,20 @@
 {
- "generado": "2026-11-27T18:05:43+00:00",
- "leidas": 5063,
+ "generado": "2026-11-28T17:06:37+00:00",
+ "leidas": 5062,
  "nuevas": 0,
  "fuentes": {
   "adzuna": 263,
   "lever": 31,
-  "remotive": 51,
+  "remotive": 48,
   "jobicy": 150,
-  "arbeitnow": 21,
+  "arbeitnow": 13,
   "himalayas": 20,
-  "greenhouse": 4527
+  "greenhouse": 4537
  },
  "descartes": {
-  "presencial fuera de León": 283,
-  "no es junior ni prácticas": 131,
-  "pide años de experiencia": 16,
+  "presencial fuera de León": 284,
+  "no es junior ni prácticas": 143,
+  "pide años de experiencia": 17,
   "exige otro idioma": 6
  },
  "tecnologias_conocidas": [
@@ -755,6 +755,36 @@
    "vista_desde": "2026-11-27"
   },
   {
+   "descartada": "no es junior ni prácticas",
+   "zona": "remoto",
+   "tecnologias": [
+    "gcp",
+    "python",
+    "sql",
+    "terraform"
+   ],
+   "id": "ee9299300926",
+   "titulo": "Data Engineer",
+   "empresa": "Elevenlabs",
+   "ubicacion": "Bulgaria, France, Hungary, Italy, Netherlands, Poland, Spain, UK",
+   "url": "https://jobicy.com/jobs/157508-data-engineer-4",
+   "fuente": "Jobicy",
+   "fecha": "2026-11-28",
+   "area": "Datos",
+   "nivel": "Sin nivel",
+   "espana": true,
+   "puntos": 65,
+   "motivos": [
+    "remoto desde España",
+    "encaja: python, sql, agents"
+   ],
+   "avisos": [],
+   "a_favor": [
+    "indica remuneración"
+   ],
+   "vista_desde": "2026-11-28"
+  },
+  {
    "descartada": "presencial fuera de León",
    "zona": "otra",
    "tecnologias": [
@@ -818,6 +848,40 @@
    ],
    "a_favor": [],
    "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "no es junior ni prácticas",
+   "zona": "remoto",
+   "tecnologias": [
+    "aws",
+    "docker",
+    "java",
+    "kafka",
+    "kotlin",
+    "kubernetes",
+    "postgresql",
+    "redis",
+    "spring boot",
+    "sql"
+   ],
+   "id": "dfc2e4b56598",
+   "titulo": "Software Engineer",
+   "empresa": "Vonage",
+   "ubicacion": "Spain",
+   "url": "https://jobicy.com/jobs/164580-software-engineer-16",
+   "fuente": "Jobicy",
+   "fecha": "2026-11-27",
+   "area": "Desarrollo",
+   "nivel": "Sin nivel",
+   "espana": true,
+   "puntos": 59,
+   "motivos": [
+    "remoto desde España",
+    "encaja: java, docker, sql, api, agents"
+   ],
+   "avisos": [],
+   "a_favor": [],
+   "vista_desde": "2026-11-28"
   },
   {
    "descartada": "pide 2+ años de experiencia",
@@ -902,6 +966,31 @@
   {
    "descartada": "presencial fuera de León",
    "zona": "otra",
+   "tecnologias": [],
+   "id": "26fd2d194bf1",
+   "titulo": "Beca Iniciativas De Datos & Ia (H/M) Otis Leganés",
+   "empresa": "Otis",
+   "ubicacion": "Leganés, Madrid, España",
+   "url": "https://www.adzuna.es/details/5981642458?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-28",
+   "area": "IA",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 56,
+   "motivos": [
+    "prácticas",
+    "presencial fuera de León"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-28"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
    "tecnologias": [
     "sap"
    ],
@@ -927,6 +1016,33 @@
     "admite estudiantes o perfiles sin experiencia"
    ],
    "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [],
+   "id": "be1f3f7e84af",
+   "titulo": "Prácticas en Ingeniería Industrial (Madrid) — Flexible y Crecimiento",
+   "empresa": "Ferrovial",
+   "ubicacion": "Madrid, Comunidad de Madrid, España",
+   "url": "https://www.adzuna.es/details/5980637655?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-27",
+   "area": "TI general",
+   "nivel": "Prácticas",
+   "espana": true,
+   "puntos": 56,
+   "motivos": [
+    "prácticas",
+    "presencial fuera de León"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [
+    "admite estudiantes o perfiles sin experiencia"
+   ],
+   "vista_desde": "2026-11-28"
   },
   {
    "descartada": "presencial fuera de León",
@@ -1342,6 +1458,30 @@
    "vista_desde": "2026-11-27"
   },
   {
+   "descartada": "no es junior ni prácticas",
+   "zona": "leon",
+   "tecnologias": [],
+   "id": "c388fe93f80f",
+   "titulo": "Especialista en Análisis Datos e IA Aplicada.",
+   "empresa": "AQUACORP",
+   "ubicacion": "León, Castilla y León, España",
+   "url": "https://www.adzuna.es/details/5981702241?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-28",
+   "area": "IA",
+   "nivel": "Sin nivel",
+   "espana": true,
+   "puntos": 48,
+   "motivos": [
+    "León"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-28"
+  },
+  {
    "descartada": "presencial fuera de León",
    "zona": "otra",
    "tecnologias": [
@@ -1369,79 +1509,31 @@
    "vista_desde": "2026-11-27"
   },
   {
-   "descartada": "presencial fuera de León",
-   "zona": "otra",
-   "tecnologias": [],
-   "id": "0331c5c2fbfd",
-   "titulo": "BECA Universitaria Ingenieros becarios",
-   "empresa": "Accenture",
+   "descartada": "no es junior ni prácticas",
+   "zona": "remoto",
+   "tecnologias": [
+    "java"
+   ],
+   "id": "3025aa7e2c15",
+   "titulo": "Desarrollador(a) Java WebFlux & IA - Remoto",
+   "empresa": "Ceiba",
    "ubicacion": "España, España",
-   "url": "https://www.adzuna.es/details/5980557405?utm_medium=api",
+   "url": "https://www.adzuna.es/details/5966771556?utm_medium=api",
    "fuente": "Adzuna",
-   "fecha": "2026-11-27",
-   "area": "TI general",
-   "nivel": "Prácticas",
+   "fecha": "2026-11-15",
+   "area": "IA",
+   "nivel": "Sin nivel",
    "espana": true,
    "puntos": 46,
    "motivos": [
-    "prácticas",
-    "presencial fuera de León"
+    "remoto desde España",
+    "encaja: java"
    ],
    "avisos": [
     "descripción parcial: lee los requisitos completos en la oferta"
    ],
    "a_favor": [],
-   "vista_desde": "2026-11-27"
-  },
-  {
-   "descartada": "presencial fuera de León",
-   "zona": "otra",
-   "tecnologias": [],
-   "id": "e6c7a826dc70",
-   "titulo": "Becario Alimentacion-1",
-   "empresa": "El Corte Inglés",
-   "ubicacion": "Madrid, España",
-   "url": "https://www.adzuna.es/details/5978610133?utm_medium=api",
-   "fuente": "Adzuna",
-   "fecha": "2026-11-25",
-   "area": "TI general",
-   "nivel": "Prácticas",
-   "espana": true,
-   "puntos": 46,
-   "motivos": [
-    "prácticas",
-    "presencial fuera de León"
-   ],
-   "avisos": [
-    "descripción parcial: lee los requisitos completos en la oferta"
-   ],
-   "a_favor": [],
-   "vista_desde": "2026-11-27"
-  },
-  {
-   "descartada": "presencial fuera de León",
-   "zona": "otra",
-   "tecnologias": [],
-   "id": "8b610d14841f",
-   "titulo": "Tech Program - Prácticas Microsoft - Zaragoza Enero 2027 (Zaragoza, ES, 50018)",
-   "empresa": "KPMG España",
-   "ubicacion": "Zaragoza, España",
-   "url": "https://www.adzuna.es/details/5978609525?utm_medium=api",
-   "fuente": "Adzuna",
-   "fecha": "2026-11-25",
-   "area": "TI general",
-   "nivel": "Prácticas",
-   "espana": true,
-   "puntos": 46,
-   "motivos": [
-    "prácticas",
-    "presencial fuera de León"
-   ],
-   "avisos": [
-    "descripción parcial: lee los requisitos completos en la oferta"
-   ],
-   "a_favor": [],
-   "vista_desde": "2026-11-27"
+   "vista_desde": "2026-11-28"
   },
   {
    "descartada": "presencial fuera de León",
@@ -1449,13 +1541,13 @@
    "tecnologias": [
     "java"
    ],
-   "id": "609263751b88",
+   "id": "0a8405c317fa",
    "titulo": "Desarrollador/a Backend Java Junior (A Coruña)",
    "empresa": "Knowmad Mood",
    "ubicacion": "A Coruña, España",
-   "url": "https://www.adzuna.es/details/5978610266?utm_medium=api",
+   "url": "https://www.adzuna.es/details/5981903470?utm_medium=api",
    "fuente": "Adzuna",
-   "fecha": "2026-11-25",
+   "fecha": "2026-11-28",
    "area": "Desarrollo",
    "nivel": "Junior",
    "espana": true,
@@ -1469,7 +1561,7 @@
     "descripción parcial: lee los requisitos completos en la oferta"
    ],
    "a_favor": [],
-   "vista_desde": "2026-11-27"
+   "vista_desde": "2026-11-28"
   },
   {
    "descartada": "no es junior ni prácticas",
@@ -1607,33 +1699,6 @@
    "url": "https://www.adzuna.es/details/5980204724?utm_medium=api",
    "fuente": "Adzuna",
    "fecha": "2026-11-27",
-   "area": "IA",
-   "nivel": "Junior",
-   "espana": true,
-   "puntos": 44,
-   "motivos": [
-    "junior",
-    "presencial fuera de León"
-   ],
-   "avisos": [
-    "descripción parcial: lee los requisitos completos en la oferta"
-   ],
-   "a_favor": [],
-   "vista_desde": "2026-11-27"
-  },
-  {
-   "descartada": "presencial fuera de León",
-   "zona": "otra",
-   "tecnologias": [
-    "mlops"
-   ],
-   "id": "c9fba92ad265",
-   "titulo": "Desarrollador MLOps & AgentOps Junior | IA Generativa",
-   "empresa": "T-Systems Iberia",
-   "ubicacion": "España, España",
-   "url": "https://www.adzuna.es/details/5973993538?utm_medium=api",
-   "fuente": "Adzuna",
-   "fecha": "2026-11-21",
    "area": "IA",
    "nivel": "Junior",
    "espana": true,
@@ -1815,13 +1880,13 @@
     "llm",
     "python"
    ],
-   "id": "d4ec86044eb2",
+   "id": "418afcda7168",
    "titulo": "AI Engineer for Quality Monitoring (JavaScript/Python) — Barcelona",
-   "empresa": "Pasiona",
-   "ubicacion": "Barcelona, España",
-   "url": "https://www.adzuna.es/details/5980885299?utm_medium=api",
+   "empresa": "pasiona",
+   "ubicacion": "Barcelona, Cataluña, España",
+   "url": "https://www.adzuna.es/details/5981691177?utm_medium=api",
    "fuente": "Adzuna",
-   "fecha": "2026-11-27",
+   "fecha": "2026-11-28",
    "area": "IA",
    "nivel": "Sin nivel",
    "espana": true,
@@ -1834,7 +1899,7 @@
     "descripción parcial: lee los requisitos completos en la oferta"
    ],
    "a_favor": [],
-   "vista_desde": "2026-11-27"
+   "vista_desde": "2026-11-28"
   },
   {
    "descartada": "presencial fuera de León",
@@ -1996,6 +2061,33 @@
    "vista_desde": "2026-11-27"
   },
   {
+   "descartada": "no es junior ni prácticas",
+   "zona": "remoto",
+   "tecnologias": [
+    "java"
+   ],
+   "id": "94f45e878999",
+   "titulo": "PowerCenter / Java Developer",
+   "empresa": "Digital55",
+   "ubicacion": "España, España",
+   "url": "https://www.adzuna.es/details/5980646733?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-27",
+   "area": "Desarrollo",
+   "nivel": "Sin nivel",
+   "espana": true,
+   "puntos": 40,
+   "motivos": [
+    "remoto desde España",
+    "encaja: java"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-28"
+  },
+  {
    "descartada": "presencial fuera de León",
    "zona": "otra",
    "tecnologias": [],
@@ -2101,6 +2193,31 @@
    ],
    "a_favor": [],
    "vista_desde": "2026-11-27"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
+   "tecnologias": [],
+   "id": "abfa993032c2",
+   "titulo": "Desarrollador/a Full Stack Junior",
+   "empresa": "Galadrim",
+   "ubicacion": "España, España",
+   "url": "https://www.adzuna.es/details/5981656589?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-28",
+   "area": "Desarrollo",
+   "nivel": "Junior",
+   "espana": true,
+   "puntos": 38,
+   "motivos": [
+    "junior",
+    "presencial fuera de León"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-28"
   },
   {
    "descartada": "no es junior ni prácticas",
@@ -2260,6 +2377,36 @@
   {
    "descartada": "presencial fuera de León",
    "zona": "otra",
+   "tecnologias": [
+    "aws",
+    "devops",
+    "docker",
+    "kubernetes"
+   ],
+   "id": "bddd0a6421fb",
+   "titulo": "AI Engineer",
+   "empresa": "BBVA Technology en Europa",
+   "ubicacion": "Madrid, Comunidad de Madrid, España",
+   "url": "https://www.adzuna.es/details/5980636604?utm_medium=api",
+   "fuente": "Adzuna",
+   "fecha": "2026-11-27",
+   "area": "IA",
+   "nivel": "Posible junior",
+   "espana": true,
+   "puntos": 36,
+   "motivos": [
+    "presencial fuera de León",
+    "encaja: docker, agentes"
+   ],
+   "avisos": [
+    "descripción parcial: lee los requisitos completos en la oferta"
+   ],
+   "a_favor": [],
+   "vista_desde": "2026-11-28"
+  },
+  {
+   "descartada": "presencial fuera de León",
+   "zona": "otra",
    "tecnologias": [],
    "id": "b4be0044e1a2",
    "titulo": "Consultor/a Tecnológico/a Junior - Desarrollo, QA y Sistemas",
@@ -2279,39 +2426,6 @@
    "avisos": [
     "descripción parcial: lee los requisitos completos en la oferta"
    ],
-   "a_favor": [],
-   "vista_desde": "2026-11-27"
-  },
-  {
-   "descartada": "pide 5+ años de experiencia",
-   "zona": "remoto",
-   "tecnologias": [
-    "aws",
-    "azure",
-    "docker",
-    "gcp",
-    "ios",
-    "kubernetes",
-    "node.js",
-    "postgresql",
-    "react"
-   ],
-   "id": "48fa209887f8",
-   "titulo": "Software Engineer - Storage",
-   "empresa": "Supabase",
-   "ubicacion": "Anywhere",
-   "url": "https://jobicy.com/jobs/156940-software-engineer-storage",
-   "fuente": "Jobicy",
-   "fecha": "2026-11-25",
-   "area": "Desarrollo",
-   "nivel": "Sin nivel",
-   "espana": false,
-   "puntos": 35,
-   "motivos": [
-    "remoto Europa/global",
-    "encaja: node, node.js, docker"
-   ],
-   "avisos": [],
    "a_favor": [],
    "vista_desde": "2026-11-27"
   },
